@@ -1,0 +1,420 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta content="yes" name="apple-mobile-web-app-capable">
+    	<meta content="yes" name="apple-touch-fullscreen">
+    	<meta content="telephone=no,email=no" name="format-detection">
+    	<link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
+		<script src="../js/flexible.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+		body,.mui-content{
+			background:#FFFFFF;
+		}
+			/*顶部选择信息*/
+		.screenInfor{
+			padding:0 0.24rem;
+			height:1.173333rem;
+			background:#fafafa;
+			width:100%;
+			font-size:0;
+			border-bottom:1px solid #d6d7dc;
+		}
+		.screenInfor>span{
+			display:inline-block;
+			line-height:1.173333rem;
+			overflow:hidden;
+			vertical-align:top;
+		}
+		.screenInfor>p{
+			
+			display:inline-block;
+			line-height:1.173333rem;
+			overflow:hidden;
+			margin:0;
+			margin-left:0.08rem;
+		}
+		.screenInfor>p span{
+			vertical-align: middle;
+			height:0.44rem;
+			width:0.58rem;
+			color:#323232;
+			font-size:12px;
+			padding:0.08rem 0.16rem;
+		}
+		[data-dpr="2"] .screenInfor>p span{
+			font-size: 24px;
+		}
+		[data-dpr="3"] .screenInfor>p span{
+			font-size: 36px;
+		}
+		.screenInfor>p span+span{
+			margin-left:0.12rem;
+		}
+		.selected{
+			font-size:12px;
+			border-radius:0.1rem;
+			background:#0f2646;
+			color:#fafafa !important;
+		}
+		/*箭头*/
+		.price img{
+    		vertical-align: middle;
+    		width:0.18rem;	
+    	}
+		.box{
+			width:2.133333rem;
+			height:0.666666rem;
+			overflow:hidden;
+			border:1px solid #d6d7dc;
+		
+		}
+		.screenInfor .mui-table-view-cell{
+			padding:0;
+		}
+		.screenInfor .mui-table-view-cell a{
+			padding:0;
+			margin:0;
+			height:0.666666rem;
+			line-height: 0.666666rem;
+		}
+		.screenInfor .mui-table-view-cell.mui-active{
+			background:#fafafa !important;
+		}
+		.screenInfor .selectbox a{
+			width:2.133333rem;
+			padding-left:0.1rem;
+			padding-right:0.32rem;
+			box-sizing:initial;
+			font-size:12px;
+			line-height:0.666666rem;
+			color:#323232;
+			text-overflow: ellipsis;
+		}
+		[data-dpr="2"] .screenInfor .selectbox a{
+			font-size: 24px;
+		}
+		[data-dpr="3"] .screenInfor .selectbox a{
+			font-size: 36px;
+		}
+		.mui-navigate-right:after, .mui-push-right:after{
+			right:0.6rem;
+		}
+		.screenInfor .mui-table-view-cell>a.mui-active{
+			background:#fafafa !important;
+		}
+		.mui-table-view-cell.mui-collapse.mui-active{
+			margin-top:0 !important;
+		}
+		.selectbox{
+			margin-left:0.133333rem;
+		}
+		.box-item{
+			height:1.146666rem;
+			display:-moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+	        display:-ms-flexbox;  /* TWEENER - IE 10 */
+            display:-webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+            display:-webkit-flex;  /* NEW - Chrome */
+            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+			flex-flow:column nowrap;
+			justify-content:center;	
+		}
+		.sort{
+			color:#323232;
+			font-size:14px;
+			margin-left:0.133333rem;
+			margin-right: 0.266666rem;
+		}
+		[data-dpr="2"] .sort{
+			font-size: 28px;
+		}
+		[data-dpr="3"] .sort{
+			font-size: 42px;
+		}
+		.category{
+			color:#323232;
+			font-size:14px;
+		}
+		[data-dpr="2"] .category{
+			font-size: 28px;
+		}
+		[data-dpr="3"] .category{
+			font-size: 42px;
+		}
+		.search{
+			width:0.533333rem;
+    		height:0.533333rem;
+    		line-height:1.066666rem;
+			right:0.266666rem;
+			display:block;	
+			font-size: 0.266666rem;
+			color: #0f2646 !important;
+		}
+		
+    	.collapse-body{
+    		width:100%;
+    		z-index:3;
+    		position:absolute;
+    		background:#fafafa;
+    		left:0;
+    		top:1.173333rem;
+    	}
+    	.collapse-body li{
+    		padding: 0 0.32rem;
+    		height: 0.826666rem;
+    		font-size:13px;
+    		line-height:0.826666rem;
+    		border-bottom:1px solid #d6d7dc;
+    		color:#323232;
+    	}
+    	.collapse-body li:last-child{
+    		border-bottom: none;
+    	}
+    	[data-dpr="2"] .collapse-body li{
+    		font-size: 26px;
+    	}
+    	[data-dpr="3"] .collapse-body li{
+    		font-size: 39px;
+    	}
+    	
+    	/*下拉选择框选中icon*/
+    	.mui-pull-right.iconfont{
+    		color:#4dbf0d !important;
+    	}
+    	/*搜索框icon*/
+    	.search.iconfont{
+    		color:#0f2646 !important;
+    		font-size:0.44rem  !important;
+    	}
+    	
+    	.Mbox{
+    		padding:0.426666rem 0.32rem;
+    	}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+		    <!--头部部分功能-->
+    	    <div class="screenInfor" id="screenInfor">
+				<span class="category">行业分类</span>
+				<span class="selectbox">
+					<div class="box-item">
+						<div class="mui-table-view-cell box mui-collapse">
+			    		<a id="select" class="mui-navigate-right" href="javascript:;">
+			    		    全部行业
+			    		</a>
+	            	</div>	
+					</div>
+				</span>
+				<span class="sort">排序</span>
+				<p class="conditions"><span class="selected">默认</span><span>销量</span><span id="price" class="price">价格
+					<img src="../Img/product/arrow.png" alt="" /></span></p>
+				<a id="search" class="iconfont icon-sousuo search mui-pull-right" href="javascript:;"></a>
+					<ul id="collapse-body" class="mui-collapse-content collapse-body" style="display:none;">
+				    	  	<li>全部行业<b style="display:block" class="mui-pull-right iconfont">&#xe66a;</b></li>
+				    	  	<li>食品<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>
+				   		  	<li>药品<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>
+				   		  	<li>护肤品<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>
+				   		  	<li>奢侈品<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>
+				   		  	<li>服装<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>
+			    		  	<li>建材<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>
+			    		  	<li>生活用品<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>
+			    		  	<li>金融理财产品<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>
+				    </ul>
+			</div>
+			<div class="Mbox">
+				<div class="public">
+		    		<ul class="">
+		    		    <li class="aliance-item">
+		    		    	<a href="">
+		    		    		<img src="../Img/Index/product.jpg"/>
+		    		    		<div class="public-text">
+		    		    			<h3>石门涧黄淮两瓶装蜂蜜</h3>
+		    		    			<div class="public-ful">
+		    		    				<span>¥<b>340</b></span>
+		    		    				月销1990件
+		    		    				<span class="public-site">重庆</span>
+		    		    			</div>
+		    		    		</div>
+		    		    	</a>
+		    		    </li>
+		    		    <li class="aliance-item">
+		    		    	<a href="">
+		    		    		<img src="../Img/Index/product.jpg"/>
+		    		    		<div class="public-text">
+		    		    			<h3>石门涧黄淮两瓶装蜂蜜</h3>
+		    		    			<div class="public-ful">
+		    		    				<span>¥<b>340</b></span>
+		    		    				月销1990件
+		    		    				<span class="public-site">重庆</span>
+		    		    			</div>
+		    		    		</div>
+		    		    	</a>
+		    		    </li>
+		    		     <li class="aliance-item">
+		    		    	<a href="">
+		    		    		<img src="../Img/Index/product.jpg"/>
+		    		    		<div class="public-text">
+		    		    			<h3>石门涧黄淮两瓶装蜂蜜</h3>
+		    		    			<div class="public-ful">
+		    		    				<span>¥<b>340</b></span>
+		    		    				月销1990件
+		    		    				<span class="public-site">重庆</span>
+		    		    			</div>
+		    		    		</div>
+		    		    	</a>
+		    		    </li>
+		    		     <li class="aliance-item">
+		    		    	<a href="">
+		    		    		<img src="../Img/Index/product.jpg"/>
+		    		    		<div class="public-text">
+		    		    			<h3>石门涧黄淮两瓶装蜂蜜</h3>
+		    		    			<div class="public-ful">
+		    		    				<span>¥<b>340</b></span>
+		    		    				月销1990件
+		    		    				<span class="public-site">重庆</span>
+		    		    			</div>
+		    		    		</div>
+		    		    	</a>
+		    		    </li>
+		    		    <li class="aliance-item">
+		    		    	<a href="">
+		    		    		<img src="../Img/Index/product.jpg"/>
+		    		    		<div class="public-text">
+		    		    			<h3>石门涧黄淮两瓶装蜂蜜</h3>
+		    		    			<div class="public-ful">
+		    		    				<span>¥<b>340</b></span>
+		    		    				月销1990件
+		    		    				<span class="public-site">重庆</span>
+		    		    			</div>
+		    		    		</div>
+		    		    	</a>
+		    		    </li>
+		    		    <li class="aliance-item">
+		    		    	<a href="">
+		    		    		<img src="../Img/Index/product.jpg"/>
+		    		    		<div class="public-text">
+		    		    			<h3>石门涧黄淮两瓶装蜂蜜</h3>
+		    		    			<div class="public-ful">
+		    		    				<span>¥<b>340</b></span>
+		    		    				月销1990件
+		    		    				<span class="public-site">重庆</span>
+		    		    			</div>
+		    		    		</div>
+		    		    	</a>
+		    		    </li>
+		    		    <li class="aliance-item">
+		    		    	<a href="">
+		    		    		<img src="../Img/Index/product.jpg"/>
+		    		    		<div class="public-text">
+		    		    			<h3>石门涧黄淮两瓶装蜂蜜</h3>
+		    		    			<div class="public-ful">
+		    		    				<span>¥<b>340</b></span>
+		    		    				月销1990件
+		    		    				<span class="public-site">重庆</span>
+		    		    			</div>
+		    		    		</div>
+		    		    	</a>
+		    		    </li>
+		    		    <li class="aliance-item">
+		    		    	<a href="">
+		    		    		<img src="../Img/Index/product.jpg"/>
+		    		    		<div class="public-text">
+		    		    			<h3>石门涧黄淮两瓶装蜂蜜</h3>
+		    		    			<div class="public-ful">
+		    		    				<span>¥<b>340</b></span>
+		    		    				月销1990件
+		    		    				<span class="public-site">重庆</span>
+		    		    			</div>
+		    		    		</div>
+		    		    	</a>
+		    		    </li>
+		    		</ul>
+		    	</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+			mui.init()
+			mui.plusReady(function(){
+				EventHanlder();
+		   	function EventHanlder(){
+		   		var select = document.getElementById('select');//选择框的获取
+				var layer  = document.getElementById('layer');//蒙层的获取
+				var selectContent = document.getElementById('collapse-body');//选择框下拉部分的获取
+				var searchButton = document.getElementById('search');
+				searchButton.addEventListener('tap',function(){
+					mui.openWindow({
+						url:'/Search/search.html',
+						id:'search'
+					})
+				})
+								
+				//唤出行业切换控制面板
+		   		select.addEventListener('tap',function(){
+					if(selectContent.style.display == 'none'){
+						selectContent.style.display = 'block';
+						//layer.style.display = 'block';
+					}else{
+						selectContent.style.display = 'none';
+						//layer.style.display = 'none';
+					}
+				});	
+				
+				//行业选择
+				mui("#collapse-body").on('tap','li',function(){
+					mui("#collapse-body li b").each(function(){
+						this.style.display = 'none';
+					})
+					var text = this.innerText;
+					select.innerText = text;//选择框内容的改变
+					select.parentNode.classList.remove('mui-active');
+					this.children[0].style.display = 'block';
+					selectContent.style.display = 'none';//行业控制面板的隐藏
+					//layer.style.display = 'none';//蒙层隐藏
+					
+				})				
+				
+				
+				//商家页面点击跳转
+				var details = mui('.aliance-item');
+				mui.each(details,function(i,item){
+					this.addEventListener('tap',function(){
+						mui.openWindow({
+							id:'product-data.html',
+							url:'product-data.html'
+						})
+					})
+				})	
+				
+				//排序条件切换
+				var screenInfor = document.getElementById('screenInfor').getElementsByTagName('p')[0];
+				var conditions = screenInfor.getElementsByTagName('span');
+				var price = document.getElementById('price');
+				mui.each(conditions,function(i,item){
+					item.addEventListener('tap',function(){
+						mui.each(conditions,function(i,item){
+							item.classList.remove('selected');
+						})
+					  	this.classList.add('selected');
+					  	if(price.classList.contains('selected'))
+						{
+							price.children[0].setAttribute('src','../Img/product/arrow-active.png');
+						}else{
+							price.children[0].setAttribute('src','../Img/product/arrow.png');
+						}
+					})	
+				});
+		   	}
+		   	
+			})
+			
+	</script>
+</html>

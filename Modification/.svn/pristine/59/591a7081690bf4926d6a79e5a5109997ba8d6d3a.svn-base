@@ -1,0 +1,18 @@
+{
+	"index.html": {
+		"resources": [
+			"Img/Index/product.jpg",
+			"fonts/iconfont.css",
+			"Img/Index/enterprise.jpg",
+			"Img/Index/friend.png",
+			"Img/Index/banner.ipg.jpg",
+			"js/mui.min.js",
+			"Img/Index/tj.png",
+			"css/mui.min.css",
+			"css/style.css",
+			"js/flexible.js",
+			"css/normalize.css",
+			"fonts/iconfont.woff"
+		]
+	}
+}

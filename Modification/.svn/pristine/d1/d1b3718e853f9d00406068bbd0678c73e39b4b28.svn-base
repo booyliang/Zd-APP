@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+    <title></title>
+    <script src="../js/flexible.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../fonts/iconfont.css" />
+    <style>
+    	b{
+    		font-weight:400 !important;
+       	}
+    	em{
+    		font-style:normal;
+    		font-family:arial;
+    	}
+    	.num{
+    		font-family:arial;
+    	}
+	    *{
+			margin: 0;
+			padding: 0;
+		}
+		ul,li,p{
+			margin:0;
+			padding:0;
+			color:#2b2b2b;
+		}
+		a{
+			text-decoration: none;
+			/*color:#b9b9b9 !important;*/
+		}
+		.ml{
+			margin-left:0.32rem;
+		}
+		img{
+			border:none;
+		}
+		
+		ul,li{
+			list-style: none;
+		}
+		body{
+			font-family:"微软雅黑" !important;
+			background-color:#FFFFFF !important;
+			color:#2b2b2b !important;
+		}
+		.mui-content{
+			background-color:#fff !important;
+		}
+		.mui-bar-nav~.mui-content{
+			padding-top:1.173333rem;
+		}
+		.mui-bar{
+			height:1.173333rem;
+			line-height: 1.173333rem;
+			background:#fff;
+		}
+		.mui-bar-nav{
+			box-shadow:none;
+		}
+		.mui-bar .mui-title{
+			left:1.173333rem;
+			right:1.173333rem;
+			font-family:"苹方";
+			font-size:18px;
+			font-weight:bold;
+			height:1.173333rem;
+			line-height: 1.173333rem;
+			color:#2b2b2b;
+		}
+		[data-dpr="2"] .mui-title{
+			font-size:36px;
+		}
+		[data-dpr="3"] .mui-title{
+			font-size:54px;
+		}
+		.mui-bar-nav.mui-bar .mui-icon:first-child{
+			width:1.173333rem;
+			height:1.173333rem;
+			background:url(../Img/header/index2.png) no-repeat center center;
+			background-size:contain;
+		}
+		.mui-bar-nav.mui-bar .mui-icon:last-child{
+			width:1.173333rem;
+			height:1.173333rem;
+			background:url(../Img/header/code2.png) no-repeat center center;
+			background-size:contain;
+		}
+    	/*顶部切换样式*/
+    	nav{
+    		height:0.853333rem;
+    		line-height:0.853333rem;
+    		padding:0 0.32rem;
+    	}
+    	nav ul{
+    		width:100%;
+    		font-size:0;
+    		display:-moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+            display:-ms-flexbox;  /* TWEENER - IE 10 */
+            display:-webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+            display:-webkit-flex;  /* NEW - Chrome */
+            display: flex; /* NEW, Spec - Opera*/
+			justify-content:space-between;
+    	}
+    	nav ul li{
+    		height:0.853333rem;
+    	}
+    	nav a{
+    		padding:0 0.106666rem;
+    		color:#2b2b2b !important;
+    		font-size:14px;
+    	}
+    	.nav ul li a.mui-control-item{
+    		height:0.786666rem;
+    		line-height:0.786666rem;
+    		width:auto;
+    		margin:0 auto;
+    	}
+    	[data-dpr="2"] nav a{
+    		font-size:28px;
+    	}
+    	[data-dpr="3"] nav a{
+    		font-size:42px;
+    	}
+    	.mui-segmented-control.mui-segmented-control-inverted~.mui-slider-progress-bar{
+    		background:#0f2646 !important
+    	}
+    	.mui-segmented-control{
+    		border:none;
+   			background:#fafafa;
+   			border-radius:0;
+   			border-top:1px solid #D6D7DC;
+   			border-bottom:1px solid #D6D7DC;
+   		}
+    	.mui-segmented-control .mui-control-item{
+    		border-left:none;
+    	}
+    	.mui-segmented-control .mui-control-item.mui-active{
+    		color:#ec4b1f !important;
+			border-bottom:2.5px solid #ec4b1f;
+			background:#fafafa;
+			line-height:0.82rem;
+    	}
+    	[data-dpr="2"] .mui-segmented-control .mui-control-item.mui-active{
+			border-bottom:5px solid #ec4b1f;	
+			line-height:0.786666rem;
+    	}
+    	[data-dpr="3"] .mui-segmented-control .mui-control-item.mui-active{
+			border-bottom:7.5px solid #ec4b1f;	
+			line-height:0.753333rem;
+    	}	
+    	/*product样式*/
+    	.imgbox{
+    		width:9.36rem;
+    		height:5.013333rem;
+    		margin:0.426666rem auto;
+    		border:1px solid #d6d7dc;
+    	}
+    	[data-dpr="2"] .imgbox{
+    		border:1px solid #d6d7dc;
+    	}
+    	[data-dpr="3"] .imgbox{
+    		border:1.5px solid #d6d7dc;
+    	}
+    	.imgbox img{
+    		width:100%;
+    		height:100%;
+    		display:block;
+    	}
+    	/*产品详细信息*/
+    	.info-center{
+ 			padding:0 0.32rem;
+ 		}
+ 		.info-center ul li{
+ 			margin-bottom:0.213333rem;
+ 			overflow:hidden;
+ 			font-size:16px;
+ 			line-height:0.426666rem;
+ 			color:#2b2b2b;
+ 		}
+ 		[data-dpr="2"] .info-center ul li{
+ 			font-size:32px;
+ 		}
+ 		[data-dpr="3"] .info-center ul li{
+ 			font-size:48px;
+ 			
+ 		}
+ 		.info-center ul li .li-tit{
+ 			width:64px;
+ 		}
+ 		[data-dpr="2"] .info-center ul li .li-tit{
+ 			width:128px;
+ 		}
+ 		[data-dpr="3"] .info-center ul li .li-tit{
+ 			width:192px;
+ 		}
+ 		.info-center ul li .li-body{
+ 			margin-left:72px;
+ 		}
+ 		[data-dpr="2"] .info-center ul li .li-body{
+ 			margin-left:144px;
+ 		}
+ 		[data-dpr="3"] .info-center ul li .li-body{
+ 			margin-left:216px;
+ 		}
+ 		
+ 		.text{
+ 			font-size:13px;
+ 			line-height:0.52rem;
+ 		}
+ 		[data-dpr="2"] .text{
+ 			font-size:26px;
+ 		}
+ 		[data-dpr="3"] .text{
+ 			font-size:39px;
+ 		}
+		/*商家页面*/
+		.outerBox{
+			width:9.36rem;
+			margin:0.426666rem 0.32rem;
+			border:1px solid #d6d7dc;
+			position:relative;
+		}
+		.click-layer{
+			width:100%;
+			position:absolute;
+			height:100%;
+			background:#2b2b2b;
+			opacity:0.24;
+			z-index:45;
+		}
+		[data-dpr="2"] .outerBox{
+			border:1px solid #d6d7dc;
+		}
+		[data-dpr="3"] .outerBox{
+			border:1.5px solid #d6d7dc;
+		}
+		#company .img-box{
+			width:9.36rem;
+			height:5.013333rem;
+		}
+		#company .img-box img{
+			width:100%
+		}
+		.playButton{
+			width:1.92rem;
+			height:1.92rem;
+			position:absolute;
+			top:50%;
+			left:50%;
+			margin-left:-0.96rem;
+			margin-top:-0.96rem;
+			z-index:46;
+		}
+		.playButton img{
+			width:100%;
+		}
+		.company-info ul>li:last-child .li-body{
+			margin-left:0;
+			margin-top:0.426666rem;
+		}
+		.company-info ul>li:last-child .li-body ul{
+			margin:0;
+			padding:0;
+			font-size:0;
+		}
+		.company-info ul>li:last-child .li-body li{
+			width:3.12rem;
+			height:2.053333rem;
+			border:1.5px solid #d6d7dc;
+			margin:0;
+			padding:0;
+			overflow:hidden;
+		}
+		[data-dpr="2"] .company-info ul>li:last-child .li-body li{
+			border:3px solid #d6d7dc;
+		}
+		[data-dpr="3"] .company-info ul>li:last-child .li-body li{
+			border:4.5px solid #d6d7dc;
+		}
+		.company-info ul>li:last-child .li-body li a{
+			margin:0 !important;
+			padding:0 !important;
+		}
+		.img-layer{
+			width:100%;
+			height:100%;
+			position:absolute;
+			background:#2b2b2b;
+			opacity:0.24;
+		}
+		/*生产页面*/
+		.produce-center{
+			padding:0.426666rem 0.32rem 0;
+		}
+		.produce-item{
+			position:relative;
+		}
+		.produce-item .button{
+			width:0.973333rem;
+			height:0.586666rem;
+			line-height:0.586666rem;
+			border:1px solid #ff3700;
+			background:#ec4b1f;
+			border-radius:4px;
+			text-align:center;
+			color:#fff;
+			font-size:11px;
+		}
+		[data-dpr="2"] .produce-item .button{
+			font-size:22px;
+		}
+		[data-dpr="3"] .produce-item .button{
+			font-size:33px;
+		}
+		.buttoned{
+			width:0.973333rem;
+			height:0.586666rem;
+			position:absolute;
+			top:0;
+			left:0;
+			background:#2b2b2b !important;
+			opacity:0.24;
+		}
+		.calendar{
+			position:absolute;
+			width:100%;
+			height:7.333333rem;
+			top:0.693333rem;
+			z-index:999;
+		}
+		.produce-body{
+			margin-top:0.106666rem;
+			margin-left:0.48rem;
+			padding-bottom:0.32rem;
+			margin-bottom:0.106666rem;
+			border-left:1px solid #ec4b1f;
+			position:relative;
+		}
+		.produce-body .radio:first-child{
+			position:absolute;
+			width:0.2rem;
+			height:0.2rem;
+			border-radius:100%;
+			background:#ec4b1f;
+			top:0;
+			left:-0.106666rem;
+		}
+		.produce-body .last.radio{
+			position:absolute;
+			width:0.2rem;
+			height:0.2rem;
+			border-radius:100%;
+			background:#ec4b1f;
+			bottom:0;
+			left:-0.106666rem;
+		}
+		.item-box{
+			margin-top:0.213333rem;
+			padding-bottom:0.32rem;
+			margin-left:0.48rem;
+			border-bottom:1px solid #e1e1e1;
+			position:relative;
+		}
+		
+		.item-box .media{
+			width:2.986666rem;
+			border:1px solid #d6d7dc;
+			position:relative;
+		}
+		.item-box .media>img{
+			width:2.986666rem;
+			height:2.986666rem;
+		}
+		.item-box .vedio-layer{
+			position:absolute;
+			width:2.986666rem;
+			height:2.986666rem;
+			top:0;
+			background:#2b2b2b;
+			opacity:0.24;
+		}
+		.item-box .media p{
+			height:0.64rem;
+			line-height:0.64rem;
+			font-size:12px;
+			color:#2b2b2b;
+			text-align:center;
+		}
+		[data-dpr="2"] .item-box .media p{
+			font-size:24px;
+		}
+		[data-dpr="3"] .item-box .media p{
+			font-size:36px;
+		}
+		.item-box .play-button{
+			width:0.853333rem;
+			height:0.853333rem;
+			position:absolute;
+			top:50%;
+			left:50%;
+			margin-top:-0.76rem;
+			margin-left:-0.426666rem
+		}
+		.item-box .play-button img{
+			width:100%;
+		}
+		.item-box .body{
+			margin-left:3.2rem;
+		}
+		.item-box .body p{
+			color:#2b2b2b;
+			font-size:14px;
+			line-height:0.373333rem;
+			margin-bottom:0.186666rem;
+		}
+		.item-box .body p:last-child{
+			margin-bottom:0;
+		}
+		[data-dpr="2"] .item-box .body p{
+			font-size:28px;
+		}
+		[data-dpr="3"] .item-box .body p{
+			font-size:42px;
+		}
+		.controll.iconfont{
+			position:absolute;
+			bottom:0.32rem;
+			left:0;
+			font-size:19px;
+			color:#646464;
+		}
+		[data-dpr="2"] .controll.iconfont{
+			font-size:38px;
+		}
+		[data-dpr="3"] .controll.iconfont{
+			font-size:57px;
+		}
+		.chat-button{
+			height:0.853333rem;
+			background:#0f2646;
+			position:absolute;
+			left:0;
+			bottom:-0.853333rem;
+			padding:0.213333rem 0;
+			display:none;
+			z-index:99;
+		}
+		.chat-button ul{
+			font-size:0;
+		}
+		.chat-button ul li{
+			padding:0 0.32rem;
+			height:0.426666rem;
+			line-height:0.426666rem;
+			display:inline-block;
+			font-size:12px;
+			color:#fafafa;
+		}
+		.clicked{
+			color:#ec4b1f !important;
+		}
+		.chat-button ul li:first-child{
+			border-right:1px solid #2c4466;
+		}
+		[data-dpr="2"] .chat-button ul li{
+			font-size:24px;
+		}
+		[data-dpr="3"] .chat-button ul li{
+			font-size:36px;
+		}
+		.chat.iconfont{
+			font-size:12px;
+			margin-left:0.106666rem;
+		}
+		[data-dpr="2"] .chat.iconfont{
+			font-size:24px;
+		}
+		[data-dpr="3"] .chat.iconfont{
+			font-size:36px;
+		}
+		.collect.iconfont{
+			font-size:12.5px;
+			margin-left:0.106666rem;
+		}
+		[data-dpr="2"] .collect.iconfont{
+			font-size:25px;
+		}
+		[data-dpr="3"] .collect.iconfont{
+			font-size:37.5px;
+		}
+		.chat-content{
+			width:auto;
+			z-index:99;
+			padding-top:0.32rem;
+			margin-left:0.48rem;
+			margin-right:0.32rem;
+		}
+		.chat-content h1{
+			margin-bottom:0.32rem;
+			color:#0f2646;
+			font-size:16px;
+			font-weight:normal;
+		}
+		[data-dpr="2"] .chat-content h1{
+			font-size:32px;
+		}
+		[data-dpr="3"] .chat-content h1{
+			font-size:48px;
+		}
+		.chat-num{
+			color:#909090;
+			font-size:12px;
+			margin-left:0.106666rem;
+		}
+		[data-dpr="2"] .chat-num{
+			font-size:24px;
+		}
+		[data-dpr="3"] .chat-num{
+			font-size:36px;
+		}
+		.chat-item{
+			margin:0.32rem 0;
+			overflow: hidden;
+		}
+		.chat-header{
+			margin-bottom:0.213333rem;
+			overflow: hidden;
+		}
+		.chat-header .media-user{
+			width:0.853333rem;
+			height:0.853333rem;
+			border-radius:100%;
+		}
+		.chat-header .media-body{
+			margin-left:1.173333rem;
+			height:0.853333rem;
+			display:flex;
+			justify-content: space-between;
+			flex-direction:column;
+		}
+		.chat-header .media-body p:first-child{
+			color:#0f2646;
+			font-size:13px;
+			line-height:0.346666rem;
+		}
+		[data-dpr="2"] .chat-header .media-body p:first-child{
+			font-size:26px;
+		}
+		[data-dpr="3"] .chat-header .media-body p:first-child{
+			font-size:39px;
+		}
+		.chat-header .media-body p:last-child{
+			color:#909090 !important;
+			font-size:11px;
+		}
+		[data-dpr="2"] .chat-header .media-body p:last-child{
+			font-size:22px;
+		}
+		[data-dpr="3"] .chat-header .media-body p:last-child{
+			font-size:33px;
+		}
+		.chat-body{
+			background:#fafafa;
+			padding:0.213333rem;
+		}
+		.chat-body .text-body p{
+			color:#323232　!important;
+			font-size:14px;	
+			letter-spacing:0.6px;
+			line-height:0.56rem;	
+		}
+		.text-body{
+			overflow:hidden;
+		}
+		[data-dpr="2"] .chat-body .text-body p{
+			font-size:28px;	
+		}
+		[data-dpr="3"] .chat-body .text-body p{
+			font-size:42px;	
+		}
+		.controller-box{
+			float:right;
+			margin-top:0.426666rem;
+		}
+		.controller-box ul{
+			font-size:0;
+		}
+		.controller-box ul li{
+			display:inline-block;
+			color:#0f2646 !important;
+			font-size:12px;
+		}
+		.controller-box ul li:last-child{
+			margin-left:0.533333rem;
+		}
+		[data-dpr="2"] .controller-box ul li{
+			font-size:24px;
+		}
+		[data-dpr="3"] .controller-box ul li{
+			font-size:36px;
+		}
+		.star.iconfont{
+			font-size:12.5px;
+			margin-right:0.106666rem;
+		}
+		[data-dpr="2"] .star.iconfont{
+			font-size:25px;
+		}
+		[data-dpr="3"] .star.iconfont{
+			font-size:37.5px;
+		}
+		.response-text p{
+			margin-top:0.213333rem;
+			color:#323232;
+			font-size:13px;
+			line-height:0.346666rem;
+		}
+		[data-dpr="2"] .response-text p{
+			font-size:26px;
+		}
+		[data-dpr="3"] .response-text p{
+			font-size:39px;
+		}
+		.response-body h2{
+			color:#0f2646;
+			font-size:12px;
+			margin-top:0.213333rem;
+			margin-bottom:0;
+		}
+		[data-dpr="2"] .response-body h2{
+			font-size:24px;
+		}
+		[data-dpr="3"] .response-body h2{
+			font-size:36px;
+		}
+		.response-body .response-item{
+			margin-top:0.32rem;
+		}
+		.response-header .media-user2{
+			width:0.586666rem;
+			height:0.586666rem;
+		}
+		.response-header .header-body{
+			margin-left:0.693333rem;
+			height:0.586666rem;
+			line-height:0.586666rem;
+			color:#909090;
+			font-size:11px;
+		}
+		[data-dpr="2"] 	.response-header .header-body{
+			font-size:22px;
+		}
+		[data-dpr="3"] 	.response-header .header-body{
+			font-size:33px;
+		}
+		.response-header .header-body p{
+			font-size:11px;
+			color:#909090 !important;
+		}
+		[data-dpr="2"] .response-header .header-body p{
+			font-size:22px;
+		}
+		[data-dpr="3"]	.response-header .header-body p{
+			font-size:33px;
+		}
+		
+		/*物流页面*/
+		.map{
+			width:100%;
+			height:5.333333rem;
+		}
+		.map img{
+			width:100%;
+			height:100%;
+		}
+		.trans-information{
+			padding:0 0.32rem;
+		}
+		.trans-company{
+			height:0.853333rem;
+			line-height:0.853333rem;
+			font-size:15px;
+			color:#2b2b2b;
+		   	border-bottom:1px solid #d6d7dc;
+		} 
+		[data-dpr="2"] .trans-company{
+			font-size:30px;
+			border-bottom:1px solid #d6d7dc;
+		} 
+		[data-dpr="3"] .trans-company{
+			font-size:45px;
+			border-bottom:1.5px solid #d6d7dc;
+		}  
+		.iconfont.vedio{
+			font-size:26px;
+			vertical-align:middle;
+			color:#0f2646;
+			margin-right:0.106666rem;
+		}
+		[data-dpr="2"] .iconfont.vedio{
+			font-size:52px;
+		}
+		[data-dpr="3"] .iconfont.vedio{
+			font-size:78px;
+		}
+		.trans-content{
+			margin-top:0.426666rem;
+		}
+		.trans-content p{
+			color:#646464 !important;
+			font-size:14px;
+			line-height:0.373333rem;
+			margin-bottom:0 !important;
+		}
+		.trans-content p span{
+			height:14px;
+			line-height:0.373333rem;
+			display:inline-block;
+		}
+		[data-dpr="2"] .trans-content p span{
+			height:28px;
+			display:inline-block;
+		}
+		[data-dpr="2"] .trans-content p{
+			font-size:28px;
+		}
+		[data-dpr="3"] .trans-content p{
+			font-size:42px;
+		}
+		.trans-state{
+	   		margin-top:0.186666rem;
+	   	}
+		.trans-content>ul>li{
+			position:relative;
+			padding-left:0.426666rem;
+			border-left:1px solid #d6d7dc;
+			padding-bottom:0.12rem;
+			margin-left:0.1rem;
+		}
+		.trans-information .radio{
+			width:0.2rem;
+			height:0.2rem;
+			border-radius:100%;
+			background:#b4b4b4;
+			position:absolute;
+			top:0;
+			left:-0.106666rem;
+		}
+		.tlcom{
+	   		overflow:hidden;
+	   		height:0.853333rem;
+	   		line-height:0.853333rem;
+	   	}
+	   	.trans-company-logo{
+	   		height:0.853333rem;
+	   		line-height:0.853333rem;
+	   		display:inline-block;
+	   	}
+	   	.trans-company-logo img{
+	   		width:0.48rem;
+	   		height:0.48rem;
+	   		vertical-align:middle;
+	   		margin:0 0.16rem;
+	   	}
+	    /*物流页面向下按钮*/
+	   .mui-table-view-cell>a:not(.mui-btn){
+	   		margin:0;
+	   		padding:0;
+	   }
+	    .iconfont.down-arrow{
+	    	text-align:center;
+	    	cursor:pointer;
+	    	color:#0f2646 !important;
+	    	margin-top:0.213333rem !important;
+	    }
+	    .iconfont.down-arrow img{
+	    	height:0.213333rem;
+	    	width:0.36rem;
+	    }
+	    /*物流页面向上箭头*/
+	    .up-arrow{
+	    	text-align:center;
+	    	cursor:pointer;
+	    	color:#0f2646 !important;
+	    	margin-top:0.213333rem !important;
+	    }
+	    .iconfont.up-arrow img{
+	    	height:0.213333rem;
+	    	width:0.36rem;
+	    }
+	    /*物流页面li的样式改写*/
+	   .collapse.mui-table-view-cell{
+	   		padding:0;
+	   	}
+	    .trans-content .mui-table-view-cell.mui-active{
+	    	background:#fff !important;
+	    }
+	    .trans-content .mui-table-view-cell>a.mui-active{
+	    	background:#fff !important;
+	    }
+	    .trans-content .mui-table-view-cell:after{
+	    	height:0 !important
+	   	}
+	   	.mui-table-view-cell.mui-collapse .mui-table-view{
+	   		margin-left:0;
+	   		margin-bottom:0;
+	   		margin-top:0.32rem;
+	   	}
+	   	.mui-table-view-cell.mui-collapse .mui-table-view>p{
+	   		font-size:14px;
+	   		color:#646464 !important;	   	
+	   	}
+	   	[data-dpr="2"] .mui-table-view-cell.mui-collapse .mui-table-view>p{
+	   		font-size:28px;	   	
+	   	}
+	   	[data-dpr="3"] .mui-table-view-cell.mui-collapse .mui-table-view>p{
+	   		font-size:42px;	   	
+	   	}
+	   	.trans-time span:last-child{
+	   		margin-left:0.213333rem;
+	   	}
+	   	.logistic-detail{
+	   		position:relative;
+	   		width:100%;
+	   	}
+	 	.vedio-record{
+	   		position:absolute;
+	   		bottom:0;
+	   		right:0;
+	   		font-size:14px;
+	   		color:#646464;
+	   	}
+	   	[data-dpr="2"] .vedio-record{
+	   		font-size:28px;
+	   	}
+	   	[data-dpr="3"] .vedio-record{
+	   		font-size:42px;
+	   	}
+	   	.vedio-record .iconfont{
+	   		font-size:22px;
+	   		color:#0f2646;
+	   		margin-left:0.213333rem;
+	   		vertical-align:middle;
+	   		z-index:1;
+	   	}
+	    [data-dpr="2"] .vedio-record .iconfont{
+	   		font-size:44px;
+	   	}
+	    [data-dpr="3"] .vedio-record .iconfont{
+	   		font-size:66px;
+	   	}
+	   	.logistic-detail p{
+	   		margin-bottom:0.186666rem !important;
+	   	}
+	   	.logistic-detail p:last-child{
+	   		margin-bottom:0;
+	   	}
+	   
+	    /*参考价页面*/
+	   	#price .mui-table-view-cell{
+	   		overflow:hidden;
+	   	}
+	   	#price .mui-table-view-cell:last-child:after{
+	   		height:1px !important;
+	   	}
+	   	 .product-item{
+		 	padding:0.32rem 0;
+		 	margin:0 0.32rem;
+		 }
+	   	.product-item img{
+		 	width:3.52rem;
+		 	height:2.666666rem;
+		 	display:block;
+		 	border:0.5px solid #d6d7dc;
+		 }
+		 [data-dpr="2"] .product-item img{
+		 	border:1px solid #d6d7dc;
+		 }
+		 [data-dpr="3"] .product-item img{
+		 	border:1.5px solid #d6d7dc;
+		 }
+	    .price{
+	    	font-size:17px;
+	    }
+	    [data-dpr="2"] .price{
+	    	font-size:34px;
+	    }
+	     [data-dpr="3"] .price{
+	    	font-size:51px;
+	    }		
+	    .price em{
+	    	color:#f60f0f !important;
+	    }
+	    .price-detail{
+	 		margin-left:3.626666rem;
+	 	}
+	 	.price-detail p{
+	 		font-size:14px;
+	 		color:#2b2b2b;
+		 	line-height:0.373333rem;
+		 	margin-bottom:0.186666rem;
+		 	overflow:hidden;
+		 	text-overflow:ellipsis;
+		 	white-space:nowrap;
+		 }
+		 [data-dpr="2"] .price-detail p{
+	 		font-size:28px;
+		 }
+		 [data-dpr="3"] .price-detail p{
+	 		font-size:42px;
+		 }
+		 .price-infor .mui-table-view-cell:after{
+	    	left:0;
+	     }
+	     /*质检页面*/
+	    .vertify-center{
+	      	height:100%;
+	      	overflow:hidden;
+	      }
+	    .vertify-center li{
+	    	margin-top:0.426666rem;
+			background:#0f2646;
+			font-size:0;
+			padding:0 0.32rem;
+			height:1.173333rem;
+		}
+		.vertify-center li:first-child{
+			position:relative;
+		}
+		.banner{
+			top:0;
+			width:100%;
+			height:1.173333rem;
+			position:absolute;
+			z-index:10001;
+		}
+		.vertify-center li span{
+			height:1.173333rem;
+			line-height:1.173333rem;
+			display:inline-block;
+		}
+		.vertify-center li p{
+			margin-left:0.106666rem;
+			line-height:1.173333rem;
+			font-size:15px;
+			color:#fafafa !important;
+			display:inline-block;
+		}
+		.vertify-center li a{
+			overflow:hidden;
+			display:block;
+		}
+		[data-dpr="2"] .vertify-center li p{
+			font-size:30px;
+		}
+		[data-dpr="3"] .vertify-center li p{
+			font-size:45px;
+		}
+		.mui-pull-left.iconfont{
+			font-size:21px;
+			color:#ec4b1f;
+			vertical-align:middle;
+		}
+		[data-dpr="2"] .mui-pull-left.iconfont{
+			font-size:42px;
+		}
+		[data-dpr="3"] .mui-pull-left.iconfont{
+			font-size:63px;
+		}
+		.mui-pull-right.iconfont{
+			color:#45b208;
+			font-size:22px;
+		}
+		[data-dpr="2"] .mui-pull-right.iconfont{
+			font-size:44px;
+		}
+		[data-dpr="3"] .mui-pull-right.iconfont{
+			font-size:66px;
+		}
+		.vertify-body{
+			position:absolute;
+			top:1.173333rem;
+			left:0.32rem;
+			width:9.36rem;
+			height:13.28rem;
+			line-height:13.28rem;
+			border:1px solid #0f2646;
+			background:#fafafa;
+			text-align: center;
+		}
+		.center-img{
+			width:6.666666rem;
+			vertical-align:middle;
+		}
+		#vertify-body{
+			margin-top:0.426666rem;
+			height:1.173333rem;
+		}
+		.mui-popover.mui-popover-action{
+			top:0;
+		}
+		.mui-backdrop-action.mui-backdrop.mui-active, .mui-bar-backdrop.mui-backdrop.mui-active{
+			opacity:0;
+		}
+		.mui-popover.mui-popover-action.mui-popover-bottom{
+			position:absolute;
+		}
+		.mui-backdrop{
+			display:none;
+		}
+    </style>
+</head>
+<body>
+	<!--头部-->
+	<header class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-pull-left" href=""></a>
+            <h1 id="title" class="mui-title mui-center">正大溯源云平台</h1>
+            <a  class="mui-pull-right mui-icon" href="" onclick="clicked('barcode_scan.html',true,true);"></a>
+    </header>
+	<!--主体部分-->
+	<div class="mui-content">
+	    <nav  id="segmentedControl"  class="nav mui-segmented-control">
+	    	<ul>
+	    		<li><a class="mui-control-item mui-active" href="#product">
+				产品</a></li>
+	    		<li><a class="mui-control-item" href="#produce">
+				生产 </a></li>
+	    		<li><a class="mui-control-item" href="#company">
+				商家</a></li>
+	    		<li><a class="mui-control-item" href="#vertify">
+				质检</a></li>
+	    		<li><a class="mui-control-item" href="#logistic">
+				物流</a></li>
+	    		<li><a class="mui-control-item" href="#price">
+				参考价</a></li>
+	    	</ul>
+		</nav>
+		
+		<div id="product" class="mui-control-content mui-active">
+			<div class="imgbox">
+				<img src="../Img/code/banner.jpg"/>	
+			</div>
+			<div class="info-center">
+				<ul>
+					<li>
+						<div class="li-tit mui-pull-left">产品名称</div>
+						<div class="li-body">云山葵蜜</div>
+					</li>
+					<li>
+						<div class="li-tit mui-pull-left">溯源编号</div>
+						<div class="li-body">112568954562</div>
+					</li>
+					<li>
+						<div class="li-tit mui-pull-left">规格</div>
+						<div class="li-body">350ml/瓶</div>
+					</li>
+					<li>
+						<div class="li-tit mui-pull-left">产品描述</div>
+						<div class="li-body text">葵花蜂蜜-向日葵蜜，俗称葵花蜜。浅琥珀色、金黄色。气味浅香带浊。味道甘甜适中，回味微酸，质地浓稠，容易结晶，结晶呈细粒或油脂状，浅黄色。</div>
+					</li>
+					<li>
+						<div class="li-tit mui-pull-left">产品功效</div>
+						<div class="li-body text">具有扩张血管、软化血管、降血压血脂胆固醇、净化血液、对心脑血管有较好的保护作用，同时具清热降火、润肠通便等作用，并可增强机体免疫力，素有蜜中黄金之称。</div>
+					</li>
+					<li>
+						<div class="li-tit mui-pull-left">生产方式</div>
+						<div class="li-body">分离蜜</div>
+					</li>
+					<li>
+						<div class="li-tit mui-pull-left">生产日期</div>
+						<div class="li-body">2016-04-11</div>
+					</li>
+					<li>
+						<div class="li-tit mui-pull-left">保质期</div>
+						<div class="li-body">常温下24个月</div>
+					</li>
+					<li>
+						<div class="li-tit mui-pull-left">储存方法</div>
+						<div class="li-body">宜放置在阴凉、干燥、通风处</div>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	    <div id="produce" class="mui-control-content">
+	    	<div class="produce-center">
+	    		<div class="produce-item">
+	    			<div class="button">采蜜</div>
+	    			<div class="buttoned" style="display:none"></div>
+	    			<div class="calendar" style="display:none"><img src="../Img/code/calendar.jpg" alt="" /></div>
+	    			<div class="produce-body mui-clearfix">
+	    				<div class="radio"></div>
+	    				<div class="item-box">
+	    					<div class="media mui-pull-left">
+	    						<div class="vedio-layer" style="display:none"></div>
+	    						<img src="../Img/code/gather.jpg" alt="" />
+	    						<p>04/11~05/11</p>
+	    						<div class="play-button">
+	    							<img src="../Img/code/vedio2.png" alt="" />
+	    						</div>
+	    					</div>
+	    					<div class="body">
+	    						<p>日期:<em>2016-04-11</em></p>
+	    						<p>时点:<em>8:00-17:00</em></p>
+	    						<p>天气:<span>晴26℃</span></p>
+	    						<p>蜂种:<span>中华蜂</span></p>
+	    						<p>采集蜂数量:<span>1500只</span></p>
+	    						<p>采集地:<span>重庆厘山头村</span></p>
+	    						<p>蜜源:<span>洋槐</span></p>
+	    						<p>负责人:<span>蒋欣欣</span></p>
+	    						<p>联系电话:<span>15866442547</span></p>
+	    					</div>
+	    					<div class="controll iconfont">&#xe686;</div>
+	    					<div class="chat-button" style="display:none">
+	    						<ul>
+	    							<li class="collectButton">收藏<span class="collect iconfont">&#xe676;</span> </li>
+	    							<li class="chatButton">评论 <span class="chat iconfont">&#xe660;</span></li>
+	    						</ul>
+	    					</div>
+	    					
+	    				</div>
+	    				<div class="last radio"></div>
+	    				<div class="chat-content" style="display:none">
+	    					<h1>热门评论<em class="chat-num">106</em></h1>
+	    					<div class="chat-item">
+	    						<div class="chat-header">
+	    							<img class="media-user mui-pull-left" src="../Img/code/chat-user.png" alt="" />
+	    							<div class="media-body">
+	    								<p class="">清云</p>
+	    								<p>湖北省黄石市 5小时前</p>
+	    							</div>
+	    						</div>
+	    						<div class="chat-body">
+	    							<div class="text-body">
+	    								<p>如何让我遇见你在我最美丽的时刻，为这我已在佛前求了五百年，求它让我们结一段尘缘</p>
+	    								<div class="controller-box">
+	    									<ul>
+	    										<li><span class="star iconfont">&#xe676;</span>1123</li>
+	    										<li><span>回复</span>6</li>
+	    									</ul>
+	    								</div>
+	    							</div>
+	    							<div class="response-body mui-clearfix">
+	    								<h2>回复</h2>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    					<div class="chat-item">
+	    						<div class="chat-header">
+	    							<img class="media-user mui-pull-left" src="../Img/code/chat-user.png" alt="" />
+	    							<div class="media-body">
+	    								<p class="">清云</p>
+	    								<p>湖北省黄石市 5小时前</p>
+	    							</div>
+	    						</div>
+	    						<div class="chat-body">
+	    							<div class="text-body">
+	    								<p>如何让我遇见你在我最美丽的时刻，为这我已在佛前求了五百年，求它让我们结一段尘缘</p>
+	    								<div class="controller-box">
+	    									<ul>
+	    										<li><span class="star iconfont">&#xe676;</span>1123</li>
+	    										<li><span>回复</span>6</li>
+	    									</ul>
+	    								</div>
+	    							</div>
+	    							<div class="response-body mui-clearfix">
+	    								<h2>回复</h2>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="produce-item">
+	    			<div class="button">蜜料</div>
+	    			<div class="buttoned" style="display:none"></div>
+	    			<div class="calendar"  style="display:none"><img src="../Img/code/calendar.jpg" alt="" /></div>
+	    			<div class="produce-body mui-clearfix">
+	    				<div class="radio"></div>
+	    				<div class="item-box">
+	    					<div class="media mui-pull-left">
+	    						<div class="vedio-layer" style="display:none"></div>
+	    						<img src="../Img/code/honey.jpg" alt="" />
+	    						<p>05/12~05/28</p>
+	    						<div class="play-button">
+	    							<img src="../Img/code/vedio2.png" alt="" />
+	    						</div>
+	    					</div>
+	    					<div class="body">
+	    						<p>日期:<em>2016-04-11</em></p>
+	    						<p>时点:<em>8:00-17:00</em></p>
+	    						<p>天气:<span>晴26℃</span></p>
+	    						<p>蜂种:<span>中华蜂</span></p>
+	    						<p>采集蜂数量:<span>1500只</span></p>
+	    						<p>采集地:<span>重庆厘山头村</span></p>
+	    						<p>蜜源:<span>洋槐</span></p>
+	    						<p>负责人:<span>蒋欣欣</span></p>
+	    						<p>联系电话:<span>15866442547</span></p>
+	    					</div>
+	    					<div class="controll iconfont">&#xe686;</div>
+	    					<div class="chat-button" style="display:none">
+	    						<ul>
+	    							<li class="collectButton">收藏<span class="collect iconfont">&#xe676;</span> </li>
+	    							<li class="chatButton">评论 <span class="chat iconfont">&#xe660;</span></li>
+	    						</ul>
+	    					</div>
+	    				</div>
+	    				<div class="last radio"></div>
+	    				<div class="chat-content" style="display:none">
+	    					<h1>热门评论<em class="chat-num">106</em></h1>
+	    					<div class="chat-item">
+	    						<div class="chat-header">
+	    							<img class="media-user mui-pull-left" src="../Img/code/chat-user.png" alt="" />
+	    							<div class="media-body">
+	    								<p class="">清云</p>
+	    								<p>湖北省黄石市 5小时前</p>
+	    							</div>
+	    						</div>
+	    						<div class="chat-body">
+	    							<div class="text-body">
+	    								<p>如何让我遇见你在我最美丽的时刻，为这我已在佛前求了五百年，求它让我们结一段尘缘</p>
+	    								<div class="controller-box">
+	    									<ul>
+	    										<li><span class="star iconfont">&#xe676;</span>1123</li>
+	    										<li><span>回复</span>6</li>
+	    									</ul>
+	    								</div>
+	    							</div>
+	    							<div class="response-body mui-clearfix">
+	    								<h2>回复</h2>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    					<div class="chat-item">
+	    						<div class="chat-header">
+	    							<img class="media-user mui-pull-left" src="../Img/code/chat-user.png" alt="" />
+	    							<div class="media-body">
+	    								<p class="">清云</p>
+	    								<p>湖北省黄石市 5小时前</p>
+	    							</div>
+	    						</div>
+	    						<div class="chat-body">
+	    							<div class="text-body">
+	    								<p>如何让我遇见你在我最美丽的时刻，为这我已在佛前求了五百年，求它让我们结一段尘缘</p>
+	    								<div class="controller-box">
+	    									<ul>
+	    										<li><span class="star iconfont">&#xe676;</span>1123</li>
+	    										<li><span>回复</span>6</li>
+	    									</ul>
+	    								</div>
+	    							</div>
+	    							<div class="response-body mui-clearfix">
+	    								<h2>回复</h2>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="produce-item">
+	    			<div class="button">加工</div>
+	    			<div class="buttoned" style="display:none"></div>
+	    			<div class="calendar" style="display:none"><img src="../Img/code/calendar.jpg" alt="" /></div>
+	    			<div class="produce-body mui-clearfix">
+	    				<div class="radio"></div>
+	    				<div class="item-box">
+	    					<div class="media mui-pull-left">
+	    						<div class="vedio-layer" style="display:none"></div>
+	    						<img src="../Img/code/produce.jpg" alt="" />
+	    						<p>06/02~06/07</p>
+	    						<div class="play-button">
+	    							<img src="../Img/code/vedio2.png" alt="" />
+	    						</div>
+	    					</div>
+	    					<div class="body">
+	    						<p>日期:<em>2016-04-11</em></p>
+	    						<p>时点:<em>8:00-17:00</em></p>
+	    						<p>天气:<span>晴26℃</span></p>
+	    						<p>蜂种:<span>中华蜂</span></p>
+	    						<p>采集蜂数量:<span>1500只</span></p>
+	    						<p>采集地:<span>重庆厘山头村</span></p>
+	    						<p>蜜源:<span>洋槐</span></p>
+	    						<p>负责人:<span>蒋欣欣</span></p>
+	    						<p>联系电话:<span>15866442547</span></p>
+	    					</div>
+	    					<div class="controll iconfont">&#xe686;</div>
+	    					<div class="chat-button" style="display:none">
+	    						<ul>
+	    							<li class="collectButton">收藏<span class="collect iconfont">&#xe676;</span> </li>
+	    							<li class="chatButton">评论 <span class="chat iconfont">&#xe660;</span></li>
+	    						</ul>
+	    					</div>
+	    				</div>
+	    				<div class="last radio"></div>
+	    				<div class="chat-content" style="display:none">
+	    					<h1>热门评论<em class="chat-num">106</em></h1>
+	    					<div class="chat-item">
+	    						<div class="chat-header">
+	    							<img class="media-user mui-pull-left" src="../Img/code/chat-user.png" alt="" />
+	    							<div class="media-body">
+	    								<p class="">清云</p>
+	    								<p>湖北省黄石市 5小时前</p>
+	    							</div>
+	    						</div>
+	    						<div class="chat-body">
+	    							<div class="text-body">
+	    								<p>如何让我遇见你在我最美丽的时刻，为这我已在佛前求了五百年，求它让我们结一段尘缘</p>
+	    								<div class="controller-box">
+	    									<ul>
+	    										<li><span class="star iconfont">&#xe676;</span>1123</li>
+	    										<li><span>回复</span>6</li>
+	    									</ul>
+	    								</div>
+	    							</div>
+	    							<div class="response-body mui-clearfix">
+	    								<h2>回复</h2>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    					<div class="chat-item">
+	    						<div class="chat-header">
+	    							<img class="media-user mui-pull-left" src="../Img/code/chat-user.png" alt="" />
+	    							<div class="media-body">
+	    								<p class="">清云</p>
+	    								<p>湖北省黄石市 5小时前</p>
+	    							</div>
+	    						</div>
+	    						<div class="chat-body">
+	    							<div class="text-body">
+	    								<p>如何让我遇见你在我最美丽的时刻，为这我已在佛前求了五百年，求它让我们结一段尘缘</p>
+	    								<div class="controller-box">
+	    									<ul>
+	    										<li><span class="star iconfont">&#xe676;</span>1123</li>
+	    										<li><span>回复</span>6</li>
+	    									</ul>
+	    								</div>
+	    							</div>
+	    							<div class="response-body mui-clearfix">
+	    								<h2>回复</h2>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="produce-item">
+	    			<div class="button">装车</div>
+	    			<div class="buttoned" style="display:none"></div>
+	    			<div class="calendar" style="display:none"><img src="../Img/code/calendar.jpg" alt="" /></div>
+	    			<div class="produce-body mui-clearfix">
+	    				<div class="radio"></div>
+	    				<div class="item-box">
+	    					<div class="media mui-pull-left">
+	    						<div class="vedio-layer" style="display:none"></div>
+	    						<img src="../Img/code/loaded.jpg" alt="" />
+	    						<p>06/14~06/14</p>
+	    						<div class="play-button">
+	    							<img src="../Img/code/vedio2.png" alt="" />
+	    						</div>
+	    					</div>
+	    					<div class="body">
+	    						<p>日期:<em>2016-04-11</em></p>
+	    						<p>时点:<em>8:00-17:00</em></p>
+	    						<p>天气:<span>晴26℃</span></p>
+	    						<p>蜂种:<span>中华蜂</span></p>
+	    						<p>采集蜂数量:<span>1500只</span></p>
+	    						<p>采集地:<span>重庆厘山头村</span></p>
+	    						<p>蜜源:<span>洋槐</span></p>
+	    						<p>负责人:<span>蒋欣欣</span></p>
+	    						<p>联系电话:<span>15866442547</span></p>
+	    					</div>
+	    					<div class="controll iconfont">&#xe686;</div>
+	    					<div class="chat-button" style="display:none">
+	    						<ul>
+	    							<li class="collectButton">收藏<span class="collect iconfont">&#xe676;</span> </li>
+	    							<li class="chatButton">评论 <span class="chat iconfont">&#xe660;</span></li>
+	    						</ul>
+	    					</div>
+	    				</div>
+	    				<div class="last radio"></div>
+	    				<div class="chat-content" style="display:none">
+	    					<h1>热门评论<em class="chat-num">106</em></h1>
+	    					<div class="chat-item">
+	    						<div class="chat-header">
+	    							<img class="media-user mui-pull-left" src="../Img/code/chat-user.png" alt="" />
+	    							<div class="media-body">
+	    								<p class="">清云</p>
+	    								<p>湖北省黄石市 5小时前</p>
+	    							</div>
+	    						</div>
+	    						<div class="chat-body">
+	    							<div class="text-body">
+	    								<p>如何让我遇见你在我最美丽的时刻，为这我已在佛前求了五百年，求它让我们结一段尘缘</p>
+	    								<div class="controller-box">
+	    									<ul>
+	    										<li><span class="star iconfont">&#xe676;</span>1123</li>
+	    										<li><span>回复</span>6</li>
+	    									</ul>
+	    								</div>
+	    							</div>
+	    							<div class="response-body mui-clearfix">
+	    								<h2>回复</h2>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    					<div class="chat-item">
+	    						<div class="chat-header">
+	    							<img class="media-user mui-pull-left" src="../Img/code/chat-user.png" alt="" />
+	    							<div class="media-body">
+	    								<p class="">清云</p>
+	    								<p>湖北省黄石市 5小时前</p>
+	    							</div>
+	    						</div>
+	    						<div class="chat-body">
+	    							<div class="text-body">
+	    								<p>如何让我遇见你在我最美丽的时刻，为这我已在佛前求了五百年，求它让我们结一段尘缘</p>
+	    								<div class="controller-box">
+	    									<ul>
+	    										<li><span class="star iconfont">&#xe676;</span>1123</li>
+	    										<li><span>回复</span>6</li>
+	    									</ul>
+	    								</div>
+	    							</div>
+	    							<div class="response-body mui-clearfix">
+	    								<h2>回复</h2>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    								<div class="response-item">
+	    									<div class="response-header mui-clearfix">
+	    										<img class="media-user2 mui-pull-left"src="../Img/code/chat-user2.png" alt="" />
+	    										<div class="header-body mui-clearfix">
+	    											小澜妮<p class="mui-pull-right"><span>2016/10/07</span><span class="ml">15:03</span></p>
+	    										</div>
+	    									</div>
+	    									<div class="response-text">
+	    										<p>哈哈，我也是席慕容粉</p>
+	    									</div>
+	    								</div>
+	    							</div>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>	
+	  	<div id="company" class="mui-control-content">
+	  		<!-- 轮播介绍 -->
+	  		<div class="outerBox">
+	  			<div class="click-layer"></div>
+	  			<div class="playButton" id="playButton">
+	  				<img src="../Img/code/play.png" alt="" />
+	  			</div>
+				<section class="img-box">
+					<div id="slider1" class="mui-slider">
+						<div class="mui-slider-group mui-slider-loop">
+							<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../Img/code/vedio.jpg" /></a></div>
+							<div class="mui-slider-item"><a href="#"><img src="../Img/code/vedio.jpg" /></a></div>
+							<div class="mui-slider-item"><a href="#"><img src="../Img/code/vedio.jpg" /></a></div>
+							<div class="mui-slider-item"><a href="#"><img src="../Img/code/vedio.jpg" /></a></div>
+							<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../Img/code/vedio.jpg" /></a></div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="info-center company-info ">
+				<ul>
+					<li>
+						<div class="li-tit mui-pull-left">商家名称</div>
+						<div class="li-body">举一世家食品科技有限公司</div>
+					</li>
+					<li>
+						<div class="li-tit mui-pull-left">商家简介</div>
+						<div class="li-body text">举一世家食品科技有限公司是目前国内规模最大、以蜜蜂养殖、蜂产品深加工为主业、集保健品、食品饮料、制药、蜂药、化妆品、房地产、旅游开发等多种产业为一体的大型私营企业，致力于蜂产品在保健、美食、美容和蜂疗等多方面的研究和应用</div>
+					</li>
+					<li>
+						<div class="li-tit mui-pull-left">所属行业</div>
+						<div class="li-body">食品</div>
+					</li>
+					<li>
+						<div class="li-tit mui-pull-left">保单号</div>
+						<div class="li-body">012345685462</div>
+					</li>
+					<li>
+						<div class="li-tit mui-pull-left">所在地</div>
+						<div class="li-body">湖北武汉</div>
+					</li>
+					<li>
+						<div class="li-tit mui-pull-left">联系方式</div>
+						<div class="li-body"><em>027-1245354</em><em class="ml">15876587458</em></div>
+					</li>
+					<li>
+						<div class="li-tit">图片信息</div>
+						<div class="li-body">
+							<div id="slider2" class="mui-slider">
+								<div class="mui-slider-group mui-slider-loop">
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<ul class="mui-table-view mui-grid-view">
+										    <li class="mui-table-view-cell mui-media"><a href="#"><img class="company mui-media-object" src="../Img/code/company1.jpg"></a></li> 
+										    <li class="mui-table-view-cell mui-media"><a href="#"><img class="company mui-media-object" src="../Img/code/company2.jpg"></a></li> 
+										    <li class="mui-table-view-cell mui-media "><a href="#"><img class="company mui-media-object" src="../Img/code/company3.jpg"></a></li>        
+										</ul>
+									</div>
+								    <div class="mui-slider-item">
+										<ul class="mui-table-view mui-grid-view">
+										    <li class="mui-table-view-cell mui-media "><a href="#"><img class="company mui-media-object" src="../Img/code/company1.jpg"></a></li>    
+										    <li class="mui-table-view-cell mui-media "><a href="#"><img class="company mui-media-object" src="../Img/code/company2.jpg"></a></li> 
+										    <li class="mui-table-view-cell mui-media "><a href="#"><img class="company mui-media-object" src="../Img/code/company3.jpg"></a></li> 
+										</ul>
+									</div>
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<ul class="mui-table-view mui-grid-view">
+										    <li class="mui-table-view-cell mui-media"><a href="#"><img class="company mui-media-object" src="../Img/code/company1.jpg"></a></li> 
+										    <li class="mui-table-view-cell mui-media"><a href="#"><img class="company mui-media-object" src="../Img/code/company2.jpg"></a></li> 
+										    <li class="mui-table-view-cell mui-media"><a href="#"><img class="company mui-media-object" src="../Img/code/company3.jpg"></a></li> 
+										</ul>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</li>
+				</ul>
+			</div>
+	  	</div>
+		<div id="vertify" class="mui-control-content">		
+		<!--防伪信息展示-->
+			<div class="vertify-center">
+			    <ul >
+			    	<li>
+			    		<a href="#vertify-body">
+				    		<span class="mui-pull-left iconfont">&#xe68c;</span>
+				    		<p>政府认证</p>
+				    		<span class="mui-pull-right iconfont">&#xe66a;</span>
+			    		</a>
+			    		<div class="banner"></div>
+			    	</li>
+			    	<li>
+			    		<a href="#vertify-body">
+				    		<span class="mui-pull-left iconfont">&#xe68d;</span>
+				    		<p>保险</p>
+				    		<span class="mui-pull-right iconfont">&#xe66a;</span>
+			    		</a>
+			    	</li>
+			    	<li>
+			    		<a href="#vertify-body">
+				    		<span class="mui-pull-left iconfont">&#xe69c;</span>
+				    		<p>第三方认证</p>
+				    		<span class="mui-pull-right iconfont">&#xe66a;</span>
+			    		</a>
+			    	</li>
+			    </ul>
+			    <div id="vertify-body" class="mui-popover mui-popover-action mui-popover-bottom">
+				    <div class="vertify-body">
+				    	<img  class="center-img" src="../Img/code/vertify1.jpg" alt="" />
+				    </div>
+			    </div>
+			</div>
+		</div>
+		<!--物流-->
+		<div id="logistic" class="mui-control-content">				
+		<!--map-->
+			<div id="allmap" class="map">
+				<img src="../Img/code/120202epi9hznuqnhvtnkf.png" alt="" />
+			</div>		    		
+			<div class="trans-information">
+				<p class="trans-company mui-clearfix">
+					<span class="mui-pull-left tlcom">物流承运公司:<span class="trans-company-logo"><img src="../Img/code/shunfeng.png" alt="" /></span>顺丰物流</span>
+					<span class="mui-pull-right" id="logistic-play"><b class="iconfont vedio">&#xe60e;</b>视频</span>
+				</p>
+				<div class="trans-content">
+					<ul>
+					    <li>
+					    	<div class="radio"></div>
+					    	<div class="collapse mui-table-view-cell mui-collapse">
+					    		<p class="trans-time"><span>2015-03-16</span><span>14:08:12</span></p>
+					    		<p class="trans-state">您的快件已签收</p>
+					    		<a class="iconfont down-arrow" style="display:block" href="#"><img src="../Img/code/pull-down.png"/></a>
+					    		<div class="logistic-detail  mui-table-view mui-table-view-chevron">
+									<p>物流车牌：WJ18-12345</p>
+									<p>货车司机：罗贯中</p>
+									<p>司机工号：<em>0888208820</em></p>
+									<p>发货人：吴承恩</p>
+									<p>卸货人：施耐庵</p>
+									<div class="vedio-record">
+					    				视频记录<span class="vedio iconfont">&#xe67e;</span>
+					    			</div>
+								</div>
+								<a class="iconfont up-arrow" style="display:none" href="#"><img src="../Img/code/pull-up.png"/></a>
+					    	
+					    	</div>
+					    </li>
+					    
+					    <li>
+					    	<div class="radio"></div>
+					    	<div class="collapse mui-table-view-cell mui-collapse">
+					    		<p class="trans-time"><span>2015-03-16</span><span>07:08:12</span></p>
+					    		<p class="trans-state">您所订购的商品已到达【武汉航空中转部】，中转中</p>
+					    		<a class="iconfont down-arrow" style="display:block" href="#"><img src="../Img/code/pull-down.png"/></a>
+					    		<div class="logistic-detail mui-table-view mui-table-view-chevron">
+									<p>物流车牌：<em>WJ18-12345</em></p>
+									<p>货车司机：罗贯中</p>
+									<p>司机工号：<em>0888208820</em></p>
+									<p>发货人：吴承恩</p>
+									<p>卸货人：施耐庵</p>
+									<div class="vedio-record">
+					    				视频记录<span class="vedio iconfont">&#xe67e;</span>
+					    			</div>
+								</div>
+								<a class="iconfont up-arrow" style="display:none" href="#"><img src="../Img/code/pull-up.png"/></a>
+					    	</div>
+					    </li>
+					    <li>
+					    	<div class="radio"></div>
+					    	<div class="collapse mui-table-view-cell mui-collapse">
+					    		<p class="trans-time"><span>2015-03-15</span><span>19:08:12</span></p>
+					    		<p class="trans-state">您所订购的商品已从【武汉白沙洲分拣站】发货</p>
+					    		<a class="iconfont down-arrow" style="display:block" href="#"><img src="../Img/code/pull-down.png"/></a>
+					    		<div class="logistic-detail mui-table-view mui-table-view-chevron">
+									<p>物流车牌：<em>WJ18-12345</em></p>
+									<p>货车司机：罗贯中</p>
+									<p>司机工号：<em>0888208820</em></p>
+									<p>发货人：吴承恩</p>
+									<p>卸货人：施耐庵</p>
+									<div class="vedio-record">
+					    				视频记录<span class="vedio iconfont">&#xe67e;</span>
+					    			</div>
+								</div>
+								<a class="iconfont up-arrow" style="display:none" href="#"><img src="../Img/code/pull-up.png"/></a>
+					    	</div>
+					    </li>
+					    <li>
+					    	<div class="radio"></div>
+					    	<div class="collapse mui-table-view-cell mui-collapse">
+					    		<p class="trans-time"><span>2015-03-16</span><span>19:08:12</span></p>
+					    		<p class="trans-state">顺丰速递&nbsp;&nbsp;湖北省武汉市白沙洲收件员已揽件</p>
+					    		<a class="iconfont down-arrow" style="display:block" href="#"><img src="../Img/code/pull-down.png"/></a>
+					    		<div class="logistic-detail mui-table-view mui-table-view-chevron">
+									<p>物流车牌：<em>WJ18-12345</em></p>
+									<p>货车司机：罗贯中</p>
+									<p>司机工号：<em>0888208820</em></p>
+									<p>发货人：吴承恩</p>
+									<p>卸货人：施耐庵</p>
+									<div class="vedio-record">
+					    				视频记录<span class="vedio iconfont">&#xe67e;</span>
+					    			</div>
+								</div>
+								<a class="iconfont up-arrow" style="display:none" href="#"><img src="../Img/code/pull-up.png"/></a>
+					    	</div>
+					    </li>
+					    <li>
+					    	<div class="radio"></div>
+					    	<div class="collapse mui-table-view-cell mui-collapse">
+					    		<p class="trans-time"><span>2015-03-16</span><span>14:08:12</span></p>
+					    		<p class="trans-state">包裹正在等待收揽</p>
+					    		<a class="iconfont down-arrow" style="display:block" href="#"><img src="../Img/code/pull-down.png"/></a>
+					    		<div class="logistic-detail mui-table-view mui-table-view-chevron">
+									<p>物流车牌：<em>WJ18-12345</em></p>
+									<p>货车司机：罗贯中</p>
+									<p>司机工号：0888208820</p>
+									<p>发货人：吴承恩</p>
+									<p>卸货人：施耐庵</p>
+									<div class="vedio-record">
+					    				视频记录<span class="vedio iconfont">&#xe67e;</span>
+					    			</div>
+								</div>
+								<a class="iconfont up-arrow" style="display:none" href="#"><img src="../Img/code/pull-up.png"/></a>
+					    	</div>
+					    </li>
+					    					
+					</ul>
+				</div>
+			</div>	    		
+		</div>
+		<div id="price" class="mui-control-content">
+			<!--报价详细信息-->
+			<div class="price-infor">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media product-item">
+						<img class="mui-pull-left" src="../Img/code/price.jpg"/>
+						<div class="price-detail">
+						   	<p>商家：<span>大冶葵蜜食品科技有限公司</span></p>
+						    <p>商品：<span>大冶葵蜜</span></p>
+						   	<p>规格：<span>350ml/瓶</span></p>
+						    <p>电话：<span><em>13325464578</em></span></p>
+						    <p>价格：<span class="price"><em>220.00</em>元/瓶</span></p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media product-item">
+						<img class="mui-pull-left" src="../Img/code/price.jpg"/>
+						<div class="price-detail">
+						   	<p>商家：<span>大冶葵蜜食品科技有限公司</span></p>
+						    <p>商品：<span>大冶葵蜜</span></p>
+						   	<p>规格：<span>350ml/瓶</span></p>
+						    <p>电话：<span><em>13325464578</em></span></p>
+						    <p>价格：<span class="price"><em>220.00</em>元/瓶</span></p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media product-item">
+						<img class="mui-pull-left" src="../Img/code/price.jpg"/>
+						<div class="price-detail">
+						   	<p>商家：<span>大冶葵蜜食品科技有限公司</span></p>
+						    <p>商品：<span>大冶葵蜜</span></p>
+						   	<p>规格：<span>350ml/瓶</span></p>
+						    <p>电话：<span><em>13325464578</em></span></p>
+						    <p>价格：<span class="price"><em>220.00</em>元/瓶</span></p>						
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media product-item">
+						<img class="mui-pull-left" src="../Img/code/price.jpg"/>
+						<div class="price-detail">
+						   	<p>商家：<span>大冶葵蜜食品科技有限公司</span></p>
+						    <p>商品：<span>大冶葵蜜</span></p>
+						   	<p>规格：<span>350ml/瓶</span></p>
+						    <p>电话：<span><em>13325464578</em></span></p>
+						    <p>价格：<span class="price"><em>220.00</em>元/瓶</span></p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media product-item">
+						<img class="mui-pull-left" src="../Img/code/price.jpg"/>
+						<div class="price-detail">
+						   	<p>商家：<span>大冶葵蜜食品科技有限公司</span></p>
+						    <p>商品：<span>大冶葵蜜</span></p>
+						   	<p>规格：<span>350ml/瓶</span></p>
+						    <p>电话：<span><em>13325464578</em></span></p>
+						    <p>价格：<span class="price"><em>220.00</em>元/瓶</span></p>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media product-item">
+						<img class="mui-pull-left" src="../Img/code/price.jpg"/>
+						<div class="price-detail">
+						   <p>商家：<span>大冶葵蜜食品科技有限公司</span></p>
+						    <p>商品：<span>大冶葵蜜</span></p>
+						   	<p>规格：<span>350ml/瓶</span></p>
+						    <p>电话：<span><em>13325464578</em></span></p>
+						   	<p>价格：<span class="price"><em>220.00</em>元/瓶</span></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="../js/mui.min.js"></script>
+	<script>
+	 	mui.init();
+	 	var dpr=window.devicePixelRatio;
+	 	console.log(dpr);
+		//物流页面js事件
+			mui('body .trans-content').on('tap','.mui-table-view-cell',function(){
+				var down = this.querySelector('.iconfont.down-arrow');
+				var up = this.querySelector('.up-arrow');
+				if(down.style.display == 'block' && up.style.display == 'none'){
+					down.style.display = 'none';
+					up.style.display = 'block';	
+				}else{
+					down.style.display = 'block';
+					up.style.display = 'none';	
+				}
+			})
+			mui('#logistic-play')[0].addEventListener('tap',function(){
+				//打开物流视频列表页面
+				this.children[0].style.color="#ec4b1f";
+			})
+			//生产页面js事件
+			mui('body .controll').each(function(index,item){
+				var chatButtons = mui('.chat-button');//获取评论收藏面板
+				var chatContent = mui('.chat-content');//获取评论内容
+				this.addEventListener('tap',function(){
+					this.classList.add('clicked');
+					if(chatButtons[index].style.display=="none"&& chatContent[index].style.display=="none"){
+						chatButtons[index].style.display="block";
+					}else{
+						chatButtons[index].style.display="none";
+					}
+					mui('.collectButton')[index].addEventListener('tap',function(){//点击收藏事件
+						if(this.classList.contains('clicked')){
+							this.classList.remove('clicked');
+						}else{
+							this.classList.add('clicked');
+						}
+					})
+					mui('.chatButton')[index].addEventListener('tap',function(){//点击评论事件
+						this.classList.add('clicked');
+						chatContent[index].style.display="block";
+						this.parentNode.parentNode.style.display="none";
+					})
+					
+					if(chatContent[index].style.display=="block"){
+						chatContent[index].style.display="none";
+					}
+				})
+			})
+			
+			mui('.produce-center .button').each(function(index,item){
+				this.addEventListener('tap',function(){
+					mui('.buttoned')[index].style.display="block";
+					var currCalendar = mui('.calendar')[index];
+					currCalendar.style.display ="block";
+					currCalendar.addEventListener('tap',function(){
+						this.style.display="none";
+						mui('.buttoned')[index].style.display="none";
+					})
+				})
+			})
+			mui('.produce-center .play-button').each(function(index,item){
+				this.addEventListener('tap',function(){
+					mui('.vedio-layer')[index].style.display="block";
+				})
+			})
+			//质检页面的js事件
+			mui('.banner')[0].addEventListener('tap',function(){
+				mui('#vertify-body').popover('toggle');
+			})
+	</script>
+</body>
+</html>

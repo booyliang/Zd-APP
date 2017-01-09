@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<script src="../js/flexible.js"></script>
+		<style>
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#fff;
+				font-family:"微软雅黑";
+			}
+			.mui-content{
+				background:#fff;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.mui-bar-nav~.mui-content{
+				padding-top:1.173333rem;
+			}
+			.mui-bar{
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				background:#0f2646;
+			}
+			.mui-bar-nav.mui-bar .mui-icon{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../Img/header/back.png) no-repeat center center;
+				background-size:contain;
+			}
+			
+			.mui-bar .mui-title{
+				left:1.173333rem;
+				right:1.173333rem;
+				font-family:"苹方";
+				font-weight:bold;
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				color:#fafafa;
+				font-size:18px;
+			}
+			[data-dpr="2"] .mui-bar .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-bar .mui-title{
+				font-size:54px;
+			}
+			.license-tit{
+				overflow:hidden;
+			}
+			.title{
+				font-weight:normal;
+				margin-top:0.426666rem;
+				text-align:center;
+				color:#323232;
+				font-size:16px;
+				line-height:16px;
+				margin-bottom:0.213333rem;
+			}
+			[data-dpr="2"] .title{
+				font-size:32px;
+				line-height:32px;
+			}
+			[data-dpr="3"] .title{
+				font-size:48px;
+				line-height:48px;
+			}
+			.license-tit p{
+				text-align: center;
+				color:#909090;
+				margin-bottom:0.16rem;
+				font-size:12px;
+			}
+			[data-dpr="2"] .license-tit p{
+				font-size:24px;
+			}
+			[data-dpr="3"] .license-tit p{
+				font-size:36px;
+			}
+			.law{
+				font-style:normal;
+				color:#60a8f7;
+			}
+			.license-body{
+				margin:0 auto;
+				margin-top:0.16rem;
+				width:8.933333rem;
+				height:12.946666rem;
+				border:1px solid #d6d7dc;	
+				box-shadow:5px 5px 5px rgba(0,0,0,.5);
+			}
+			.license-body img{
+				width:100%;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-pull-left"></a>
+		    <h1 class="mui-title">工商执照</h1>
+		</header>
+		<div class="mui-content">
+			<div class="license-tit">
+				<h2 class="title">原青林公社科技有限公司进驻企业执照信息</h2>
+			    <p>根据国家工商总局 <em class="law">《网络交易管理办法》</em>要求</p>
+			    <p>对网店营业执照信息公示如下:</p>
+			</div>
+		    <div class="license-body">
+		    	<img src="../Img/honest/licence.jpg" alt="" />
+		    </div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

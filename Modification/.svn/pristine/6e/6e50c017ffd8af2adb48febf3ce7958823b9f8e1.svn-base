@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<script src="../js/flexible.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="../css/normalize.css" />
+	    <link rel="stylesheet" href="../fonts/iconfont.css" />
+	    <style>
+	    	*{
+				margin: 0;
+				padding: 0;
+			}
+			ul,li,p{
+				margin:0;
+				padding:0;
+			}
+			a{
+				text-decoration: none;
+			}
+			img{
+				border:none;
+			}
+			
+			ul{
+				list-style: none;
+			}
+			body{
+				font-family:"微软雅黑" !important;
+				background-color:#e8e8e8 !important;
+				color:#2b2b2b;
+			}
+			.mui-content{
+				background-color:#e8e8e8 !important;
+			}
+			.mui-bar{
+				height:1.173333rem;
+				line-height:1.173333rem;
+				box-shadow:none;
+			}
+			.mui-bar .mui-title{
+				font-family:"苹方";
+				font-size:18px;
+				font-weight:bold;
+				color:#fafafa;
+				height:1.173333rem;
+				line-height:1.173333rem;
+			}
+			[data-dpr="2"] .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-title{
+				font-size:48px;
+			}
+			/*顶部导航*/
+	    	header{
+	    		background:#0f2646 !important
+	    	}
+	    	.mui-bar-nav~.mui-content{
+	    		padding-top:1.173333rem;
+	    	}
+	    	.mui-bar-nav.mui-bar .mui-icon{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../Img/header/back.png) no-repeat center center;
+				background-size:contain;
+			}
+			/*顶部搜索框*/
+			.input-row{
+				margin-bottom:0.426666rem;
+				height:0.853333rem;
+				line-height:0.853333rem;
+				border-top:1px solid #d6d7dc;
+				position:relative;
+				background:#fafafa;
+			}
+			.input-row input{
+				margin:0.106666rem 0;
+				padding:0 0.32rem;
+				height:0.64rem;
+				line-height:normal;
+				color:#d4d4d4;
+				border:0;
+				background:#fafafa;
+				text-indent:0.106666rem;
+				font-size:12px;
+			}
+			[data-dpr="2"] .input-row input{
+				font-size:24px;
+			}
+			[data-dpr="3"] .input-row input{
+				font-size:36px;
+			}
+			.search.iconfont{
+				display:block;
+				position:absolute;
+				right:0.426666rem;
+				top:0;
+				font-size:19px;
+				height:0.533333rem;
+				line-height:0.533333rem;
+				margin:0.16rem 0;
+				color:#0f2646;
+			}
+			[data-dpr="2"] .search.iconfont{
+				font-size:38px;
+			}
+			[data-dpr="3"] .search.iconfont{
+				font-size:57px;
+			}
+			.hot-back{
+				margin-bottom:0.213333rem;
+				color:#909090 !important;
+				font-size:13px;
+				padding-left:0.32rem;
+			}
+			[data-dpr="2"] .hot-back{
+				font-size:26px;
+			}
+			[data-dpr="3"] .hot-back{
+				font-size:39px;
+			}
+			.feedback-list .mui-table-view-cell a{
+				margin:0;
+				padding:0;
+				color:#2b2b2b;
+			}
+			.feedback-list .mui-table-view-cell{
+				padding:0;
+				line-height:1.173333rem;
+				margin:0 0.32rem;
+				font-size:16px;
+			}
+			[data-dpr="2"] .feedback-list .mui-table-view-cell{
+				font-size:32px;
+			}
+			[data-dpr="3"] .feedback-list .mui-table-view-cell{
+				font-size:48px;
+			}
+			.mui-table-view-cell:after{
+				left:0;
+				background-color:#d6d7dc !important;
+			}
+			
+	    </style>
+	</head>
+
+	<body>
+		<!--顶部-->
+		<header id="header" class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-pull-left" href=""></a>
+            <h1 class="mui-title">意见反馈</h1>
+    	</header>
+    	<div class="mui-content">
+    	    <div class="feedback-center">
+    	    	<div class="input-row">
+    	    		<span class="search iconfont">&#xe628;</span>
+    	    		<input type="text" placeholder="问题搜索"/>
+    	    	</div>
+    	    	
+    	    	<p class="hot-back">热点反馈</p>
+    	    	<div class="feedback-list">
+    	    		<ul class="mui-table-view">
+				    <li class="mui-table-view-cell"><a href="#">你未发现的溯源隐秘功能</a></li>
+				    <li class="mui-table-view-cell"><a href="#">你未发现的溯源隐秘功能</a></li>
+				    <li class="mui-table-view-cell"><a href="#">你未发现的溯源隐秘功能</a></li>
+				    <li class="mui-table-view-cell"><a href="#">你未发现的溯源隐秘功能</a></li>
+				    <li class="mui-table-view-cell"><a href="#">你未发现的溯源隐秘功能</a></li>
+				</ul>
+    	    	</div>
+    	    </div>
+    	</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

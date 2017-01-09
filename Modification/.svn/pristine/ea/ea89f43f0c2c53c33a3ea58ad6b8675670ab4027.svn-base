@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>产品中心内容</title>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<script src="../js/flexible.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+		body,.mui-content{
+			background: #fff;
+			margin-bottom: 1.466666rem;
+		}
+		/*展示图片*/
+           .showImg{
+           	width: 10rem;
+           	height: 9.28rem;
+           	overflow: hidden;
+           } 
+           .showImg img{
+           	width: 100%;
+           	height: 9.28rem;
+           }   
+        /*展示图片结束*/ 
+        /*商品内容*/
+      	 	.shopCont .shopCont-tit{
+      	 	 padding: 0 0.32rem;
+      	 	}
+      	 	.shopCont .shopCont-tit .shopCont-titP{
+      	 	display: flex;	
+      	 	padding-top: 0.426666rem;
+      	 	}
+      	 	.shopCont .shopCont-tit .shopCont-titP p{
+      	     margin: 0; 
+      	     font-size: 11px;
+      	     color: #0F2646;
+      	     /*margin-top:-5px;*/	
+      	 	}
+      	 	[data-dpr="2"]  .shopCont .shopCont-tit .shopCont-titP p{
+           	font-size: 22px;
+           }
+           [data-dpr="3"]  .shopCont .shopCont-tit .shopCont-titP p{
+           	font-size: 44px;
+           }
+           .shopCont .shopCont-tit .shopCont-titP .ml{
+           	width: 7.893333rem;
+           	font-size: 16px;
+           	color: #646464;
+           	line-height: 0.666666rem;
+           }
+           [data-dpr="2"]  .shopCont .shopCont-tit .shopCont-titP .ml{
+           	font-size: 32px;
+           }
+           [data-dpr="3"]  .shopCont .shopCont-tit .shopCont-titP .ml{
+           	font-size: 48px;
+           }
+           .shopCont .shopCont-tit span{
+           	text-align: center;
+           	display: block;
+           	/*width: 10%;*/
+           	height: 0.973333rem;
+           	border-left: 1px solid #E1E1E1;
+           	padding: 0 0 0 0.32rem;
+           }
+           .shopCont .shopCont-tit span img{
+           	width: 0.613333rem;
+           	height: 0.586666rem;
+           	margin: 0;
+           	padding: 0;
+           }
+           .shopCont .shopCont-tit .pric{
+           	font-size:16px;
+           	color: #f00c0c;
+           	padding-bottom: 0.426666rem;
+           	padding-top: 0.32rem;
+           }
+           [data-dpr="2"] .shopCont .shopCont-tit .pric{
+           	font-size: 32px;
+           }
+           [data-dpr="3"] .shopCont .shopCont-tit .pric{
+           	font-size: 48px;
+           }
+           .shopCont .shopCont-tit .pric b{
+           	font-size: 28px;
+           	padding-left: 0.106666rem;
+           }
+           [data-dpr="2"] .shopCont .shopCont-tit .pric b{
+           	font-size: 56px;
+           }
+           [data-dpr="3"] .shopCont .shopCont-tit .pric b{
+           	font-size: 84px;
+           }
+           .shopCont .shopx{
+           	height: 1.173333rem;
+           	line-height: 1.173333rem;
+           	border-top: 1px solid #D6D7DC;
+           	border-bottom: 1px solid #D6D7DC;
+           	font-size: 16px;
+           }
+           [data-dpr="2"] .shopCont .shopx{
+           	font-size: 32px;
+           }
+           [data-dpr="3"] .shopCont .shopx{
+           	font-size: 48px;
+           }
+           .shopCont .shopx a{
+           	color: #646464;
+           }
+           .shopCont .shopx b{
+           	color: #2B2B2B;
+           	padding-left: 0.426666rem;
+           }
+           .shopCont .shopx i{
+           	margin-top: 0.32rem;
+           	float: right;
+           	display: block;
+           	width: 0.293333rem;
+           	height: 0.48rem;
+           	background: url(../Img/product/jr.png) no-repeat;
+           	background-size: 100%;
+           }
+           .shopCont .shopx2{
+           	border-top: none;
+           	border-bottom: 2px solid #D6D7DC;
+           }
+           .shopCont .shopx2 b{
+           	padding-left: 0.106666rem;
+           	font-weight: 400;
+           }
+           .shopCont .shopx2 div{
+           	float: right;
+           }
+           .shopCont .shopx2 div strong{
+           	padding: 0 0.32rem 0 0.106666rem;
+           	color: #F00C0C;
+           	font-weight: 400;
+           }
+           /*宝贝详情*/
+          .shopMain{
+          	padding: 0 0.32rem 0px 0.32rem;
+          }
+          .shopMain h2{
+          	font-size: 16px;
+          	color: #2B2B2B;
+          	text-align: center;
+          	padding: 0.533333rem 0 0.32rem 0;
+          }
+          [data-dpr="2"].shopMain h2{
+          	font-size: 32px;
+          }
+          [data-dpr="3"].shopMain h2{
+          	font-size: 48px;
+          }
+          .shopMain .shopMainP{
+          	font-size: 13px;
+          	line-height: 20px;
+          	color: #323232;
+          }
+          [data-dpr="2"] .shopMain .shopMainP{
+          	font-size: 26px;
+          	line-height: 34px;
+          }
+          [data-dpr="3"] .shopMain .shopMainP{
+          	font-size: 39px;
+          	line-height: 47px;
+          }
+          .shopMain .shopMainImg {
+          	display: flex;
+          	margin-top: 0.32rem;
+          	margin-bottom: 10px;
+          }
+          .shopMain .shopMainImg li{
+          	width: 3.146666rem;
+          	height: 2.08rem;
+          	border: 3px solid #D6D7DC;
+          }
+          .shopMain .shopMainImg li img{
+          	width: 100%;
+          	height: 1.893333rem;
+          }
+          
+          /*页脚位置*/
+         .foot{
+         	position: fixed;
+         	bottom: 0px;
+         	height: 1.306666rem;
+         }
+         .foot .mui-tab-item .mui-icon{
+         	font-size: 0.533333rem;
+         	width: 0.533333rem;
+            height: 0.533333rem;
+         }
+         .foot .mui-tab-item .mui-tab-label{
+         	/*margin-top: 8px;*/
+         	font-size: 11px;
+         	overflow:  initial !important;
+         }
+         [data-dpr="2"] .foot .mui-tab-item .mui-tab-label{
+         	font-size: 22px;
+         	margin-top: 8px;
+         }
+         [data-dpr="3"] .foot .mui-tab-item .mui-tab-label{
+         	font-size: 33px;
+         	margin-top: 8px;
+         }
+		.footer5{
+				background: #ffa200;
+				width: 0.133333rem !important;
+				color: white !important;
+				font-size: 16px;
+			}
+        [data-dpr="2"] .footer5{
+        	font-size: 32px;
+        }
+        [data-dpr="3"] .footer5{
+        	font-size: 48px;
+        }
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">正大溯源云平台</h1>
+		</header>
+		<div class="mui-content">
+		    <!--展示图片-->
+		    <div class="showImg">
+		    	<img src="../Img/product/639789738491539473.jpg"/>
+		    </div>
+		    <!--商品内容-->
+		    <div class="shopCont">
+		    	<ul class="mui-table-view">
+		    	        <li class="shopCont-tit">
+		    	        	<div class="shopCont-titP">
+		    	        		<div class="ml">【B族豌豆】草本植物 蜜糖豆 蜜豆 青豆 小寒豆长日性冷季植物 二倍体植物</div>
+	                            <span>
+	                            	<img src="../Img/product/618575151589875424.png"/>
+	                            	<p>购物车</p>
+	                            </span>
+		    	        	</div>                            
+                            <div class="pric">￥<b>24</b>.7</div> 
+		    	        </li>
+		    	        <li class="shopCont-tit shopx">
+		    	        	<a href="">
+		    	        		已选择 <b>1件</b>
+		    	        		<i></i>
+		    	        	</a>
+		    	        </li>
+		    	        <li class="shopCont-tit shopx shopx2">
+		    	        	<a href="">
+		    	        		评价 <b>237</b>
+		    	        		<i></i>
+		    	        		<div>好评<strong>98%</strong></div>
+		    	        	</a>
+		    	        </li>
+		    	</ul>
+		    </div>
+		    <!--商品详情-->
+		    <div class="shopMain">
+		    	<h2>宝贝详情</h2>
+		    	<div class="shopMainP">
+		    		品种：B族豌豆是甘肃省农业科学院作物研究所选育成功的半无叶型新品种。<br />
+                                    形态特征：攀援草本，高80～180厘米，全株绿色，光滑无毛，被粉霜。<br />
+                                    食疗功效：豌豆味甘、性平，归脾、胃经，具有益中气、止泻痢、调营卫、利小便、消痈肿、解乳石毒之功效。对脚气、痈肿、乳汁不通、脾胃不适、呃逆呕吐、心腹胀痛、口渴泄痢等病症，有一定的食疗作用。
+		    	</div>
+		    	<ul class="shopMainImg">
+		    		<li><img src="../Img/product/879807049639345101.jpg"/></li>
+		    		<li style="border-left: none; border-right: none;"><img src="../Img/product/376519929141653620.jpg"/></li>
+		    		<li><img src="../Img/product/403428933281909070.jpg"/></li>
+		    	</ul>
+		    </div>
+		</div>
+		<nav class="mui-bar mui-bar-tab foot">
+		    <a class="mui-tab-item mui-active">
+		        <span class="mui-icon iconfont">&#xe678;</span>
+		        <span class="mui-tab-label">客服</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <span class="mui-icon iconfont">&#xe679;</span>
+		        <span class="mui-tab-label">店铺</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <span class="mui-icon iconfont">&#xe694;</span>
+		        <span class="mui-tab-label">收藏</span>
+		    </a>
+		    <a class="mui-tab-item">
+		        <span class="mui-icon iconfont">&#xe665;</span>
+		        <span class="mui-tab-label">分享</span>
+		    </a>
+		    <a class="mui-tab-item footer5">
+		        <span class="mui-tab-label">立即订购</span>
+		    </a>
+		</nav>
+	</body>
+<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+</html>

@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../../css/normalize.css" />
+		<script src="../../js/flexible.js"></script>
+		<style>
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#e8e8e8;
+				font-family:"微软雅黑";
+			}
+			.mui-content{
+				background:#e8e8e8;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.ml{
+				margin-left:0.32rem;
+			}
+			.ml16{
+				margin-left:0.213333rem;
+			}
+			.mr{
+				margin-right:0.106666rem;
+			}
+			.mui-bar-nav~.mui-content{
+				padding-top:1.173333rem;
+			}
+			.mui-bar{
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				background: #0f2646;
+			}
+			.mui-bar-nav{
+				box-shadow:none;
+			}
+			.mui-bar-nav.mui-bar .mui-icon{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../../Img/header/back.png) no-repeat center center;
+				background-size:contain;
+			}
+			.mui-bar .mui-title{
+				font-family:"苹方";
+				font-weight:bold;
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				color:#fafafa;
+				font-size:18px;
+			}
+			[data-dpr="2"] .mui-bar .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-bar .mui-title{
+				font-size:54px;
+			}
+			/*内容*/
+			.specia{
+				padding:0.426666rem 0.32rem 0;
+				font-size:17px;
+				color:#909090 !important;
+			}
+			[data-dpr='2'] .specia{
+				font-size:34px;
+			}
+			[data-dpr='3'] .specia{
+				font-size:51px;
+			}
+			.specia span{
+				height:0.453333rem;
+				line-height:0.453333rem;
+				font-size:17px;
+				color:#909090 !important;
+				display:inline-block;
+			}
+			[data-dpr='2'] .specia span{
+				font-size:34px;
+			}
+			.img-box-top{
+				background:#0f2646;
+				height:3.746666rem;
+			}
+			.all-img{
+				display:-moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+	            display:-ms-flexbox;  /* TWEENER - IE 10 */
+	            display:-webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	            display:-webkit-flex;  /* NEW - Chrome */
+	            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+				flex-flow:column wrap;
+				justify-content:center;
+				align-items:center;
+			}
+			.img-box-top .img-radius{
+				margin-top:1.386666rem;
+				width:3.093333rem;
+				height:3.093333rem;
+				border-radius:50%;
+				border:1px solid #fafafa;
+			}
+			.img-radius img{
+				width:100%;
+			}
+			.user-name{
+				margin-top:0.32rem;
+				font-size:18px;
+				color:#323232;
+				line-height:0.48rem;
+				text-align:center;
+			}
+			[data-dpr="2"] .user-name{
+				font-size:36px;
+			}
+			[data-dpr="3"] .user-name{
+				font-size:54px;
+			}
+			.img-box-bottom{
+				margin-top:2.986666rem;
+			}
+			.account-list ul{
+				background:#fff;
+			}
+			.account-list ul li{
+				margin:0 0.32rem;
+				color:#646464 !important;
+				overflow:hidden;
+				font-size:16px;
+				height:1.173333rem;
+				line-height:1.173333rem;
+				border-bottom:1px solid #e1e1e1;
+			}
+			[data-dpr="2"] .account-list ul li{
+				font-size:32px;
+				border-bottom:1px solid #e1e1e1;
+			}
+			[data-dpr="3"] .account-list ul li{
+				font-size:48px;
+				border-bottom:1.5px solid #e1e1e1;
+			}
+			.account-list ul li:last-child{
+				border-bottom:0;
+			}
+			.account-list ul li span{
+				color:#2b2b2b !important;
+				font-size:16px;
+			}
+			[data-dpr="2"] .account-list ul li span{
+				font-size:32px;
+			}
+			[data-dpr="3"] .account-list ul li span{
+				font-size:48px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--顶部-->
+		<header id="header" class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-pull-left" href=""></a>
+            <h1 class="mui-title">我的账号</h1>
+    	</header>
+    	<div class="mui-content">
+    		<div class="img-box-top">
+	    		<div class="specia mui-ellipsis">
+	    			个性签名：<span>我的云为我编织了一串绕行的雨...</span>
+	    		</div>
+	    		 <div class="all-img">
+    	   	   		<div class="img-radius">
+    	   				<img src="../../Img/mine/personal/portrait.png" alt="" />	
+    	   			</div>
+    	   			<div class="user-name">清云</div>
+    	   		</div>
+    		</div>
+    		
+    	   <div class="img-box-bottom">
+    	   	  
+    	   		
+    	   		<div class="account-list">
+    	   			<ul>
+    	   				<li>溯源号<span class="mui-pull-right"><i>mouseshit</i></span></li>
+    	   				<li>电话<span class="mui-pull-right">158****4567</span></li>
+    	   				<li>微信号<span class="mui-pull-right">未绑定</span></li>
+    	   				<li>QQ号<span class="mui-pull-right">未绑定</span></li>
+    	   				<li>微博<span class="mui-pull-right">未绑定</span></li>
+    	   			</ul>
+    	   		</div>
+    	   </div> 
+    	</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

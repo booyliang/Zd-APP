@@ -1,0 +1,489 @@
+{
+  "index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "js/Adaptive.js",
+      "css/mui.min.css",
+      "css/normalize.css",
+      "js/lib/Gdong.js",
+      "css/iconfont.css",
+      "fonts/iconfont.css",
+      "fonts/iconfont.woff",
+      "fonts/mui.ttf",
+      "Img/Index/\u0011ý\u00194.png",
+      "Img/Index/friend.png",
+      "js/flexible.js",
+      "Img/Index/banner.ipg.jpg",
+      "Img/Index/tj.png",
+      "Img/Index/enterprise.jpg",
+      "Img/Index/product.jpg",
+      "css/style.css",
+      "Img/Index/\u0011ý\u00194.png"
+    ],
+    "refer": [
+      "home.html",
+      "Product/product-data.html",
+      "Honesty/store-intro.html",
+      "Supply/suppy.html"
+    ]
+  },
+  "Product/product.html": {
+    "resources": [
+      "Img/Index/product.jpg",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/flexible.js",
+      "css/normalize.css",
+      "Img/product/arrow.png",
+      "fonts/iconfont.css",
+      "fonts/iconfont.woff",
+      "Img/product/arrow-active.png"
+    ],
+    "refer": [
+      "Search/search.html",
+      "Product/product-data.html"
+    ]
+  },
+  "Product/product-data.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/flexible.js",
+      "css/normalize.css",
+      "Img/news/news-list.jpg",
+      "Img/product/376519929141653620.jpg",
+      "Img/product/639789738491539473.jpg",
+      "Img/product/618575151589875424.png",
+      "Img/product/jr.png",
+      "Img/product/879807049639345101.jpg",
+      "Img/product/403428933281909070.jpg",
+      "fonts/iconfont.woff"
+    ],
+    "refer": []
+  },
+  "Supply/suppy.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "Img/supply/supply-list.jpg",
+      "js/flexible.js",
+      "css/normalize.css",
+      "fonts/iconfont.woff"
+    ],
+    "refer": []
+  },
+  "Supply/supply-comment.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "css/normalize.css",
+      "css/style.css",
+      "Img/supply/supply-detail.jpg",
+      "fonts/iconfont.woff",
+      "Img/supply/supply-list.jpg",
+      "Img/supply/observer.png",
+      "Img/supply/observer2.png",
+      "Img/supply/comment.png"
+    ],
+    "refer": []
+  },
+  "Video/video.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/lib/bvd.js",
+      "js/mui.min.js",
+      "css/bvd.css",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/flexible.js",
+      "css/normalize.css",
+      "fonts/iconfont.woff",
+      "Img/video/video-collect.png",
+      "Img/video/533932787346147215.png"
+    ],
+    "refer": []
+  },
+  "Video/video-list.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/flexible.js",
+      "css/normalize.css",
+      "fonts/iconfont.woff"
+    ],
+    "refer": []
+  },
+  "Search/search.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "css/normalize.css",
+      "fonts/iconfont.woff",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "home.html": {
+    "resources": [
+      "index.html",
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/flexible.js",
+      "css/normalize.css",
+      "fonts/iconfont.woff"
+    ],
+    "refer": [
+      "index.html",
+      "footer.html",
+      "Honesty/aliance.html",
+      "Product/product.html",
+      "Mine/mine.html",
+      "News/news.html"
+    ]
+  },
+  "footer.html": {
+    "resources": [
+      "Img/footer/news.png",
+      "Img/footer/honesty.png",
+      "Img/footer/product.png",
+      "Img/footer/mine.png",
+      "Img/footer/news-active.png",
+      "Img/footer/honesty-active.png",
+      "Img/footer/product-active.png",
+      "Img/footer/mine-active.png",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "css/normalize.css"
+    ],
+    "refer": [
+      "News/news.html",
+      "Honesty/aliance.html",
+      "Product/product.html",
+      "Mine/mine.html"
+    ]
+  },
+  "Honesty/aliance.html": {
+    "resources": [
+      "Img/honest/logo.jpg",
+      "Img/honest/collect.png",
+      "fonts/mui.ttf",
+      "Img/honest/search.png",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "fonts/iconfont.css",
+      "css/normalize.css",
+      "fonts/iconfont.woff"
+    ],
+    "refer": [
+      "Honesty/store-intro.html"
+    ]
+  },
+  "Mine/mine.html": {
+    "resources": [
+      "Img/mine/login/portrait2.png",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "fonts/iconfont.css",
+      "css/normalize.css",
+      "fonts/iconfont.woff"
+    ],
+    "refer": [
+      "Mine/login/login.html",
+      "Mine/share.html",
+      "Mine/feedback.html",
+      "Mine/about.html",
+      "Mine/set/setting.html"
+    ]
+  },
+  "News/news.html": {
+    "resources": [
+      "Img/news/news-list.jpg",
+      "Img/news/title.png",
+      "Img/news/search.png",
+      "Img/news/channel.png",
+      "Img/news/banner.jpg",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "fonts/iconfont.css",
+      "css/normalize.css",
+      "fonts/iconfont.woff"
+    ],
+    "refer": [
+      "Supply/supply-comment.html",
+      "Search/search.html"
+    ]
+  },
+  "lead.html": {
+    "resources": [
+      "Img/lead/ZD-origin.jpg",
+      "Img/lead/alliance.jpg",
+      "Img/lead/supermarket.jpg"
+    ],
+    "refer": [
+      "home.html"
+    ]
+  },
+  "start.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "lead.html",
+      "home.html"
+    ]
+  },
+  "Mine/login/login.html": {
+    "resources": [
+      "Img/mine/login/wechat.png",
+      "Img/mine/login/password.png",
+      "Img/mine/login/sina.png",
+      "Img/mine/login/portrait.png",
+      "Img/mine/login/qq.png",
+      "Img/mine/login/me.png"
+    ],
+    "refer": [
+      "Mine/login/signUp.html"
+    ]
+  },
+  "Mine/login/signUp.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "Img/mine/login/portrait.png",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "css/normalize.css"
+    ],
+    "refer": []
+  },
+  "Mine/personal/personal-data.html": {
+    "href": "Mine/personal/personal-data.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/iconfont.css",
+      "css/normalize.css",
+      "js/flexible.js",
+      "Img/header/back.png",
+      "js/mui.min.js",
+      "Img/mine/personal/observer.png",
+      "fonts/iconfont.woff"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "Mine/personal/account.html": {
+    "href": "Mine/personal/account.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/iconfont.css",
+      "css/normalize.css",
+      "js/flexible.js",
+      "Img/header/back.png",
+      "js/mui.min.js",
+      "Img/mine/personal/portrait-not-set.png",
+      "Img/mine/personal/add.png",
+      "fonts/iconfont.woff"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "Mine/personal/mshare.html": {
+    "href": "Mine/personal/mshare.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/iconfont.css",
+      "css/normalize.css",
+      "js/flexible.js",
+      "js/mui.min.js",
+      "Img/mine/login/wechat.png",
+      "Img/mine/login/qq.png",
+      "Img/mine/login/sina.png"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "Mine/personal/history.html": {
+    "href": "Mine/personal/history.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/iconfont.css",
+      "css/normalize.css",
+      "js/flexible.js",
+      "Img/header/back.png",
+      "js/mui.min.js",
+      "Img/mine/personal/select.png",
+      "Img/mine/personal/history-list.jpg",
+      "fonts/iconfont.woff"
+    ],
+    "refer": [
+      "Mine/personal/mshare.html"
+    ],
+    "priority": 0
+  },
+  "Mine/personal/collection.html": {
+    "href": "Mine/personal/collection.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/iconfont.css",
+      "css/normalize.css",
+      "js/flexible.js",
+      "Img/header/back.png",
+      "js/mui.min.js",
+      "Img/mine/personal/history-list.jpg",
+      "Img/mine/personal/favorite-comment.jpg",
+      "Img/mine/personal/gather-honey2.png",
+      "Img/mine/personal/favorite-enterprise.jpg",
+      "Img/mine/personal/select.png",
+      "Img/mine/personal/observer.png",
+      "Img/mine/personal/dian.png"
+    ],
+    "refer": [
+      "Mine/personal/mshare.html"
+    ],
+    "priority": 0
+  },
+  "Mine/personal/personal-center.html": {
+    "href": "Mine/personal/personal-center.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/iconfont.css",
+      "css/normalize.css",
+      "js/flexible.js",
+      "Img/mine/personal/header.jpg",
+      "Img/header/back.png",
+      "Img/mine/personal/center-banner.jpg",
+      "js/mui.min.js",
+      "Img/mine/personal/account.png",
+      "Img/mine/personal/history.png",
+      "Img/mine/personal/favorite.png",
+      "Img/mine/personal/personal.png",
+      "Img/mine/personal/observer.png",
+      "fonts/iconfont.woff"
+    ],
+    "refer": [
+      "Mine/personal/personal-data.html",
+      "Mine/personal/account.html",
+      "Mine/personal/history.html",
+      "Mine/personal/collection.html"
+    ],
+    "priority": 0
+  },
+  "Honesty/store-intro.html": {
+    "resources": [
+      "Img/honest/logo2.jpg",
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "css/normalize.css"
+    ],
+    "refer": [
+      "Honesty/message.html",
+      "Honesty/license.html",
+      "Honesty/card.html"
+    ]
+  },
+  "Honesty/message.html": {
+    "resources": [
+      "Img/honest/company.jpg",
+      "Img/honest/company1.jpg",
+      "Img/header/back.png",
+      "Img/honest/company2.jpg",
+      "Img/honest/company3.jpg",
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "css/normalize.css"
+    ],
+    "refer": []
+  },
+  "Honesty/license.html": {
+    "resources": [
+      "Img/header/back.png",
+      "Img/honest/licence.jpg",
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "css/normalize.css"
+    ],
+    "refer": []
+  },
+  "Honesty/card.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "Img/header/back2.png",
+      "js/mui.min.js",
+      "Img/honest/logo3.png",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "css/normalize.css"
+    ],
+    "refer": []
+  },
+  "Mine/share.html": {
+    "resources": [
+      "Img/header/back.png"
+    ],
+    "refer": []
+  },
+  "Mine/feedback.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "Img/header/back.png",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "css/normalize.css",
+      "fonts/iconfont.woff"
+    ],
+    "refer": []
+  },
+  "Mine/about.html": {
+    "resources": [
+      "Img/honest/company.jpg",
+      "fonts/iconfont.css",
+      "Img/honest/company1.jpg",
+      "js/mui.min.js",
+      "Img/header/back.png",
+      "css/mui.min.css",
+      "Img/honest/company2.jpg",
+      "Img/honest/company3.jpg",
+      "js/flexible.js",
+      "css/normalize.css"
+    ],
+    "refer": []
+  },
+  "Mine/set/setting.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "Img/header/back.png",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "css/normalize.css"
+    ],
+    "refer": []
+  }
+}

@@ -1,0 +1,412 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<script src="../js/flexible.js"></script>
+		<style>
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#fff;
+				font-family:"微软雅黑";
+			}
+			.mui-content{
+				background:#fff;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			/*顶部导航栏*/
+			.nav{
+				overflow: hidden;
+				border-bottom:0.5px solid #e4e4e4;
+				font-size:0;
+				width:100%;
+				height:0.853333rem;
+			}
+			[data-dpr="2"] .nav{
+				border-bottom:1px solid #e4e4e4;
+			}
+			[data-dpr="3"] .nav{
+				border-bottom:1.5px solid #e4e4e4;
+			}
+			.nav span{
+				display:inline-block;
+				position:relative;
+			}
+			/*频道icon*/
+			.channel{
+				height:0.853333rem;
+				width:1.066666rem;
+				background:url(../Img/news/channel.png) no-repeat center center;
+				background-size:1.066666rem 0.853333rem;
+			}
+			/*中间导航栏*/
+			.top-nav{
+				padding:0 0.746666rem;
+				position:absolute;
+				right:1.066666rem;
+			    left:1.066666rem;
+			    display: inline-block;
+			    overflow:hidden;
+			    width: auto;
+			    margin:0;
+			    text-overflow:ellipsis;
+			    border:none;
+			}
+			.top-nav ul{
+				display:-moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                display:-ms-flexbox;  /* TWEENER - IE 10 */
+                display:-webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                display:-webkit-flex;  /* NEW - Chrome */
+                display: flex; /* NEW, Spec - Opera*/
+				justify-content:space-between;
+				font-size:0;
+				overflow: hidden;
+			}
+			.top-nav ul li{
+				height:0.853333rem;
+				line-height:0.853333rem;
+				display:inline-block;
+				overflow: hidden;
+			}
+			.top-nav ul li a{
+				vertical-align:middle;
+				box-sizing:initial;
+				font-size:16px;
+			}
+			.top-nav ul li a.mui-control-item{
+				margin-bottom:0.106666rem;
+				display:inline;
+				padding:0 0.106666rem 0.106666rem 0.106666rem;
+				background:#fff;
+				color:#2b2b2b !important;
+				vertical-align:middle;
+			}
+			.top-nav ul li a.mui-control-item.mui-active{
+				background:#fff;
+				border-bottom:1.5px solid #ec4b1f;
+			}
+			[data-dpr="2"] .top-nav ul li a.mui-control-item.mui-active{
+				background:#fff;
+				border-bottom:3px solid #ec4b1f;
+			}
+			[data-dpr="3"] .top-nav ul li a.mui-control-item.mui-active{
+				background:#fff;
+				border-bottom:4.5px solid #ec4b1f;
+			}
+			
+			[data-dpr="2"] .top-nav ul li a{
+				font-size:32px;
+			}
+			[data-dpr="3"] .top-nav ul li a{
+				font-size:48px;
+			}
+			/*搜索icon*/
+			.search{
+				height:0.853333rem;
+				width:1.066666rem;
+				background:url(../Img/news/search.png) no-repeat center center;
+				background-size:contain;
+			}
+			/*中间图片*/
+			.img-banner{
+				width:100%;
+				position:relative;
+				height:6.186666rem;
+				overflow:hidden;
+			}
+			.img-banner img{
+				width:100%;
+			}
+			/*图片标题*/
+			.img-title{
+				position:absolute;
+				left:0;
+				bottom:0;
+				height:0.853333rem;
+				line-height:0.853333rem;
+				width:100%;
+				text-align:center;
+			}
+			[data-dpr="2"] .img-title p{
+				font-size:30px;
+			}
+			[data-dpr="3"] .img-title p{
+				font-size:45px;
+			}
+			.img-title p{
+				vertical-align: middle;
+				color:#fafafa;
+				font-size:15px;
+				line-height:0.4rem;
+				display:inline-block;
+				height:0.4rem;
+				margin-bottom:0;
+			}
+			/*图片阴影层*/
+			.img-layer{
+				width:100%;
+				position:absolute;
+				left:0;
+				bottom:0;
+				height:0.853333rem;
+				background:#000;
+				opacity:0.48;
+			}
+			/*标题icon*/
+			.title-icon{
+				vertical-align: middle;
+				display:inline-block;
+				margin-right:0.213333rem;
+				height:0.4rem;
+				width:0.106666rem;
+				background: url(../Img/news/title.png) no-repeat;
+				background-size:contain;
+				color:#f41212;
+			}
+			/*新闻列表*/
+			.newslist ul{
+				padding:0 0.32rem;
+			}
+			.newslist ul li{
+				overflow:hidden;
+				border-bottom:1px solid #e1e1e1;
+			}
+			.newslist ul li a{
+				display:block;
+				margin:0.32rem 0;
+			}
+			.media-object{
+				display:block;
+				width:2.773333rem;
+				height:1.813333rem;
+				border:0.5px solid #d6d7dc;
+			}
+			[data-dpr="2"] .media-object{
+				border:1px solid #d6d7dc;
+			}
+			[data-dpr="3"] .media-object{
+				border:1.5px solid #d6d7dc;
+			}
+			.media-body{
+				display:-moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                display:-ms-flexbox;  /* TWEENER - IE 10 */
+                display:-webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                display:-webkit-flex;  /* NEW - Chrome */
+                display: flex; /* NEW, Spec - Opera*/
+                height:1.813333rem;
+                justify-content: space-between;
+                flex-direction: column;
+				margin-right:2.986666rem;
+			}
+			.media-body p:first-child{
+				line-height:0.64rem;
+				color:#2b2b2b !important;
+				font-size:16px;
+			}
+			[data-dpr="2"] .media-body p:first-child{
+				font-size:32px;
+			}
+			[data-dpr="3"] .media-body p:first-child{
+				font-size:48px;
+			}
+			.media-body p:last-child{
+				color:#909090 !important;
+				font-size:12px;
+				height:0.32rem;
+				line-height:0.32rem;
+			}
+			[data-dpr="2"] .media-body p:last-child{
+				font-size:24px;
+			}
+			[data-dpr="3"] .media-body p:last-child{
+				font-size:36px;
+			}
+			.media-body .chat.iconfont{
+				font-size:12.5px;
+				color:#d4d4d4;
+				margin-right:0.106666rem;
+			}
+			[data-dpr="2"] .media-body .chat.iconfont{
+				font-size:25px;
+			}
+			[data-dpr="3"] .media-body .chat.iconfont{
+				font-size:37.5px;
+			}
+			.media-body span:last-child{
+				font-size:11px;
+				color:#909090;
+				margin-left:0.213333rem;
+			}
+			[data-dpr="2"] .media-body span:last-child{
+				font-size:22px;
+			} 
+			[data-dpr="3"] .media-body span:last-child{
+				font-size:33px;
+			}
+			/*频道列表*/
+			.channel-list{
+				background:#fff;
+				z-index:99;
+				position:absolute;
+				top:0.853333rem;
+				left:0;
+				width:100%;
+				padding:0.426666rem 0.32rem;
+			}
+			.channel-list ul{
+				display:-moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                display:-ms-flexbox;  /* TWEENER - IE 10 */
+                display:-webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                display:-webkit-flex;  /* NEW - Chrome */
+                display: flex; /* NEW, Spec - Opera*/
+               justify-content:space-between;
+				font-size:0;
+			}
+			.channel-list ul:last-child{
+				margin-top:0.213333rem;
+			}
+			.channel-list ul li{
+				display:inline-block;
+				width:1.706666rem;
+				height:0.586666rem;
+				line-height:0.586666rem;
+				text-align: center;
+				background:#0f2646;
+				color:#fafafa;
+				font-size:12px;
+			}
+			[data-dpr="2"] .channel-list ul li{
+				font-size:24px;
+			}
+			[data-dpr="3"] .channel-list ul li{
+				font-size:36px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+		    <div class="nav">
+		    	<span class="channel mui-pull-left" id="channelButton"></span>
+		    	<nav class="top-nav mui-segmented-control">
+		    		<ul>
+		    			<li><a class="mui-control-item mui-active" href="#">推荐</a></li>
+		    			<li><a class="mui-control-item" href="#">热点</a></li>
+		    			<li><a class="mui-control-item" href="#">农业</a></li>
+		    			<li><a class="mui-control-item" href="#">社会</a></li>
+		    		</ul>
+		    	</nav>
+		    	<span class="search mui-pull-right" id="searchButton"></span>
+		    </div>
+		    <div class="channel-list" style="display:none">
+		    	<ul>
+		    		<li>教育</li>
+		    		<li>教育</li>
+		    		<li>教育</li>
+		    		<li>教育</li>
+		    		<li>教育</li>
+		    	</ul>
+		    	<ul>
+		    		<li>教育</li>
+		    		<li>教育</li>
+		    		<li>教育</li>
+		    		<li>教育</li>
+		    		<li>教育</li>
+		    	</ul>
+		    </div>
+		    <div class="img-banner">
+		    	<img src="../Img/news/banner.jpg" alt="" />
+		    	<div class="img-layer"></div>
+		    	<div class="img-title"><span class="title-icon"></span><p>小麦种植成本增高，利润逐年减少</p></div>
+		    </div>
+		    <div class="newslist">
+		    	<ul>
+		    		<li>
+		    			<a href="">
+		    				<img class="media-object mui-pull-right" src="../Img/news/news-list.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>三星新广告暗讽 借iPad Air铅笔广告分击</p>
+		    					<p>
+		    						<span class="chat iconfont">&#xe63e;</span><i>106</i>
+		    						<span>2小时前</span>
+		    					</p>
+		    				</div>
+		    			</a>
+		    		</li>
+		    		<li>
+		    			<a href="">
+		    				<img class="media-object mui-pull-right" src="../Img/news/news-list.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>三星新广告暗讽 借iPad Air铅笔广告分击</p>
+		    					<p>
+		    						<span class="chat iconfont">&#xe63e;</span>106
+		    						<span>2小时前</span>
+		    					</p>
+		    				</div>
+		    			</a>
+		    		</li>
+		    		<li>
+		    			<a href="">
+		    				<img class="media-object mui-pull-right" src="../Img/news/news-list.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>三星新广告暗讽 借iPad Air铅笔广告分击</p>
+		    					<p>
+		    						<span class="chat iconfont">&#xe63e;</span>106
+		    						<span>2小时前</span>
+		    					</p>
+		    				</div>
+		    			</a>
+		    		</li>
+		    		<li>
+		    			<a href="">
+		    				<img class="media-object mui-pull-right" src="../Img/news/news-list.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>三星新广告暗讽 借iPad Air铅笔广告分击</p>
+		    					<p>
+		    						<span class="chat iconfont">&#xe63e;</span>106
+		    						<span>2小时前</span>
+		    					</p>
+		    				</div>
+		    			</a>
+		    		</li>
+		    	</ul>
+		    </div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				//频道列表
+				mui('#channelButton')[0].addEventListener('tap',function(){
+					channelList = mui('.channel-list')[0];
+					if(channelList.style.display=="none"){
+						channelList.style.display = "block";
+					}else{
+						channelList.style.display = "none";
+					}
+				})
+				
+				mui('.channel-list ul').on('tap','li',function(){
+					channelList.style.display = "none";
+				})
+			})
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,381 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+b,
+div {
+	/*font-family: "微软雅黑" !important;*/
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+}
+
+
+/*头部导航公用*/
+
+header.mui-bar-nav {
+	height: 44px;
+	line-height:44px;
+	background: #0f2746;
+	padding: 0;
+}
+
+header.mui-bar-nav a {
+	width: 44px;
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+}
+header.mui-bar-nav a:active{
+	background: #041731;
+	color: #b4b4b4;
+}
+header.mui-bar-nav .mui-title {
+	font-size: 18px;
+	line-height: 44px;
+	color: white;
+	font-family: "苹方";
+	font-weight: bold;
+}
+
+/*商品推荐区域*/
+
+.public ul {
+	display: flex;
+	justify-content: space-between;
+	margin: 0rem;
+	padding: 0;
+	flex-wrap: wrap;
+}
+
+.public ul li {
+	width: 4.48rem;
+	/*margin-left: 0.2rem;*/
+}
+
+.public ul li img {
+	display: inline-block;
+	width: 100%;
+	height: 2.986666rem;
+	border: 1px solid #D6D7DC;
+	margin: 0px;
+	padding: 0px;
+}
+
+.public-text {
+	margin-bottom: 0.32rem;
+}
+
+.public-text h3 {
+	font-size: 16px;
+	text-align: center;
+	color: #2B2B2B;
+	font-weight: 400;
+	margin: 0.213333rem 0;
+}
+
+[data-dpr="2"] .public-text h3 {
+	font-size: 30px;
+}
+
+[data-dpr="3"] .public-text h3 {
+	font-size: 48px;
+}
+
+.public-text .public-ful {
+	font-size: 11px;
+	color: #909090;
+}
+
+[data-dpr="2"] .public-text .public-ful {
+	font-size: 22px;
+}
+
+[data-dpr="3"] .public-text .public-ful {
+	font-size: 33px;
+}
+
+.public-text .public-ful span {
+	color: #f60f0f;
+	font-size: 12px;
+}
+
+[data-dpr="2"] .public-text .public-ful span {
+	font-size: 24px;
+}
+
+[data-dpr="3"] .public-text .public-ful span {
+	font-size: 36px;
+}
+
+.public-text .public-ful span b {
+	font-size: 17px;
+	padding: 0 0.213333rem 0 0.106666rem;
+}
+
+[data-dpr="2"] .public-text .public-ful span b {
+	font-size: 34px;
+}
+
+[data-dpr="3"] .public-text .public-ful span b {
+	font-size: 38px;
+}
+
+.public-text .public-ful .public-site {
+	float: right;
+	color: #909090;
+}
+
+
+/*供应页面商品列表*/
+
+#supUl li {
+	padding: 0.32rem;
+	height: 2.466666rem;
+	border-bottom: 1px solid #D6D7DC;
+	position: relative;
+}
+
+#supUl li img {
+	width: 2.773333rem;
+	height: 1.813333rem;
+	border: 1px solid #D6D7DC;
+	margin-left: 0.213333rem;
+}
+
+#supUl li p {
+	font-size: 16px;
+	color: #2B2B2B;
+	line-height: 0.666666rem;
+	margin: 0;
+	/*margin: 0.106666rem 0 0.213333rem 0px;*/
+}
+
+[data-dpr="2"] #supUl li p {
+	font-size: 32px;
+}
+
+[data-dpr="3"] #supUl li p {
+	font-size: 48px;
+}
+
+#supUl li p.supChat {
+	line-height: none;
+	position: absolute;
+	bottom: 0.133333rem;
+}
+
+#supUl li p.supChat span.iconfont {
+	font-size: 0.333333rem;
+	/*vertical-align: middle;*/
+	color: #D4D4D4;
+}
+
+#supUl li p.supChat span i {
+	margin-left: 0.106666rem;
+	font-style: normal;
+}
+
+#supUl li p.supChat span i.chat {
+	margin-right: 0.213333rem;
+}
+
+#supUl li p.supChat span {
+	font-size: 12px;
+}
+
+[data-dpr="2"] #supUl li p.supChat span {
+	font-size: 24px;
+}
+
+[data-dpr="3"] #supUl li p.supChat span {
+	font-size: 36px;
+}
+
+
+/*评论公用*/
+
+.commentsNew img {
+	widows: 1.066666rem;
+	height: 1.066666rem;
+	float: left;
+	margin-right: 0.32rem;
+}
+
+.commentsNew {
+	padding: 0.32rem;
+	box-sizing: border-box;
+	width: 100%;
+	color: #2B2B2B;
+}
+
+.commentsTitle {
+	line-height: 0.8rem;
+	height: 1.066666rem;
+}
+
+.commentsTitle p {
+	margin: 0;
+	height: 18px;
+	font-size: 18px;
+	color: #0F2646;
+}
+
+[data-dpr="2"] .commentsTitle p {
+	font-size: 26px;
+	height: 26px;
+}
+
+[data-dpr="3"] .commentsTitle p {
+	font-size: 54px;
+	height: 54px;
+}
+
+.commentsTitle span {
+	display: inline-block;
+	color: #909090;
+	font-size: 11px;
+}
+
+[data-dpr="2"] .commentsTitle span {
+	font-size: 22px;
+}
+
+[data-dpr="3"] .commentsTitle span {
+	font-size: 33px;
+}
+
+.commentsRight {
+	color: #909090;
+	font-size: 12px;
+}
+
+[data-dpr="2"] .commentsRight {
+	font-size: 24px;
+}
+
+[data-dpr="3"] .commentsRight {
+	font-size: 32px;
+}
+
+.commentsRight i {
+	color: #909090;
+	font-size: 0.333333rem;
+}
+
+.RightSpan {
+	margin-left: 0.533333rem;
+}
+
+.commentsIn {
+	width: 8.133333rem;
+	position: relative;
+	height: auto;
+	border-radius: 3px;
+	padding: 0.213333rem;
+	background: #FAFAFA;
+	left: 1.173333rem;
+}
+
+.lice {
+	border-bottom: 1px solid #D6D7DC;
+}
+
+.commentsIn p {
+	font-size: 16px;
+	color: #323232;
+	line-height: 0.56rem;
+}
+
+[data-dpr='2'] .commentsIn p {
+	font-size: 28px;
+}
+
+[data-dpr='3'] .commentsIn p {
+	font-size: 48px;
+}
+
+.commentsInShow {
+	clear: both;
+	width: 100%;
+	color: #909090;
+	display: none;
+}
+
+.ShowLeftTi {
+	display: flex;
+	height: 0.586666rem;
+	line-height: 0.586666rem;
+	justify-content: space-between;
+	margin: 0.32rem 0 0 0;
+}
+
+.commentsIn .commentsInShow img {
+	width: 0.586666rem;
+	height: 0.586666rem;
+}
+
+.commentsIn .commentsInShow .ShowLeft {
+	color: #909090;
+	padding: 0px;
+}
+
+.commentsIn .commentsInShow .ShowLeft li {
+	list-style: none;
+}
+
+.commentsIn .commentsInShow .ShowLeft li b,
+.commentsIn .commentsInShow .ShowLeft li.mui-pull-right b {
+	display: inline-block;
+	padding-top: 0.066666rem;
+	font-weight: 400;
+}
+
+.commentsIn .commentsInShow .ShowLeft li p {
+	clear: left;
+	margin: 0;
+	margin-top: 0.213333rem;
+	padding: 0px;
+	color: #2B2B2B;
+	font-size: 12px;
+}
+
+#reply {
+	display: block;
+	clear: both;
+	width: 100%;
+	color: #0F2646;
+	font-size: 12px;
+	margin: 0.213333rem 0 0 0;
+}
+
+[data-dpr="2"] #reply {
+	font-size: 24px;
+}
+
+[data-dpr="3"] #reply {
+	font-size: 32px;
+}

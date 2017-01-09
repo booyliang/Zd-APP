@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<script src="../js/flexible.js"></script>
+		<style type="text/css">
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#fff;
+				font-family:"微软雅黑";
+			}
+			.mui-content{
+				background:#f4f4f4;
+				height:100%;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			html{
+				height:100%;
+			}
+			body{
+				height:100%;
+			}
+			.mui-bar-nav~.mui-content{
+				padding-top:1.173333rem;
+			}
+			.mui-bar{
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				background:#f4f4f4;
+			}
+			.mui-bar-nav{
+				box-shadow:none;
+			}
+			.mui-bar-nav.mui-bar .mui-icon{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../Img/header/back2.png) no-repeat center center;
+				background-size:contain;
+			}
+			.mui-bar .mui-title{
+				left:1.173333rem;
+				right:1.173333rem;
+				font-family:"苹方";
+				font-weight:bold;
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				color:#0f2646;
+				font-size:18px;
+			}
+			[data-dpr="2"] .mui-bar .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-bar .mui-title{
+				font-size:54px;
+			}
+			#mlogo img{
+				position: relative;
+				max-width: 100%;
+				width:4rem;
+				height:2.586666rem;
+	          	top:1.333333rem;
+	          	left:1.813333rem;
+			}
+			#mQe{
+				position: relative;
+				width:100%;
+				height:100%;
+				background:url(../Img/honest/name-card.jpg) no-repeat;
+				background-size:10rem;
+				background-position: bottom;
+			}
+	          .mQe{
+	          	position: absolute;
+	          	width:3.32rem;
+	          	top:4.853333rem;
+	          	left:2.04rem;
+	          }
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-pull-left"></a>
+		    <h1 class="mui-title">店铺名片</h1>
+		</header>
+		<div class="mui-content">
+		    <div id="mQe">
+		    	<div id="mlogo">
+		    		<img src="../Img/honest/logo3.png"/>
+		    	</div>
+		    	<img class="mQe" src="../Img/honest/QR.png"/>
+		    </div>
+		</div>
+	</body>
+    <script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+</html>

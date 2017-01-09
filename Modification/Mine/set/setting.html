@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../../css/normalize.css" />
+		<script src="../../js/flexible.js"></script>
+		<style>
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#e8e8e8;
+				font-family:"微软雅黑";
+				
+			}
+			.mui-content{
+				background:#e8e8e8;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.ml{
+				margin-left:0.32rem;
+			}
+			.mr{
+				margin-right:0.106666rem;
+			}
+			.mui-bar-nav~.mui-content{
+				padding-top:1.173333rem;
+			}
+			.mui-bar{
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				background:#0f2646;
+			}
+			.mui-bar-nav{
+				box-shadow:none;
+			}
+			.mui-bar-nav.mui-bar .mui-icon{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../../Img/header/back.png) no-repeat center center;
+				background-size:contain;
+			}
+			.mui-bar .mui-title{
+				font-family:"苹方";
+				font-weight:bold;
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				color:#fafafa;
+				font-size:18px;
+			}
+			[data-dpr="2"] .mui-bar .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-bar .mui-title{
+				font-size:54px;
+			}
+			/*字体设置*/
+			.setting-center ul li {
+				color:#2b2b2b !important;
+				font-size:16px;
+				border-bottom:1px solid #d6d7dc;
+			}
+			.setting-center ul li:last-child{
+				border-bottom:0 !important; 
+			}
+			[data-dpr="2"] .setting-center ul li {
+				font-size:32px;
+				border-bottom:1px solid #d6d7dc;
+			}
+			[data-dpr="3"] .setting-center ul li {
+				font-size:48px;
+				border-bottom:1.5px solid #d6d7dc;
+			}
+			.setting-center ul li a{
+				margin:0 !important;
+				padding:0 !important;
+				color:#2b2b2b !important;
+			}
+			.setting-center ul li span{
+				color:#909090 !important;
+				font-size:13px;
+			}
+			[data-dpr="2"] 	.setting-center ul li span{
+				font-size:26px;
+			}
+			[data-dpr="3"] 	.setting-center ul li span{
+				font-size:39px;
+			}
+			.setting-center ul{
+				margin-top:0.426666rem;
+			}
+			 .mui-table-view:before,.mui-table-view:after{
+				height:0;
+			}
+			.mui-table-view-cell{
+				margin:0 0.32rem;
+				padding:0;
+				line-height:1.173333rem;
+			}
+			.mui-table-view-cell:after{
+				left:0;
+				height:0;
+			}
+			.switch{
+				width:1.706666rem;
+				height:0.586666rem;
+				line-height:0.586666rem;
+				margin:0.293333rem 0;
+				display:inline-block;
+			}
+			.switch img{
+				width:100%;
+			}
+			
+			/*字体大小切换面板*/
+			#word{
+				width:8rem;
+				height:6.533333rem;
+				top:50%;
+				left:50%;
+				margin-top:-3.266666rem;
+				/*包含手机顶部电量条的高度*/
+				margin-left:-4rem;
+				background:#fafafa;
+				border-radius:7px;
+			}
+			.word-tit{
+				padding:0 0.32rem;
+				height:1.306666rem;
+				line-height:1.306666rem;
+				background:#0f2646;
+				color:#fafafa;
+				font-size:18px;
+				border-top-left-radius:7px;
+				border-top-right-radius:7px;
+			}
+			[data-dpr="2"] .word-tit{
+				font-size:36px;
+			}
+			[data-dpr="3"] .word-tit{
+				font-size:54px;
+			}
+			.cancel{
+				font-size:14px;
+			}
+			[data-dpr="2"] .cancel{
+				font-size:28px;
+			}
+			[data-dpr="3"] .cancel{
+				font-size:42px;
+			}
+			.word-stand li{
+				height:1.306666rem;
+				line-height:1.306666rem;
+				color:#2b2b2b;
+			}
+			.word-stand li .iconfont{
+				width:0.533333rem;
+				height:0.533333rem;
+				line-height:0.533333rem;
+				margin:0.32rem 0;
+				display:inline-block;
+				font-size:20px;
+			}
+			[data-dpr="2"] .word-stand li .iconfont{
+				font-size:40px;
+			}
+			[data-dpr="3"] .word-stand li .iconfont{
+				font-size:60px;
+			}
+			.select{
+				color:#909090;
+			}
+			.selected{
+				color:#45b208;
+			}
+			.small{
+				font-size:15px;
+			}
+			[data-dpr="2"] .small{
+				font-size:30px;
+			}
+			[data-dpr="3"] .small{
+				font-size:45px;
+			}
+			.normal{
+				font-size:16px;
+			}
+			[data-dpr="2"] .normal{
+				font-size:32px;
+			}
+			[data-dpr="3"] .normal{
+				font-size:48px;
+			}
+			.big{
+				font-size:17px;
+			}
+			[data-dpr="2"] .big{
+				font-size:34px;
+			}
+			[data-dpr="3"] .big{
+				font-size:51px;
+			}
+			.biger{
+				font-size:18px;
+			}
+			[data-dpr="2"] .biger{
+				font-size:36px;
+			}
+			[data-dpr="3"] .biger{
+				font-size:54px;
+			}
+			
+			.mui-popover.mui-popover-action .mui-table-view{
+				margin:0;
+				text-align: initial;
+			}
+			.mui-popover.mui-popover-action .mui-table-view .mui-table-view-cell:after{
+				background-color:#e1e1e1;
+			}
+			.mui-table-view-cell>a:not(.mui-btn){
+				margin:0;
+				padding:0;
+			}
+			.mui-popover .mui-table-view{
+				max-height:initial;
+			}
+			
+			
+			/*版本*/
+			#version{
+				width:6.133333rem;
+				height:2.346666rem;
+				line-height:2.346666rem;
+				border-radius:7px;
+				text-align:center;
+				margin-top:-1.706666rem;
+				margin-left:-3.066666rem;
+				top:50%;
+				left:50%;
+				background:#0f2646;
+				opacity:0.48;
+				position:absolute;
+			}
+			.layer{
+				width:6.133333rem;
+				height:2.346666rem;
+				position:absolute;
+				top:0;
+				left:0;
+				color:#fafafa;
+				font-size:16px;
+			}
+			[data-dpr="2"] .layer{
+				font-size:32px;
+			}
+			[data-dpr="3"] .layer{
+				font-size:48px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--顶部-->
+		<header id="header" class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-pull-left" href=""></a>
+            <h1 class="mui-title">设置</h1>
+    	</header>
+    	<div class="mui-content">
+    	    <div class="setting-center">
+    	    	<ul class="mui-table-view">
+					<li class="mui-table-view-cell"><a href="#">清除本地缓存<span class="mui-pull-right"><i>1.6</i>M</span></a></li>
+					<li class="mui-table-view-cell"><a href="javascript:;">WLAN环境下自动升级客户端<span class="switch mui-pull-right"><img src="../../Img/mine/setting/BT.png" alt="" /></span></a></li>
+					<li class="mui-table-view-cell"><a href="#word">字体大小<span class="mui-pull-right">标准</span></a></li>
+					<li class="mui-table-view-cell"><a href="#">推送设置<span class="switch mui-pull-right"><img src="../../Img/mine/setting/BT2.png" alt="" /></span></a></li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell"><a href="#">帮助</a></li>
+					<li class="mui-table-view-cell"><a href="javascript:;" id="versionButton">版本更新</a></li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell"><a id="confirmButton" href="javascript:;">退出</a></li>
+				</ul>
+    	    </div>
+
+			<div id="word" class="mui-popover mui-popover-action mui-popover-cenetr">
+				<div class="word-tit">字体大小<span class="cancel mui-pull-right mui-action-back">取消</span></div>
+				<ul class="mui-table-view word-stand">
+					<li class="mui-table-view-cell small">
+						<a href="javascript:;">小<span class="mui-pull-right select iconfont">&#xe64f;</span></a>
+					</li>
+					<li class="mui-table-view-cell normal">
+						<a href="javascript:;">标准<span class="mui-pull-right selected iconfont">&#xe64f;</span></a>
+					</li>
+					<li class="mui-table-view-cell big">
+						<a href="javascript:;">大<span class="mui-pull-right select iconfont">&#xe64f;</span></a>
+					</li>
+					<li class="mui-table-view-cell biger">
+						<a href="javascript:;">超大<span class="mui-pull-right select iconfont">&#xe64f;</span></a>
+					</li>
+				</ul>
+			</div>
+			<div id="version" style="display:none">
+				<div class="layer">当前已是最新版本!</div>
+			</div>
+    	</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+//			mui.plusReady(function(){
+				var old_back = mui.back;
+				document.getElementById("confirmButton").addEventListener('tap', function() {
+					var btnArray = ['取消', '确定'];
+					mui.confirm('确认退出溯源平台？', '提醒', btnArray, function(e) {
+						if (e.index == 1) {
+							plus.runtime.quit();
+						} else {
+							return false;
+						}
+					})
+				});
+				
+				document.getElementById("versionButton").addEventListener('tap', function(){
+					mui.toast('当前已是最新版本！');
+				})
+				
+//			})
+		</script>
+	</body>
+
+</html>

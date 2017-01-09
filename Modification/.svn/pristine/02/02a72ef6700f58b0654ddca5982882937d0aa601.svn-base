@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<script src="../js/flexible.js"></script>
+		<style>
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#e8e8e8;
+				font-family:"微软雅黑";
+			}
+			.mui-content{
+				background:#e8e8e8;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			/*顶部列表*/
+			.mui-content ul{
+				width:100%;
+				background:#fff;
+				margin-bottom:0.426666rem;
+			}
+			.company{
+				padding:0.213333rem 0.32rem;
+				height:1.733333rem;
+				overflow: hidden;
+			}
+			.company li{
+				overflow: hidden;
+			}
+			.company .media-object{
+				border:1px solid #d6d7dc;
+				width:1.306666rem;
+				height:1.306666rem;
+				display:block;
+			}
+			.company .media-body{
+				margin-left:1.546666rem;
+				height:1.306666rem;
+			}
+			.company .media-body p{
+				color:#0f2646;
+				font-size:15px;
+				line-height:1.306666rem;
+			}
+			[data-dpr="2"] .company .media-body p{
+				font-size:30px;
+			}
+			[data-dpr="3"] .company .media-body p{
+				font-size:45px;
+			}
+			.item-box li{
+				position:relative;
+				margin:0 0.32rem;
+				height:1.173333rem;
+				line-height:1.173333rem;
+				border-bottom:1px solid #e1e1e1;
+				font-size:15px;
+			}
+			[data-dpr="2"] .item-box li{
+				border-bottom:1px solid #e1e1e1;
+				font-size:30px;
+			}
+			[data-dpr="3"] .item-box li{
+				border-bottom:1.5px solid #e1e1e1;
+				font-size:45px;
+			}
+			.item-box li .li-tit{
+				color:#909090;
+				width:1.6rem;
+			}
+			.item-box li .li-body{
+				margin-left:2.133333rem;
+				color:#323232;
+			}
+			.item-box li a{
+				color:#323232;
+			}
+			.cl-blue{
+				color:#0f2646 !important;
+			}
+			.collect{
+				position:absolute;
+				right:0;
+				top:0.293333rem;
+				width:1.173333rem;
+				height:0.586666rem;
+				border-radius:5px;
+				border:1px solid #d6d7dc;
+				color:#909090;
+				font-size:11px;
+				line-height:0.586666rem;
+				text-align:center;
+				background:#f4f4f4;
+			}
+			[data-dpr="2"] .collect{
+				font-size:22px;
+			}
+			[data-dpr="3"] .collect{
+				font-size:33px;
+			}
+			.collected{
+				background:#0f2646;
+				color:#fafafa;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mui-content">
+		    <ul class="company">
+		    	<li>
+		    		<img class="media-object mui-pull-left" src="../Img/honest/logo2.jpg" alt="" />
+		    		<div class="media-body">
+		    			<p>原青林公社科技有限公司</p>
+		    		</div>
+		    	</li>
+		    </ul>
+		    <ul class="item-box">
+		    	<li>
+		    		<div class="li-tit mui-pull-left">掌柜名</div>
+		    		<div class="li-body">原青林公社专营店</div>
+		    		<div id="collect" class="collect">收藏</div>
+		    	</li>
+		    	<li>
+		    		<div class="li-tit mui-pull-left">地址</div>
+		    		<div class="li-body">武汉光谷步行街D区555号</div>
+		    		
+		    	</li>
+		    	<li>
+		    		<div class="li-tit mui-pull-left">服务电话</div>
+		    		<div class="li-body"><i>027-8208820</i></div>
+		    	</li>
+		    </ul>
+		     <ul class="item-box">
+		    	<li>
+		    		<div class="li-tit mui-pull-left">好评率</div>
+		    		<div class="li-body cl-blue"><i>100.00%</i></div>
+		    	</li>
+		    	<li>
+		    		<div class="li-tit mui-pull-left">描述相符</div>
+		    		<div class="li-body cl-blue">4.8高于同行29.15%</div>
+		    	
+		    	</li>
+		    	<li>
+		    		<div class="li-tit mui-pull-left">服务态度</div>
+		    		<div class="li-body cl-blue">4.8持平</div>
+		    	</li>
+		    	<li>
+		    		<div class="li-tit mui-pull-left">物流服务</div>
+		    		<div class="li-body">4.7低于同行0.22%</div>
+		    	</li>
+		    </ul>
+		    <ul class="item-box">
+		    	<li>
+		    		<a href="#">工商执照</a>
+		    	</li>
+		    	<li>
+		    		<a href="#">店铺名片</a>
+		    	</li>
+		    </ul>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				mui('#collect')[0].addEventListener('tap',function(){
+					if(this.classList.contains('collected')){
+						this.classList.remove('collected');
+					}else{
+						this.classList.add('collected');
+					}
+					
+				})
+			})
+		</script>
+	</body>
+
+</html>

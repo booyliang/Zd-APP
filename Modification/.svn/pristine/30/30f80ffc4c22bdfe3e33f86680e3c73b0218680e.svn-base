@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../../css/normalize.css" />
+		<script src="../../js/flexible.js"></script>
+		<style>
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#e8e8e8;
+				font-family:"微软雅黑";
+			}
+			.mui-content{
+				background:#e8e8e8;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.ml{
+				margin-left:0.32rem;
+			}
+			.ml16{
+				margin-left:0.213333rem;
+			}
+			.mr{
+				margin-right:0.106666rem;
+			}
+			.mui-bar-nav~.mui-content{
+				padding-top:1.173333rem;
+			}
+			.mui-bar{
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				background: #0f2646;
+			}
+			.mui-bar-nav{
+				box-shadow:none;
+			}
+			.mui-bar-nav.mui-bar .mui-icon{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../../Img/header/back.png) no-repeat center center;
+				background-size:contain;
+			}
+			.mui-bar .mui-title{
+				font-family:"苹方";
+				font-weight:bold;
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				color:#fafafa;
+				font-size:18px;
+			}
+			[data-dpr="2"] .mui-bar .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-bar .mui-title{
+				font-size:54px;
+			}
+			/*资料中心*/
+			.data-center .user-img{
+				height:1.706666rem;
+				line-height:1.706666rem;
+				vertical-align: middle;
+				padding:0 !important;
+			}
+			.mui-table-view:first-child{
+				margin-top:0.426666rem;
+			}
+			.mui-table-view{
+				margin-top:0.32rem;
+				padding:0;
+			}
+			.mui-table-view:after,.mui-table-view:before{
+				height:0;
+			}
+			.mui-table-view-cell{
+				height:1.173333rem;
+				line-height:1.173333rem;
+				font-size:16px;
+				color:#646464 !important;
+				padding:0;
+				margin:0 0.32rem;
+			}
+			[data-dpr="2"] .mui-table-view-cell{
+				font-size:32px;
+			}
+			[data-dpr="3"] .mui-table-view-cell{
+				font-size:48px;
+			}
+			.mui-table-view-cell:after{
+				left:0;
+			}
+			.mui-table-view-cell>a{
+				padding:0 !important;
+				margin:0 !important
+			}
+			#user-img{
+				width:1.386666rem;
+				height:1.386666rem;
+				line-height:1.386666rem;
+				margin:0.16rem 0;
+				border-radius:50%;
+			}
+			#user-img img{
+				width:100%;
+			}
+			.specia{
+				padding:0 0.32rem;
+				margin-top:0.32rem;
+				background:#fff;
+				overflow:hidden;
+			}
+			.specia-edit{
+				font-size:16px;
+				margin:0.32rem 0;
+				color:#646464 !important
+			}
+			[data-dpr="2"] .specia-edit{
+				font-size:32px;
+			}
+			[data-dpr="3"] .specia-edit{
+				font-size:48px;
+			}
+			.specia-content{
+				margin-bottom:0.32rem;
+				margin-top:-0.093333rem;
+				font-size:14px;
+				line-height:0.56rem;
+				color:#2b2b2b !important;
+			}
+			[data-dpr="2"] .specia-content{
+				font-size:28px;
+			}
+			[data-dpr="3"] .specia-content{
+				font-size:42px;
+			}
+			.detail span{
+				color:#2b2b2b !important;
+				font-size:16px;
+			}
+			[data-dpr="2"] .detail span{
+				font-size:32px;
+			}
+			[data-dpr="3"] .detail span{
+				font-size:48px;
+			}
+			.mui-table-view-cell:after{
+				background-color:#e1e1e1 !important;
+			}
+			/*性别设置*/
+			#sex{
+				width:8rem;
+				height:3.92rem;
+				top:50%;
+				left:50%;
+				margin-top:-2.493333rem;
+				/*包含手机顶部电量条的高度*/
+				margin-left:-4rem;
+				background:#fafafa;
+				border-radius:7px;
+			}
+			.tit{
+				padding:0 0.32rem;
+				height:1.306666rem;
+				line-height:1.306666rem;
+				background:#0f2646;
+				color:#fafafa;
+				font-size:18px;
+				border-top-left-radius:7px;
+				border-top-right-radius:7px;
+			}
+			[data-dpr="2"] .tit{
+				font-size:36px;
+			}
+			[data-dpr="3"] .tit{
+				font-size:54px;
+			}
+			.cancel{
+				font-size:14px;
+			}
+			[data-dpr="2"] .cancel{
+				font-size:28px;
+			}
+			[data-dpr="3"] .cancel{
+				font-size:42px;
+			}
+			.sex-body li{
+				margin:0 0.32rem;
+				height:1.306666rem;
+				line-height:1.306666rem;
+				color:#2b2b2b;
+				font-size:16px;
+			}
+			[data-dpr="2"] .sex-body li{
+				font-size:32px;
+			}
+			[data-dpr="3"] .sex-body li{
+				font-size:48px;
+			}
+			.sex-body li .iconfont{
+				width:0.533333rem;
+				height:0.533333rem;
+				line-height:0.533333rem;
+				margin:0.32rem 0;
+				display:inline-block;
+				font-size:20px;
+			}
+			[data-dpr="2"] .sex-body li .iconfont{
+				font-size:40px;
+			}
+			[data-dpr="3"] .sex-body li .iconfont{
+				font-size:60px;
+			}
+			.select{
+				color:#909090;
+			}
+			.selected{
+				color:#45b208;
+			}
+			
+			/*头像设置面板*/
+			#picture{
+				width:8rem;
+				height:3.92rem;
+				top:50%;
+				left:50%;
+				margin-top:-2.493333rem;
+				/*包含手机顶部电量条的高度*/
+				margin-left:-4rem;
+				background:#fafafa;
+				border-radius:7px;
+			}
+			#picture .mui-table-view{
+				margin:0 !important;
+				background:#fff;
+				border-top-left-radius:0;
+				border-top-right-radius:0;
+			}
+			#picture .mui-table-view .mui-table-view-cell{
+				height:1.306666rem;
+				line-height:1.306666rem;
+				font-size:16px;
+				color:#2b2b2b;
+			}
+			[data-dpr="2"] #picture .mui-table-view .mui-table-view-cell{
+				font-size:32px;
+			}
+			[data-dpr="3"] #picture .mui-table-view .mui-table-view-cell{
+				font-size:48px;
+			}
+			#picture .mui-table-view .mui-table-view-cell:after{
+				background-color:#e1e1e1 !important;
+			}
+			#picture .mui-table-view .mui-table-view-cell>a{
+				padding:0;
+				margin:0;
+				color:#2b2b2b;
+				text-align:left;
+			}
+			#picture .mui-table-view .mui-table-view-cell>a.mui-active{
+				background:#fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--顶部-->
+		<header id="header" class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-pull-left" href=""></a>
+            <h1 class="mui-title">个人资料</h1>
+    	</header>
+    	<div class="mui-content">
+    		<div class="data-center">
+	    		<ul class="mui-table-view">
+					<li class="mui-table-view-cell user-img"><a href="#picture">头像<span class="mui-pull-right" id="user-img"><img src="../../Img/mine/personal/observer.png" alt="" /></span></a></li>
+				</ul>
+				<ul class="mui-table-view detail">
+					<li class="mui-table-view-cell">用户名<span class="mui-pull-right"><i>mouseshit</i></span></li>
+					<li class="mui-table-view-cell">昵称<span class="mui-pull-right">清云</span></li>
+					<li class="mui-table-view-cell"><a href="#sex">性别<span class="mui-pull-right">女</span></a></li>
+					<li class="mui-table-view-cell">地区<span class="mui-pull-right">湖北武汉</span></li>
+					<li class="mui-table-view-cell">详细地址<span class="mui-pull-right">洪山区光谷总部国际</span></li>
+				</ul>
+				<div class="specia">
+					<div class="specia-edit">
+						个性签名<span class="edit iconfont"></span>
+					</div>
+					<p class="specia-content">我的云为我编织了一串绕行的雨，我的云他紧紧围绕着我的身体，揣测着我的呼吸....</p>
+				</div>
+			</div>
+    	</div>
+    	
+    	<div id="sex" class="mui-popover mui-popover-action mui-popover-cenetr">
+    		<div class="tit">性别<span class="cancel mui-pull-right mui-action-back">取消</span></div>
+    		<ul class="sex-body">
+    			<li>男<span class="mui-pull-right select iconfont">&#xe64f;</span></li>
+    			<li>女<span class="mui-pull-right selected iconfont">&#xe64f;</span></li>
+    		</ul>
+    	</div>
+    	
+    	<div id="picture" class="mui-popover mui-popover-action mui-popover-cenetr">
+			<div class="tit">头像设置<span class="cancel mui-pull-right mui-action-back">取消</span></div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="javascript:;" id="gallery">从相册中选取</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="javascript:;" id="getCamera">拍照</a>
+				</li>
+			</ul>
+		</div>
+		
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+		</script>
+	</body>
+
+</html>

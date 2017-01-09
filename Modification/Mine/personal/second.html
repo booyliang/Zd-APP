@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../../css/normalize.css" />
+		<script src="../../js/flexible.js"></script>
+		<style>
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#e8e8e8;
+				font-family:"微软雅黑";
+			}
+			.mui-content{
+				background:#e8e8e8;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.ml{
+				margin-left:0.32rem;
+			}
+			.ml16{
+				margin-left:0.213333rem;
+			}
+			.mr{
+				margin-right:0.106666rem;
+			}
+			.mui-bar-nav~.mui-content{
+				padding-top:1.173333rem;
+			}
+			.mui-bar{
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				background: #0f2646;
+			}
+			.mui-bar-nav{
+				box-shadow:none;
+			}
+			.mui-bar-nav.mui-bar .mui-icon{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../../Img/header/back.png) no-repeat center center;
+				background-size:contain;
+			}
+			.mui-bar .mui-title{
+				font-family:"苹方";
+				font-weight:bold;
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				color:#fafafa;
+				font-size:18px;
+			}
+			[data-dpr="2"] .mui-bar .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-bar .mui-title{
+				font-size:54px;
+			}
+			/*积分图片*/
+			.img-box{
+				height:5.6rem;
+				display:-moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+	            display:-ms-flexbox;  /* TWEENER - IE 10 */
+	            display:-webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	            display:-webkit-flex;  /* NEW - Chrome */
+	            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+				flex-flow:column wrap;
+				justify-content:flex-end;
+				align-items:center;
+				overflow: hidden;
+			}
+			.img-radius{
+				width:1.893333rem;
+				height:2.133333rem;
+				line-height:2.133333rem;
+				display:block;
+				margin-bottom:0.426666rem;
+			}
+			.img-radius img{
+				width:100%;
+			}
+			.current-second{
+				color:#646464;
+				font-size:18px;
+				line-height:0.48rem;
+				margin-bottom:0.96rem;
+			}
+			[data-dpr="2"] .current-second{
+				font-size:36px;
+			}
+			[data-dpr="3"] .current-second{
+				font-size:54px;
+			}
+			.second-list{
+				background:#fff;
+			}
+			.second-list ul li{
+				margin:0 0.32rem;
+				height:1.173333rem;
+				line-height:1.173333rem;
+				border-bottom:1px solid #e1e1e1;
+				color:#646464;
+				font-size:16px;
+				overflow:hidden;
+			}
+			[data-dpr="2"] .second-list ul li{
+				font-size:32px;
+				border-bottom:1px solid #e1e1e1;
+			}
+			[data-dpr="3"] .second-list ul li{
+				font-size:48px;
+				border-bottom:1.5px solid #e1e1e1;
+			}
+			.second-list ul li:last-child{
+				border-bottom:0;	
+			}
+			.second-list ul li span{
+				display:inline-block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--顶部-->
+		<header id="header" class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-pull-left" href=""></a>
+            <h1 class="mui-title">我的积分</h1>
+    	</header>
+    	<div class="mui-content">
+    		<div class="img-box">
+    			<div class="img-radius" id="login"><img src="../../Img/mine/personal/score.png" alt="" /></div>
+    	    	<div class="current-second">当前积分：<i>56</i></div>
+    		</div>
+    	  	<div class="second-list">
+    	  		<ul>
+    	  			<li>登录次数：
+    	  				<span class="login-num"><i>28</i>次</span>
+    	  				<span class="mui-pull-right"><i>28</i>分</span>
+    	  			</li>
+    	  			<li>分享次数：
+    	  				<span class="share-num"><i>28</i>次</span>
+    	  				<span class="mui-pull-right"><i>28</i>分</span>
+    	  			</li>
+    	  			<li>评论次数：
+    	  				<span class="chat-num"><i>28</i>次</span>
+    	  				<span class="mui-pull-right"><i>28</i>分</span>
+    	  			</li>
+    	  			<li>下载次数：
+    	  				<span class="download-num"><i>28</i>次</span>
+    	  				<span class="mui-pull-right"><i>28</i>分</span>
+    	  			</li>
+    	  		</ul>
+    	  	</div>
+    	</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

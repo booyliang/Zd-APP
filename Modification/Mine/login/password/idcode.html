@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../../../css/normalize.css" />
+		<script src="../../../js/flexible.js"></script>
+		<style>
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#f4f4f4;
+				font-family:"微软雅黑";
+			}
+			.mui-content{
+				background:#f4f4f4;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.ml{
+				margin-left:0.32rem;
+			}
+			.mr{
+				margin-right:0.106666rem;
+			}
+			.mui-bar-nav~.mui-content{
+				padding-top:1.173333rem;
+			}
+			.mui-bar{
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				background:#f4f4f4;
+			}
+			.mui-bar-nav{
+				box-shadow:none;
+			}
+			.mui-bar-nav.mui-bar .mui-icon{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../../../Img/header/back2.png) no-repeat center center;
+				background-size:contain;
+			}
+			.mui-bar .mui-title{
+				font-family:"苹方";
+				font-weight:bold;
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				color:#0f2646;
+				font-size:18px;
+			}
+			[data-dpr="2"] .mui-bar .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-bar .mui-title{
+				font-size:54px;
+			}
+			
+			/*表单*/
+			.form{
+				padding:0 0.24rem;
+			}
+			/*提示语句*/
+			.notice{
+				line-height:0.56rem;
+				margin-top:0.333333rem;
+				font-size:14px;
+				color:#323232 !important;
+			}
+			[data-dpr="2"] .notice{
+				font-size:28px;
+			}
+			[data-dpr="3"] .notice{
+				font-size:42px;
+			}
+			
+			.input-row{
+				position:relative;
+				margin:0.213333rem 0;
+				height:1.173333rem;
+				line-height:1.173333rem;
+				border:1px solid #d6d7dc;
+				border-radius:5px;
+			}
+			[data-dpr="2"] .input-row{
+				border-radius:10px;
+			}
+			[data-dpr="3"] .input-row{
+				border-radius:15px;
+			}
+			/*输入框*/
+			.input-row input{
+				position:relative;
+				border:none;
+				margin:0.293333rem 0;
+				height:0.586666rem;
+				line-height:normal;
+				padding:0 0.32rem;
+				font-size:16px;
+				color:#2b2b2b !important;
+				background:#f4f4f4;
+			}
+			::-webkit-input-placeholder{
+				color:#909090;
+			}
+			[data-dpr="2"] .input-row input{
+				font-size:32px;
+			}
+			[data-dpr="3"] .input-row input{
+				font-size:48px;
+			}
+			/*提交按钮*/
+			.form button{
+				padding:0;
+				border:0;
+				margin:0;
+				height:1.173333rem;
+				line-height:1.173333rem;
+				text-align:center;
+				color:#8B9BB1;
+				font-size:18px;
+				background:#0F2646;
+				width:100%;
+				border-radius:5px;
+			}
+			[data-dpr="2"] .form button{
+				font-size:36px;
+				border-radius:10px;
+			}
+			[data-dpr="3"] .form button{
+				font-size:54px;
+				border-radius:15px;
+			}
+			/*重新发送提示*/
+			.repeat{
+				margin-top:0.426666rem;
+				text-align:center;
+			}
+			.repeat span{
+				color:#ec4b1f !important;
+				font-size:14px;
+			}
+			[data-dpr="2"] .repeat span{
+				font-size:28px;
+			}
+			[data-dpr="3"] .repeat span{
+				font-size:42px;
+			}
+			/*验证码错误提示按钮*/
+			.warning{
+				margin:0.213333rem 0 0.32rem;
+				color:#dd0203 !important;
+				font-size:13px;
+				line-height:0.346666rem;
+			}
+			[data-dpr="2"] .warning{
+				font-size:26px;
+			}
+			[data-dpr="3"] .warning{
+				font-size:39px;
+			}
+			.error.iconfont{
+				position:absolute;
+				top:0;
+				right:0.32rem;
+				height:0.586666rem;
+				line-height:0.586666rem;
+				margin:0.26666rem 0;
+				font-size:22px;
+				color:#dd0203;
+				display:block;
+			}
+			[data-dpr="2"] .error.iconfont{
+				font-size:44px;
+			}
+			[data-dpr="3"] .error.iconfont{
+				font-size:66px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header id="header" class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-pull-left" href=""></a>
+            <h1 id="title" class="mui-title mui-center">短信验证</h1>
+    	</header>
+    	<div class="mui-content">
+    		<div class="form">
+	    	    <p class="notice">您的手机15833448179将会收到一条含有6位数字验证码的短信</p>
+	    	    <div class="input-row">
+	    	    	<input type="text" placeholder="请输入验证码"/>
+	    	    	<span class="error iconfont">&#xe683;</span>
+	    	    </div>
+	    	    <p class="warning" style="display:none">您输入的验证码有误，请重新获取验证码</p>
+	    	    <button>确定</button>
+	    	    <p class="repeat"><span id="recall">60s后可重新获取验证码</span></p>
+    	    </div>
+    	</div>
+		<script src="../../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

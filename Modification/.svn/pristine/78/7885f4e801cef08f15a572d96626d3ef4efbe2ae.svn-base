@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../../css/normalize.css" />
+		<script src="../../js/flexible.js"></script>
+		<style>
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#e8e8e8;
+				font-family:"微软雅黑";
+			}
+			.mui-content{
+				background:#e8e8e8;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.ml{
+				margin-left:0.32rem;
+			}
+			.ml16{
+				margin-left:0.213333rem;
+			}
+			.mr{
+				margin-right:0.106666rem;
+			}
+			.mui-bar-nav~.mui-content{
+				padding-top:1.173333rem;
+			}
+			.mui-bar{
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				background: #0f2646;
+			}
+			.mui-bar-nav{
+				box-shadow:none;
+			}
+			.mui-bar-nav.mui-bar .mui-icon{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../../Img/header/back.png) no-repeat center center;
+				background-size:contain;
+			}
+			.mui-bar .mui-title{
+				font-family:"苹方";
+				font-weight:bold;
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				color:#fafafa;
+				font-size:18px;
+			}
+			[data-dpr="2"] .mui-bar .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-bar .mui-title{
+				font-size:54px;
+			}
+			/*中间盒子*/
+			.location-center>p{
+				margin-top:0.426666rem;
+				padding:0 0.32rem;
+				color:#646464 !important;
+				font-size:14px;
+				line-height:0.373333rem;
+			}
+			[data-dpr="2"] .location-center>p{
+				font-size:28px;
+			}
+			[data-dpr="3"] .location-center>p{
+				font-size:42px;
+			}
+			#location{
+				vertical-align: middle;
+				overflow:hidden;
+			}
+			.geolocation{
+				padding:0 0.32rem;
+				height:1.173333rem;
+				line-height:1.173333rem;
+				background:#fff;
+				margin-top:0.213333rem;
+				overflow:hidden;
+				font-size:0;
+			}
+			.geolocation span{
+				vertical-align: middle;
+				display:inline-block;
+				margin-right:0.213333rem;
+			}
+		 	.address{
+				vertical-align:middle;
+				display:inline-block;
+				height:1.173333rem;
+				line-height:1.173333rem;
+				font-size:16px;
+				color:#2b2b2b;
+			}
+			[data-dpr="2"] .address{
+				font-size:32px;
+			}
+			[data-dpr="3"] .address{
+				font-size:48px;
+			}
+			#location i:first-of-type{
+				margin-right:0.426666rem;
+			}
+			#location i:last-child{
+				margin-left:0.106666rem;
+			}
+			.location.iconfont{
+				font-size:22px;
+				color:#0f2646;
+			}
+			[data-dpr="2"] .location.iconfont{
+				font-size:44px;
+			}
+			[data-dpr="3"] .location.iconfont{
+				font-size:66px;
+			}
+			.loading.iconfont{
+				font-size:22px;
+				color:#0f2646;
+			}
+			[data-dpr="2"] .loading.iconfont{
+				font-size:44px;
+			}
+			[data-dpr="3"] .loading.iconfont{
+				font-size:66px;
+			}
+			.selected{
+				margin-top:0.213333rem;
+				padding:0 0.32rem;
+				height:1.173333rem;
+				line-height:1.173333rem;
+				background:#fff;
+			}
+			.selected-location{
+				font-size:16px;
+				color:#646464;
+			}
+			[data-dpr="2"] .selected-location{
+				font-size:32px;
+			}
+			[data-dpr="3"] .selected-location{
+				font-size:48px;
+			}
+			.location-list{
+				margin-top:0.426666rem;
+				background:#fff;
+			}
+			.location-list ul li{
+				margin:0 0.32rem;
+				border-bottom:1px solid #d6d7dc;
+				height:1.173333rem;
+				line-height:1.173333rem;
+				font-size:16px;
+				color:#2b2b2b;
+			}
+			[data-dpr="2"] .location-list ul li{
+				font-size:32px;
+				border-bottom:1px solid #d6d7dc;
+			}
+			[data-dpr="3"] .location-list ul li{
+				font-size:48px;
+				border-bottom:1.5px solid #d6d7dc;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--顶部-->
+		<header id="header" class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-pull-left" href=""></a>
+            <h1 class="mui-title">选择地区</h1>
+    	</header>
+    	<div class="mui-content">
+			<div class="location-center">
+				<p>当前位置</p>
+				<div class="geolocation">
+					<div id="location" style="display:block">
+						<span class="location iconfont">&#xe689;</span>
+						<i class="address">中国</i><i class="address">湖北</i><i class="address">武汉</i>
+					</div>
+					<div id="loading-location" style="display:none">
+						<span class="loading iconfont">&#xe670;</span>
+						<i>正在定位</i>
+					</div>
+				</div>
+				<p>全部地区</p>
+				<div class="selected">
+					<i class="address">中国</i>
+					<span class="selected-location mui-pull-right">
+						已选地区
+					</span>
+				</div>
+				
+				<div class="location-list">
+					<ul>
+						<li>安道尔</li>
+						<li>安道尔</li>
+						<li>安道尔</li>
+						<li>安道尔</li>
+						<li>安道尔</li>
+						<li>安道尔</li>
+						<li>安道尔</li>
+						<li>安道尔</li>
+						<li>安道尔</li>
+						<li>安道尔</li>
+						<li>安道尔</li>
+						<li>安道尔</li>
+					</ul>
+				</div>
+			</div>
+    	</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

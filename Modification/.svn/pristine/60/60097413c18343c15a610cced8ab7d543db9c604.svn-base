@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../../css/normalize.css" />
+		<script src="../../js/flexible.js"></script>
+		<style>
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#e8e8e8;
+				font-family:"微软雅黑";
+			}
+			.mui-content{
+				background:#e8e8e8;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.ml{
+				margin-left:0.32rem;
+			}
+			.ml16{
+				margin-left:0.213333rem;
+			}
+			.mr{
+				margin-right:0.106666rem;
+			}
+			.mui-bar-nav~.mui-content{
+				padding-top:1.173333rem;
+			}
+			.mui-bar{
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				background: #0f2646;
+			}
+			.mui-bar-nav{
+				box-shadow:none;
+			}
+			.mui-bar-nav.mui-bar .mui-icon{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../../Img/header/back.png) no-repeat center center;
+				background-size:contain;
+			}
+			.mui-bar .mui-title{
+				font-family:"苹方";
+				font-weight:bold;
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				color:#fafafa;
+				font-size:18px;
+			}
+			[data-dpr="2"] .mui-bar .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-bar .mui-title{
+				font-size:54px;
+			}
+			/*资料中心*/
+			.data-center .user-img{
+				height:1.706666rem;
+				line-height:1.706666rem;
+				vertical-align: middle;
+				padding:0 !important;
+			}
+			.mui-table-view:first-child{
+				margin-top:0.426666rem;
+			}
+			.mui-table-view{
+				margin-top:0.32rem;
+				padding:0;
+			}
+			.mui-table-view:after,.mui-table-view:before{
+				height:0;
+			}
+			.mui-table-view-cell{
+				height:1.173333rem;
+				line-height:1.173333rem;
+				font-size:16px;
+				color:#646464 !important;
+				padding:0;
+				margin:0 0.32rem;
+			}
+			[data-dpr="2"] .mui-table-view-cell{
+				font-size:32px;
+			}
+			[data-dpr="3"] .mui-table-view-cell{
+				font-size:48px;
+			}
+			.mui-table-view-cell:after{
+				left:0;
+			}
+			.mui-table-view-cell>a{
+				padding:0 !important;
+				margin:0 !important
+			}
+			#user-img{
+				width:1.386666rem;
+				height:1.386666rem;
+				line-height:1.386666rem;
+				margin:0.16rem 0;
+				border-radius:50%;
+			}
+			#user-img img{
+				width:100%;
+			}
+			.specia{
+				padding:0 0.32rem;
+				margin-top:0.32rem;
+				background:#fff;
+				overflow:hidden;
+			}
+			.specia-edit{
+				font-size:16px;
+				margin:0.32rem 0;
+				color:#646464 !important
+			}
+			[data-dpr="2"] .specia-edit{
+				font-size:32px;
+			}
+			[data-dpr="3"] .specia-edit{
+				font-size:48px;
+			}
+			.specia-content{
+				margin-bottom:0.32rem;
+				margin-top:-0.093333rem;
+				font-size:14px;
+				line-height:0.56rem;
+				color:#2b2b2b !important;
+			}
+			[data-dpr="2"] .specia-content{
+				font-size:28px;
+			}
+			[data-dpr="3"] .specia-content{
+				font-size:42px;
+			}
+			.detail span{
+				color:#2b2b2b !important;
+				font-size:16px;
+			}
+			[data-dpr="2"] .detail span{
+				font-size:32px;
+			}
+			[data-dpr="3"] .detail span{
+				font-size:48px;
+			}
+			.mui-table-view-cell:after{
+				background-color:#e1e1e1 !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--顶部-->
+		<header id="header" class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-pull-left" href=""></a>
+            <h1 class="mui-title">个人资料</h1>
+    	</header>
+    	<div class="mui-content">
+    		<div class="data-center">
+	    		<ul class="mui-table-view">
+					<li class="mui-table-view-cell user-img">头像<span class="mui-pull-right" id="user-img"><img src="../../Img/mine/personal/observer.png" alt="" /></span></li>
+				</ul>
+				<ul class="mui-table-view detail">
+					<li class="mui-table-view-cell">用户名<span class="mui-pull-right"><i>mouseshit</i></span></li>
+					<li class="mui-table-view-cell">昵称<span class="mui-pull-right">清云</span></li>
+					<li class="mui-table-view-cell">性别<span class="mui-pull-right">女</span></li>
+					<li class="mui-table-view-cell">地区<span class="mui-pull-right">湖北武汉</span></li>
+					<li class="mui-table-view-cell">详细地址<span class="mui-pull-right">洪山区光谷总部国际</span></li>
+				</ul>
+				<div class="specia">
+					<div class="specia-edit">
+						个性签名<span class="edit iconfont"></span>
+					</div>
+					<p class="specia-content">我的云为我编织了一串绕行的雨，我的云他紧紧围绕着我的身体，揣测着我的呼吸....</p>
+				</div>
+			</div>
+    	</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

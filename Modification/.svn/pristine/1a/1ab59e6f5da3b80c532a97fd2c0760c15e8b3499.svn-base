@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
+		<script src="../js/flexible.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		    body,.mui-content{
+		    	background: #FAFAFA;
+		    	font-family: "微软雅黑";
+		    }
+		    ul{
+		    	list-style: none;
+		    }
+			.suppTitle{
+				height: 0.853333rem;
+				border-bottom: 1px solid #D6D7DC;
+				line-height: 0.853333rem;
+				padding: 0 0.32rem;
+			}
+			.suppTitle span{
+				float: left;
+				font-size: 15px;
+				color: #2B2B2B;
+				margin-right: 0.426666rem;
+				
+			}
+			[data-dpr="2"] .suppTitle span{
+				font-size: 30px;
+			}
+			[data-dpr="3"] .suppTitle span{
+				font-size: 45px;
+			}
+			.suppTitle p{
+				font-size: 12px;
+				color: #D4D4D4;
+			}
+			[data-dpr="2"] .suppTitle p{
+				font-size: 24px;
+			}
+			[data-dpr="3"] .suppTitle p{
+				font-size: 36px;
+			}
+			
+			.suppTitle .icon-sousuo{
+				font-size: 16px;
+				color: #0F2646;
+				padding-right: 0.213333rem;
+				vertical-align:middle;
+			}
+			[data-dpr="2"] .suppTitle .icon-sousuo{
+				font-size: 32px;
+			}
+			[data-dpr="3"] .suppTitle .icon-sousuo{
+				font-size: 48px;
+			}
+			/*内容区域*/
+			#supUl li{
+				padding: 0.32rem;
+				height: 2.466666rem;
+				border-bottom: 1px solid #D6D7DC;
+				position: relative;
+			}
+			#supUl li img{
+				width: 2.773333rem;
+				height: 1.813333rem;
+				border: 1px solid #D6D7DC;
+				margin-left: 0.213333rem;
+			}
+			#supUl li p{
+				font-size: 16px;
+				color: #2B2B2B;
+				line-height: 0.666666rem;
+				margin: 0;
+				/*margin: 0.106666rem 0 0.213333rem 0px;*/
+			}
+			[data-dpr="2"] #supUl li p{
+				font-size: 32px;
+			}
+			[data-dpr="3"] #supUl li p{
+				font-size: 48px;
+			}
+			#supUl li p.supChat{
+				line-height: none;
+				position: absolute;
+				bottom: 0.133333rem;
+			}
+			#supUl li p.supChat span.iconfont{
+				font-size: 0.333333rem;
+				/*vertical-align: middle;*/
+				color: #D4D4D4;
+			}
+			#supUl li p.supChat span i{
+				margin-left: 0.106666rem;
+				font-style: normal;
+			}
+			#supUl li p.supChat span i.chat{
+				margin-right: 0.213333rem;
+			}
+			#supUl li p.supChat span{
+				font-size: 12px;
+			}
+			[data-dpr="2"] #supUl li p.supChat span{
+				font-size: 24px;
+			}
+			[data-dpr="3"] #supUl li p.supChat span{
+				font-size: 36px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+		   <div class="suppTitle">
+			  <span>供应</span>
+			  <p><i class="iconfont icon-sousuo"></i>热门搜索</p>
+			</div> 
+			<!--内容区域-->
+			
+				<ul id="supUl">
+					<li>
+						<a href="">
+							<img class="media-object mui-pull-right" src="../Img/supply/supply-list.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>三星新广告暗讽 借iPad Air铅笔广告分击</p>
+		    					<p class="supChat">
+		    						<span class="iconfont icon-shoucang1"><i class="chat">1334</i></span>
+		    						<span class="iconfont icon-pinglun1"><i>106</i></span>
+		    					</p>
+		    				</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img class="media-object mui-pull-right" src="../Img/supply/supply-list.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>三星新广告暗讽 借iPad Air铅笔广告分击</p>
+		    					<p class="supChat">
+		    						<span class="iconfont icon-shoucang1"><i class="chat">1334</i></span>
+		    						<span class="iconfont icon-pinglun1"><i>106</i></span>
+		    					</p>
+		    				</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img class="media-object mui-pull-right" src="../Img/supply/supply-list.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>三星新广告暗讽 借iPad Air铅笔广告分击</p>
+		    					<p class="supChat">
+		    						<span class="iconfont icon-shoucang1"><i class="chat">1334</i></span>
+		    						<span class="iconfont icon-pinglun1"><i>106</i></span>
+		    					</p>
+		    				</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img class="media-object mui-pull-right" src="../Img/supply/supply-list.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>三星新广告暗讽 借iPad Air铅笔广告分击</p>
+		    					<p class="supChat">
+		    						<span class="iconfont icon-shoucang1"><i class="chat">1334</i></span>
+		    						<span class="iconfont icon-pinglun1"><i>106</i></span>
+		    					</p>
+		    				</div>
+						</a>
+					</li>
+				</ul>
+			
+		</div>
+		
+	</body>
+<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+</html>

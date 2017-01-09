@@ -1,0 +1,391 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<script src="../js/flexible.js"></script>
+		<style>
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#fff;
+				font-family:"微软雅黑";
+			}
+			.mui-content{
+				background:#fff;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			/*顶部搜索栏*/
+			.search-condition{
+				line-height:1.173333rem;
+				padding-left:0.32rem;
+				height:1.173333rem;
+				background:#fafafa;
+				width:100%;
+				font-size:0;
+				border-bottom:1px solid #d6d7dc;
+				position:relative;
+			}
+			[data-dpr="2"] .search-condition{
+				border-bottom:1px solid #d6d7dc;
+			}
+			[data-dpr="3"] .search-condition{
+				border-bottom:1.5px solid #d6d7dc;
+			}
+			.search-condition span{
+				display:inline-block;
+			}
+			.search-condition>span{
+				margin-right:0.213333rem;
+				font-size:14px;
+				color:#2b2b2b !important;
+				vertical-align: top;
+			}
+			.sort{
+				margin-right:0 !important;
+			}
+			[data-dpr="2"] .search-condition>span{
+				font-size:28px;
+			}
+			[data-dpr="3"] .search-condition>span{
+				font-size:42px;
+			}
+			/*二级面板修改样式*/
+			.mui-table-view-cell{
+				padding:0;
+			}
+			.mui-table-view-cell>a:not(.mui-btn){
+				padding:0;
+				margin:0;
+			}
+			.mui-table-view-cell>a:not(.mui-btn).mui-active{
+				background:#fff;
+			}
+			.mui-table-view-cell.mui-active{
+				background:#fff;
+			}
+			.box-item{
+				display:table;
+				height:1.173333rem;
+				line-height:1.173333rem;
+			}
+			.box{
+				display:table-cell;
+				vertical-align: middle;
+				width:2.186666rem;
+				height:0.693333rem;
+				line-height:0.693333rem;	
+			}
+			.box a{
+				width:1.28rem;
+				overflow: hidden;
+				padding-left:0.213333rem !important;
+				padding-right:0.693333rem !important;
+				border:1px solid #d6d7dc;
+				border-radius:0.053333rem;
+				font-size:12px;
+				box-sizing: initial;
+			}
+			[data-dpr="2"] .box a{
+				font-size:24px;
+				border:2px solid #d6d7dc;
+			}
+			[data-dpr="3"] .box a{
+				border:3px solid #d6d7dc;
+				font-size:36px;
+			}
+			.mui-navigate-right:after, .mui-push-right:after{
+				right:0.213333rem;
+			}
+			.conditions{
+				display:inline-block;
+				line-height:1.173333rem;
+			}
+			.conditions>span{
+				vertical-align: middle;
+				height:0.64rem;
+				line-height:0.64rem;
+				margin-left:0.266666rem;
+				color:#2b2b2b !important;
+				font-size:12px;
+			}
+			[data-dpr="2"] .conditions>span{
+				font-size:24px;
+			}
+			[data-dpr="3"] .conditions>span{
+				font-size:36px;
+			}
+			/*排序条件选中样式*/
+			.conditions .selected{
+				padding:0 0.16rem;
+				background:#0f2646;
+				color:#fafafa !important;
+				border-radius:0.133333rem;
+			}
+			.search{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../Img/honest/search.png) no-repeat center center;
+				background-size:contain;
+			}
+			/*下拉面板*/
+			.collapse-body{
+				padding:0 0.32rem;
+				position:absolute;
+				top:1.173333rem;
+				left:0;
+				width:100%;
+				background:#fff;
+				z-index: 33;
+			}
+			.collapse-body li{
+				line-height: 0.853333rem;
+				height:0.853333rem;
+				color:#000;
+				font-size:12px;
+				border-bottom:1px solid #d6d7dc;
+			}
+			[data-dpr="2"] .collapse-body li{
+				font-size:24px;
+				border-bottom:1px solid #d6d7dc;
+			}
+			[data-dpr="3"] .collapse-body li{
+				font-size:36px;
+				border-bottom:1.5px solid #d6d7dc;
+			}
+			/*下拉选中icon*/
+			.mui-pull-right.iconfont{
+				font-size:0.426666rem;
+    			color:#4dbf0d !important;
+    		}
+    		/*下拉面板出现蒙层*/
+			.layer{
+				position:absolute;
+				z-index:22;
+				width:100%;
+				height:100%;
+				top:0;
+				left:0;
+				background:#fff;
+				opacity:0.48;
+			}
+			/*商家列表*/
+			.aliance-list{
+				overflow:hidden;
+				position:relative;
+			}
+			.aliance-list ul li{
+				overflow: hidden;
+				margin:0 0.32rem;
+				border-bottom:1px solid #e1e1e1;
+			}
+			.aliance-list ul li a{
+				overflow: hidden;
+				display:block;
+				margin:0.32rem 0;
+			}
+			.aliance-list .media-object{
+				width:2.773333rem;
+				height:2.133333rem;
+				border:1px solid #d6d7dc;
+			}
+			[data-dpr="2"] .aliance-list .media-object{
+				border:1px solid #d6d7dc;
+			}
+			[data-dpr="3"] .aliance-list .media-object{
+				border:1.5px solid #d6d7dc;
+			}
+			.media-body{
+				position:relative;
+				height:2.133333rem;
+				margin-left:2.88rem;
+				margin-top:0.106666rem;
+			}
+			.media-body p{
+				color:#2b2b2b !important;
+				font-size:14px;
+				line-height:21px;
+			}
+			[data-dpr="2"] .media-body p{
+				font-size:28px;
+				line-height:42px;
+			}
+			[data-dpr="3"] .media-body p{
+				font-size:42px;
+				line-height:63px;
+			}
+			/*收藏icon*/
+			.collection{
+				position:absolute;
+				bottom:0;
+				right:0;
+				color:#909090;
+				font-size:12px;
+				line-height:12px;
+				vertical-align:middle;
+			}
+			[data-dpr="2"] .collection{
+				font-size:24px;
+				line-height:25px;
+			}
+			[data-dpr="3"] .collection{
+				font-size:36px;
+				line-height:36px;
+			}
+			.collect{
+				margin-right:0.106666rem;
+				display:inline-block;
+				width:0.333333rem;
+				height:0.333333rem;
+				background:url(../Img/honest/collect.png) no-repeat center center;
+				background-size:contain;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mui-content">
+		    <div class="search-condition">
+		    	<span class="category">行业分类</span>
+		    	<span class="selectbox">
+					<div class="box-item">
+						<div class="mui-table-view-cell mui-collapse box">
+				    		<a id="select" class="mui-navigate-right" href="javascript:;">
+				    		    全部行业
+				    		</a>
+		            	</div>
+	            	</div>
+				</span>
+				<span class="sort">排序</span>
+				<p class="conditions"><span >默认</span><span class="selected">人气</span></p>
+				<a id="search" class="search mui-pull-right" href="javascript:;"></a>
+					<ul id="collapse-body" class="mui-collapse-content collapse-body" style="display:none">
+				    	  	<li>全部行业<b style="display:block" class="mui-pull-right iconfont">&#xe66a;</b></li>
+				    	  	<li>食品<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>
+				   		  	<li>药品<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>
+				   		  	<li>护肤品<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>
+				   		  	<li>奢侈品<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>
+				   		  	<li>服装<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>
+			    		  	<li>建材<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>
+			    		  	<li>生活用品<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>		    		  	<li>金融理财产品<b style="display:none" class="mui-pull-right iconfont">&#xe66a;</b></li>
+				    </ul>
+		    </div>
+		   
+		    <div class="aliance-list">
+		    	<div class="layer" style="display:none"></div>
+		    	<ul>
+		    		<li>
+		    			<a href="#">
+		    				<img class="media-object mui-pull-left" src="../Img/honest/logo.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>商家: <span>武汉一品正信科技有限公司</span></p>
+		    					<p>地址: <span>光谷步行街D区555号</span></p>
+		    					<p>电话: <span>054-2212345</span></p>
+		    					<div class="collection">
+		    						<span class="collect"></span>1129万
+		    					</div>
+		    				</div>
+		    			</a>
+		    		</li>
+		    		<li>
+		    			<a href="#">
+		    				<img class="media-object mui-pull-left" src="../Img/honest/logo.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>商家: <span>武汉一品正信科技有限公司</span></p>
+		    					<p>地址: <span>光谷步行街D区555号</span></p>
+		    					<p>电话: <span>054-2212345</span></p>
+		    					<div class="collection mui-pull-right">
+		    						<span class="collect"></span>1129万
+		    					</div>
+		    				</div>
+		    			</a>
+		    		</li>
+		    		<li>
+		    			<a href="#">
+		    				<img class="media-object mui-pull-left" src="../Img/honest/logo.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>商家: <span>武汉一品正信科技有限公司</span></p>
+		    					<p>地址: <span>光谷步行街D区555号</span></p>
+		    					<p>电话: <span>054-2212345</span></p>
+		    					<div class="collection mui-pull-right">
+		    						<span class="collect"></span>1129万
+		    					</div>
+		    				</div>
+		    			</a>
+		    		</li>
+		    		<li>
+		    			<a href="#">
+		    				<img class="media-object mui-pull-left" src="../Img/honest/logo.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>商家: <span>武汉一品正信科技有限公司</span></p>
+		    					<p>地址: <span>光谷步行街D区555号</span></p>
+		    					<p>电话: <span>054-2212345</span></p>
+		    					<div class="collection mui-pull-right">
+		    						<span class="collect"></span>1129万
+		    					</div>
+		    				</div>
+		    			</a>
+		    		</li>
+		    		<li>
+		    			<a href="#">
+		    				<img class="media-object mui-pull-left" src="../Img/honest/logo.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>商家: <span>武汉一品正信科技有限公司</span></p>
+		    					<p>地址: <span>光谷步行街D区555号</span></p>
+		    					<p>电话: <span>054-2212345</span></p>
+		    					<div class="collection mui-pull-right">
+		    						<span class="collect"></span>1129万
+		    					</div>
+		    				</div>
+		    			</a>
+		    		</li>
+		    	</ul>
+		    </div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				var layer = mui('.layer')[0];
+				var select= mui('#select')[0]
+				mui('#select')[0].addEventListener('tap',function(){
+					collapse_body =mui('#collapse-body')[0];
+					if(collapse_body.style.display == "none"){
+						collapse_body.style.display="block";
+						layer.style.display="block";
+					}else{
+						collapse_body.style.display="none";
+						layer.style.display="none";
+					}
+				})
+				
+				mui("#collapse-body").on('tap','li',function(){
+					collapse_body.style.display="none";
+					mui("#collapse-body li b").each(function(){
+						this.style.display = 'none';
+					})
+					var text = this.innerText;
+					console.log(text);
+					select.innerText = text;//选择框内容的改变
+					select.parentNode.classList.remove('mui-active');
+					this.children[0].style.display = 'block';
+					layer.style.display = 'none';//蒙层隐藏
+				})
+			})
+		</script>
+	</body>
+
+</html>

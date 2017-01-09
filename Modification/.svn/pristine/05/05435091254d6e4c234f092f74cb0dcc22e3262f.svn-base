@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<!--<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>-->
+		<style type="text/css">
+			#nav{
+        	display: flex;
+        	flex-flow:row nowrap;
+			justify-content:space-between;
+			width: 100%;
+			/*height: 1.573333rem;*/
+			position: fixed;
+			z-index: 10;
+			bottom: 0;	
+			padding: 0px 34px 0 34px;
+			background: #FAFAFA;
+        }
+        #nav a{
+        	position: relative;
+        	text-align: center;
+          	float: left;
+           	/*height:1.546666rem;*/
+           	/*line-height: 0.666666rem;*/
+           	width: auto !important; 
+        }
+        #nav a span{
+        	display: block;
+        	font-size:11px ;
+        	color: #646464;
+        }
+      	[data-dpr="2"] #nav a span{
+        	font-size: 22px;
+        	line-height: 22px;
+
+        }
+        [data-dpr="3"] #nav a span{
+        	font-size: 33px;
+        	line-height: 33px;
+
+        }
+        #nav a img{
+        	margin-top: 0.24rem;
+        	position: relative;
+        	width: 20px;
+        	height: 20px;
+        	padding: 0px;
+        }
+		nav span{
+			color: #646464;
+		}
+		.mui-active span{
+			color: #0F2646 !important;
+		}
+		</style>
+	</head>
+
+	<body>
+		
+		<nav id="nav" class="mui-bar mui-bar-tab">
+	           <a id="defaultTab" class="mui-tab-item" href="News/news.html" >
+	           		<img class="mui-icon" src="Img/footer/news.png" alt="" />
+	           		<span class="mui-tab-label">资讯</span>
+	           </a>
+	           <a class="mui-tab-item" href="Honesty/aliance.html">
+	           		<img class="mui-icon" src="Img/footer/honesty.png" alt="" />
+	           		<span class="mui-tab-label">诚信联盟</span>
+	           </a>
+	           <a class="mui-tab-item" href="Product/product.html">
+	           		<img class="mui-icon" src="Img/footer/product.png" alt="" />
+	           		<span class="mui-tab-label">产品中心</span>
+	           </a>
+	           <a class="mui-tab-item" href="Mine/mine.html">
+	           		<img class="mui-icon" src="Img/footer/mine.png" alt="" />
+	           		<span class="mui-tab-label">我的</span>
+	           </a>
+        </nav>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			//选项卡点击事件
+			mui('.mui-bar-tab').on('tap', 'a', function(e) {			
+				// 获取当前点击的选项
+				var targetTab = this.getAttribute('href');	
+				
+				// 获取图标对象
+				var targetIcon=mui(this.children[0])[0];
+				//获取图标名称
+				var targetSpan=mui(this.children[1])[0];
+				// 初始化
+				mui('.mui-bar-tab .mui-tab-item img').each(function (index,item) {
+					var itemSrc = item.getAttribute('src');
+					if(itemSrc.indexOf('active')){
+						item.src = itemSrc.replace('-active.png','.png');						
+					}
+				});
+			
+				// 设置当前的图标
+				targetIcon.src = targetIcon.getAttribute('src').replace('.png','-active.png');	
+				
+				// 当前选项值传到父webview
+				if(window.plus){
+					var currWs = plus.webview.currentWebview();	
+					var targetTitle = this.querySelector('.mui-tab-label').innerHTML;
+					// 触发详情页面的targetTab事件
+					mui.fire(currWs.parent(),'targetTab',{
+						targetTitle:targetTitle,
+					    targetTab:targetTab
+					});
+				}
+			});
+			
+			// 自定义事件，模拟点击"首页选项卡"
+			document.addEventListener('gohome', function() {
+				var defaultTab = document.getElementById("defaultTab");
+				// 模拟首页点击
+				mui.trigger(defaultTab, 'tap');
+				// 切换选项卡高亮
+				var current = document.querySelector(".mui-bar-tab>.mui-tab-item.mui-active");
+				if (defaultTab !== current) {
+					current.classList.remove('mui-active');
+					defaultTab.classList.add('mui-active');
+				}
+			});
+		</script>
+	</body>
+
+</html>

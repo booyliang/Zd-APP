@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<script src="../js/flexible.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="../css/normalize.css" />
+	    <link rel="stylesheet" href="../fonts/iconfont.css" />
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul,li,p{
+				margin:0;
+				padding:0;
+			}
+			a{
+				text-decoration: none;
+			}
+			img{
+				border:none;
+			}
+			
+			ul{
+				list-style: none;
+			}
+			body{
+				font-family:"微软雅黑" !important;
+				background-color:#e8e8e8 !important;
+				color:#2b2b2b;
+			}
+			.mui-content{
+				background-color:#e8e8e8 !important;
+			}
+			.mui-bar{
+				height:1.173333rem;
+				line-height:1.173333rem;
+				box-shadow:none;
+			}
+			.mui-bar .mui-title{
+				font-family:"苹方";
+				font-size:18px;
+				font-weight:bold;
+				color:#fafafa;
+				height:1.173333rem;
+				line-height:1.173333rem;
+			}
+			[data-dpr="2"] .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-title{
+				font-size:48px;
+			}
+			/*顶部导航*/
+	    	header{
+	    		background:#0f2646 !important
+	    	}
+	    	.mui-bar-nav~.mui-content{
+	    		padding-top:1.173333rem;
+	    	}
+	    	.mui-bar-nav.mui-bar .mui-icon{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../Img/header/back.png) no-repeat center center;
+				background-size:contain;
+			}
+			/*投诉列表*/
+			.input-row{
+				padding-left:0.32rem;
+				margin-top:0.426666rem;
+				line-height:1.173333rem;
+				height:1.173333rem;
+				background:#fff;
+				overflow: hidden;
+			}
+			.input-row div{
+				line-height:1.173333rem;
+				height:1.173333rem;
+			}
+			.input-row .logo{
+				overflow:hidden;
+				width:2.866666rem;
+				font-size:0;
+			}
+			.input-row .logo span{
+				line-height:1.173333rem;
+				height:1.173333rem;
+				display:inline-block;
+				float:left;
+			}
+			.sign{
+				width:0.8rem;
+				vertical-align:middle;
+			}
+			.sign.iconfont{
+				color:#0f2646;
+				font-size:30px;
+			}
+			[data-dpr="2"] .sign.iconfont{
+				font-size:60px;
+			}
+			[data-dpr="3"] .sign.iconfont{
+				font-size:90px;
+			}
+			.input-row .input{
+				width:auto;
+				line-height:1.173333rem;
+				height:1.173333rem;
+			}
+			.input-row input{
+				height:0.586666rem;
+				line-height:0.586666rem;
+				padding:0;
+				margin:0.293333rem 0;
+				border:0;
+				font-size:16px;
+				color:#d4d4d4;
+				width:auto;
+			}
+			[data-dpr="2"] .input-row input{
+				font-size:32px;
+			}
+			[data-dpr="3"] .input-row input{
+				font-size:48px;
+			}
+			.word{
+				margin-left:0.32rem;
+				font-size:15px;
+				color:#2b2b2b;
+				/*vertical-align:middle;*/
+			}
+			[data-dpr="2"] .word{
+				font-size:30px;
+			}
+			[data-dpr="3"] .word{
+				font-size:45px;
+			}
+			.online{
+				height:1.173333rem;
+				line-height:1.173333rem;
+				background:#0f2646;
+				margin-top:0.426666rem;
+				color:#fafafa;
+				font-size:18px;
+				text-align:center;
+			}
+			[data-dpr="2"] .online{
+				font-size:36px;
+			}
+			[data-dpr="3"] .online{
+				font-size:54px;
+			}
+			.online-sign{
+				display:inline-block;
+				padding-left:0.693333rem;
+				background:url(../Img/mine/aliMessageSystem.png) no-repeat left center;
+				background-size:0.666666rem 0.586666rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--顶部-->
+		<header id="header" class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-pull-left" href=""></a>
+            <h1 class="mui-title">投诉</h1>
+    	</header>
+    	
+    	<div class="mui-content">
+    	    <div class="complaint-list">
+    	    	<div class="input-row">
+    	    		<div class="logo mui-pull-left">
+	    	    		<span class="sign iconfont">&#xe681;</span>
+	    	    		<span class="word">地点</span>
+    	    		</div>
+    	    		<div class="input">
+    	    			<input type="text" placeholder="请输入你的地址"/>
+    	    		</div>
+    	    	</div>
+    	    	<div class="input-row">
+    	    		<div class="logo mui-pull-left">
+	    	    		<span class="sign iconfont">&#xe658;</span>
+	    	    		<span class="word">举报人</span>
+    	    		</div>
+    	    		<div class="input">
+    	    			<input type="text" placeholder="请输入你的姓名"/>
+    	    		</div>
+    	    	</div>
+    	    	<div class="input-row">
+    	    		<div class="logo mui-pull-left">
+	    	    		<span class="sign iconfont">&#xe680;</span>
+	    	    		<span class="word">电话</span>
+    	    		</div>
+    	    		<div class="input">
+    	    			<input type="text" placeholder="请输入你的电话"/>
+    	    		</div>
+    	    	</div>
+    	    	<div class="online"><span class="online-sign">客服在线</span></div>
+    	    </div>
+    	</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+		</script>
+	</body>
+
+</html>

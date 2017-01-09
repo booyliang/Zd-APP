@@ -1,0 +1,293 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>视频主页</title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bvd.css"/>
+		<script src="../js/flexible.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			.mui-content{
+				padding-top: 1.173333rem !important;
+			}
+			h3{
+				margin: 0;
+				font-size: 18px;
+				color: #2B2B2B;
+				font-weight: 400;
+			}
+			[data-dpr="2"] h3{
+				font-size: 36px;
+			}
+			[data-dpr="3"] h3{
+				font-size: 54px;
+			}
+			.redo{
+				font-size: 15px;
+			}
+			[data-dpr="2"] .redo{
+				font-size: 30px;
+			}
+			[data-dpr="3"] .redo{
+				font-size: 45px;
+			}
+			/*内容区域*/
+			.matter h3{
+				line-height: 1.173333rem;
+				margin: 0;
+				background: #FAFAFA;
+			}
+			.matter{
+				padding: 0 0.32rem;
+			  	height: 1.173333rem;
+			  	background: #FAFAFA;
+			  	line-height: 1.173333rem;
+			}
+			.matter div.redo{
+				color: #2B2B2B;
+			}
+			/*评论区域*/
+			.criticism{
+				height: 1.173333rem;
+				background: #FFF;
+				border-top: 1px solid #D6D7DC;
+				border-bottom: 1px solid #D6D7DC;
+				line-break: 1.173333rem;
+				padding: 0 0.32rem;
+			}
+			.criticism .crit{
+				line-height: 1.16rem;
+			}
+			.criticism .criticismL .icon-liaotian{
+				font-size: 23px;	
+				color: #2B2B2B;	
+				margin: 0;		
+			}
+			[data-dpr="2"] .criticism .criticismL .icon-liaotian{
+				font-size: 46px;				
+			}
+			[data-dpr="3"] .criticism .criticismL .icon-liaotian{
+				font-size: 69px;				
+			}
+			.criticism .criticismL p span{
+				font-size: 14px;
+				padding-left: 0.106666rem;
+				vertical-align: middle;
+				color: #2B2B2B;
+			}
+			[data-dpr="2"] .criticism .criticismL p span{
+				font-size: 28px;
+			}
+			[data-dpr="3"] .criticism .criticismL p span{
+				font-size: 52px;
+			}
+			.criticism .criticismR img{
+				width: 0.626666rem;
+				height: 0.6rem;
+		        vertical-align: middle;
+		        margin-right: 1.066666rem;
+			}
+			.criticism .criticismR img:last-child{
+				margin-right: 0;
+			}
+			
+			/*日历区域*/
+			.main{
+			    clear: both;
+			    background: #FAFAFA;
+			}
+			.main ul{
+				padding: 0 0.32rem;
+			}
+			.main ul li{
+				display: block;
+			}
+			.main h3{
+				margin-top:0.426666rem ;
+				width: 100%;
+			}
+			.main .redo{
+				color: #909090;
+				margin-bottom:0.213333rem;
+			}
+			/*日期滑动*/
+			.mainData{
+			clear: both;
+			background: #FAFAFA;
+			border: 1px solid #E1E1E1;	
+			height: 1.6rem;
+			margin-bottom: 0.32rem;
+			}
+			.mainData a{
+				display: inline-block;
+				float: left;
+				width: 1.52rem;
+				height: 1.52rem;
+				background: #fff;
+				text-align: center;
+				line-height: 1.56rem;
+				border-left: 1px solid #E1E1E1;
+				color: #2B2B2B;
+				font-size: 16px;
+			}
+			.mainData a:first-child{
+				border-left: none;
+				
+			}
+			[data-dpr="2"] .mainData a{
+				font-size: 32px;
+			}
+			[data-dpr="3"] .mainData a{
+				font-size: 48px;
+			}
+			.active{
+				background: #0F2646 !important;
+				color: #FAFAFA !important;
+			}
+			.mcorer{
+				color: #B4B4B4 !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-pull-left iconfont icon-cha"></a>
+		    <h1 class="mui-title">实时视频</h1>
+		    <a class="mui-pull-right" style="margin-right:0.32rem;">全部</a>
+		</header>
+		<div class="mui-content">
+			<!--调用视屏-->
+		    <div class="bad-video">
+				<video webkit-playsinline>
+					<!--ios请用mp4格式-->
+					<source src='http://img.ksbbs.com/asset/Mon_1605/0ec8cc80112a2d6.mp4' type="video/mp4"></source>
+					<p>设备不支持</p>
+				</video>
+			</div>
+			<!--内容区域-->
+			<div class="matter">
+			   <h3 class="mui-pull-left">采蜜</h3>
+			   <div class="redo mui-pull-right">2016/04/11</div>
+			</div>
+			<!--评论区域-->
+			<div class="criticism">
+				<div class="crit criticismL mui-pull-left">
+					<p class="iconfont icon-liaotian"><span>1.5万人评论</span></p>
+				</div>
+				<div class="crit criticismR mui-pull-right">
+					<img src="../Img/video/video-collect.png"/>
+					<img src="../Img/video/533932787346147215.png"/>
+				</div>
+			</div>
+			
+			<!--日历区域-->
+		    <div class="main">
+		    	<ul>
+		    		<li>
+		    			<h3 class="mui-pull-left">采蜜视频</h3>
+		    			<div class="redo mui-pull-right">2016-04</div>
+		    			<!--日期滑动-->
+		    			<div class="mainData">
+		    				<a class="active" href="">11</a>
+		    				<a href="">12</a>
+		    				<a href="">13</a>
+		    				<a href="">14</a>
+		    				<a href="">15</a>
+		    				<a href="">16</a>
+		    			</div>
+		    			<div class="redo mui-pull-right">2016-04</div>
+		    			<!--日期滑动-->
+		    			<div class="mainData">
+		    				<a href="">11</a>
+		    				<a href="">12</a>
+		    				<a href="">13</a>
+		    				<a class="mcorer" href="">14</a>
+		    				<a class="mcorer" href="">15</a>
+		    				<a class="mcorer" href="">16</a>
+		    			</div>
+
+		    		</li>
+		    		<li>
+		    			<h3 class="mui-pull-left">蜜料视频</h3>
+		    			<div class="redo mui-pull-right">2016-04</div>
+		    			<!--日期滑动-->
+		    			<div class="mainData">
+		    				<a class="mcorer" href="">11</a>
+		    				<a class="mcorer" href="">12</a>
+		    				<a href="">13</a>
+		    				<a href="">14</a>
+		    				<a href="">15</a>
+		    				<a href="">16</a>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<h3 class="mui-pull-left">加工视频</h3>
+		    			<div class="redo mui-pull-right">2016-04</div>
+		    			<!--日期滑动-->
+		    			<div class="mainData">
+		    				<a href="">11</a>
+		    				<a href="">12</a>
+		    				<a href="">13</a>
+		    				<a href="">14</a>
+		    				<a href="">15</a>
+		    				<a href="">16</a>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<h3 class="mui-pull-left">装车视频</h3>
+		    			<div class="redo mui-pull-right">2016-04</div>
+		    			<!--日期滑动-->
+		    			<div class="mainData">
+		    				<a href="">11</a>
+		    				<a href="">12</a>
+		    				<a href="">13</a>
+		    				<a href="">14</a>
+		    				<a href="">15</a>
+		    				<a href="">16</a>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<h3 class="mui-pull-left">物流车车厢内视频</h3>
+		    			<div class="redo mui-pull-right">2016-04</div>
+		    			<!--日期滑动-->
+		    			<div class="mainData">
+		    				<a href="">11</a>
+		    				<a href="">12</a>
+		    				<a href="">13</a>
+		    				<a href="">14</a>
+		    				<a href="">15</a>
+		    				<a href="">16</a>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<h3 class="mui-pull-left">物流车驾驶室视频</h3>
+		    			<div class="redo mui-pull-right">2016-04</div>
+		    			<!--日期滑动-->
+		    			<div class="mainData">
+		    				<a href="">11</a>
+		    				<a href="">12</a>
+		    				<a href="">13</a>
+		    				<a href="">14</a>
+		    				<a href="">15</a>
+		    				<a href="">16</a>
+		    			</div>
+		    		</li>
+		    	</ul>
+		    </div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/lib/bvd.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+			var v = mui.bvd();
+		</script>
+	</body>
+
+</html>

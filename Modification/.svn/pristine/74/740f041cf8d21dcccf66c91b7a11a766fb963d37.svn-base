@@ -1,0 +1,266 @@
+{
+  "index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "js/Adaptive.js",
+      "css/mui.min.css",
+      "css/normalize.css",
+      "js/lib/Gdong.js",
+      "css/iconfont.css",
+      "fonts/iconfont.css",
+      "fonts/iconfont.woff",
+      "fonts/mui.ttf",
+      "Img/Index/\u0011ý\u00194.png",
+      "Img/Index/friend.png",
+      "js/flexible.js",
+      "Img/Index/banner.ipg.jpg",
+      "Img/Index/tj.png",
+      "Img/Index/enterprise.jpg",
+      "Img/Index/product.jpg",
+      "css/style.css",
+      "Img/Index/\u0011ý\u00194.png"
+    ],
+    "refer": [
+      "home.html"
+    ]
+  },
+  "Product/product.html": {
+    "resources": [
+      "Img/Index/product.jpg",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/flexible.js",
+      "css/normalize.css",
+      "Img/product/arrow.png",
+      "fonts/iconfont.css",
+      "fonts/iconfont.woff",
+      "Img/product/arrow-active.png"
+    ],
+    "refer": [
+      "Search/search.html",
+      "Product/product-data.html"
+    ]
+  },
+  "Product/product-data.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/flexible.js",
+      "css/normalize.css",
+      "Img/news/news-list.jpg",
+      "Img/product/376519929141653620.jpg",
+      "Img/product/639789738491539473.jpg",
+      "Img/product/618575151589875424.png",
+      "Img/product/jr.png",
+      "Img/product/879807049639345101.jpg",
+      "Img/product/403428933281909070.jpg",
+      "fonts/iconfont.woff"
+    ],
+    "refer": []
+  },
+  "Supply/suppy.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "Img/supply/supply-list.jpg",
+      "js/flexible.js",
+      "css/normalize.css",
+      "fonts/iconfont.woff"
+    ],
+    "refer": []
+  },
+  "Supply/supply-comment.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "css/normalize.css",
+      "css/style.css",
+      "Img/supply/supply-detail.jpg",
+      "fonts/iconfont.woff",
+      "Img/supply/supply-list.jpg",
+      "Img/supply/observer.png",
+      "Img/supply/observer2.png",
+      "Img/supply/comment.png"
+    ],
+    "refer": []
+  },
+  "Video/video.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/lib/bvd.js",
+      "js/mui.min.js",
+      "css/bvd.css",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/flexible.js",
+      "css/normalize.css",
+      "fonts/iconfont.woff",
+      "Img/video/video-collect.png",
+      "Img/video/533932787346147215.png"
+    ],
+    "refer": []
+  },
+  "Video/video-list.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/flexible.js",
+      "css/normalize.css",
+      "fonts/iconfont.woff"
+    ],
+    "refer": []
+  },
+  "Search/search.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "css/normalize.css",
+      "fonts/iconfont.woff",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "home.html": {
+    "resources": [
+      "index.html",
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/flexible.js",
+      "css/normalize.css",
+      "fonts/iconfont.woff"
+    ],
+    "refer": [
+      "index.html",
+      "footer.html",
+      "Honesty/aliance.html",
+      "Product/product.html",
+      "Mine/mine.html",
+      "News/news.html"
+    ]
+  },
+  "footer.html": {
+    "resources": [
+      "Img/footer/news.png",
+      "Img/footer/honesty.png",
+      "Img/footer/product.png",
+      "Img/footer/mine.png",
+      "Img/footer/news-active.png",
+      "Img/footer/honesty-active.png",
+      "Img/footer/product-active.png",
+      "Img/footer/mine-active.png",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "css/normalize.css"
+    ],
+    "refer": [
+      "News/news.html",
+      "Honesty/aliance.html",
+      "Product/product.html",
+      "Mine/mine.html"
+    ]
+  },
+  "Honesty/aliance.html": {
+    "resources": [
+      "Img/honest/logo.jpg",
+      "Img/honest/collect.png",
+      "fonts/mui.ttf",
+      "Img/honest/search.png",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "fonts/iconfont.css",
+      "css/normalize.css",
+      "fonts/iconfont.woff"
+    ],
+    "refer": []
+  },
+  "Mine/mine.html": {
+    "resources": [
+      "Img/mine/login/portrait2.png",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "fonts/iconfont.css",
+      "css/normalize.css",
+      "fonts/iconfont.woff"
+    ],
+    "refer": [
+      "Mine/login/login.html"
+    ]
+  },
+  "News/news.html": {
+    "resources": [
+      "Img/news/news-list.jpg",
+      "Img/news/title.png",
+      "Img/news/search.png",
+      "Img/news/channel.png",
+      "Img/news/banner.jpg",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "fonts/iconfont.css",
+      "css/normalize.css"
+    ],
+    "refer": []
+  },
+  "lead.html": {
+    "resources": [
+      "Img/lead/ZD-origin.jpg",
+      "Img/lead/alliance.jpg",
+      "Img/lead/supermarket.jpg"
+    ],
+    "refer": [
+      "home.html"
+    ]
+  },
+  "start.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "lead.html",
+      "home.html"
+    ]
+  },
+  "Mine/login/login.html": {
+    "resources": [
+      "Img/mine/login/wechat.png",
+      "Img/mine/login/password.png",
+      "Img/mine/login/sina.png",
+      "Img/mine/login/portrait.png",
+      "Img/mine/login/qq.png",
+      "Img/mine/login/me.png"
+    ],
+    "refer": [
+      "Mine/login/signUp.html"
+    ]
+  },
+  "Mine/login/signUp.html": {
+    "resources": [
+      "fonts/iconfont.css",
+      "js/mui.min.js",
+      "Img/mine/login/portrait.png",
+      "css/mui.min.css",
+      "js/flexible.js",
+      "css/normalize.css"
+    ],
+    "refer": []
+  }
+}

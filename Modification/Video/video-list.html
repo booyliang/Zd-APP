@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<script src="../js/flexible.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			.mui-content{
+				padding-top: 1.173333rem !important;
+			}
+			h4{
+				font-size: 18px;
+				margin: 0;
+				color: #2B2B2B;
+				margin-bottom: 0.32rem;
+				margin-top: 0.64rem;
+			}
+			[data-dpr="2"] h4{
+				font-size: 36px;
+			}
+			[data-dpr="3"] h4{
+				font-size: 54px;
+			}
+			
+			.mui-main{
+				padding: 0 0.32rem 0 0.32rem;
+			}
+			.mui-main li a{
+				display: inline-block;
+				padding: 0 0.32rem;
+				background: #0F2646;
+				height: 0.853333rem;
+				line-height: 0.853333rem;
+				color: #FAFAFA;
+				border-radius: 3px;
+				font-size: 15px;
+				clear: both;
+			}
+			[data-dpr="2"] .mui-main li a{
+				font-size: 30px;
+			}
+			[data-dpr="3"] .mui-main li a{
+				font-size: 45px;
+			}
+			.mui-data{
+				margin: 0.32rem 0;
+				display: none;
+			}
+			.mui-data span:last-child{
+				display: block;
+				height: 9.5rem;
+				margin-bottom: 0.32rem;
+			}
+			.mdata{
+				text-align: center;
+				width: 1.56rem;
+				height: 1.56rem;
+				line-height: 1.56rem;
+				border: 1px solid #E1E1E1;
+				font-size: 16px;
+			}
+			[data-dpr="2"] .mdata{
+				font-size: 32px;
+			}
+			[data-dpr="3"] .mdata{
+				font-size: 48px;
+			}
+			.mui-bn{
+				clear: both;
+				margin-top: 0.426666rem !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-pull-left iconfont icon-cha"></a>
+		    <h1 class="mui-title">实时视频</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-main">
+			        <li class="mui-first">
+			            <h4>蜂蜜制作流程视屏</h4>
+			            <a class="button" href="javascript:;">2016年04月</a>
+			            <div class="mui-data"></div>
+			            <div class="mui-bn"><a href="">2016年05月</a></div>
+			            <div class="mui-bn"><a href="">2016年06月</a></div>
+			        </li>
+			        <li class="">
+			            <h4>物流车厢内视屏</h4>
+			            <a class="button" href="javascript:;">2016年06月</a>
+			            <div class="mui-data"></div>
+			        </li>
+			        <li class="">
+			           <h4> 物流车驾驶室视屏</h4>
+			           <a class="button" href="javascript:;">2016年06月</a>
+			           <div class="mui-data"></div>
+			        </li>
+			</ul>		    
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var moday=[31,28,31,30,31,30,31,31,30,31,30,31];
+			var d=new Date();
+			var month=d.getMonth()+ 1; //当前的月份
+			var days=d.getDate(); //当前月的号数
+			var years=d.getFullYear(); //当前的年份
+			var run=years % 4; //看看是不是闰年
+			if(run !=0) {
+				moday[1]=28; //2月份的天数
+			}
+			
+			else {
+				moday[1]=29;
+			}			
+			var date=new Date();
+			date.setDate(1);
+			var momatch=[0,1,2,3,4,5,6]; //这个存的是当前月的一号前面有多少空位，周日没有，周一一个以此类推
+			var dangqian=momatch[date.getDay()];
+			var rili=document.getElementsByClassName("mui-data");
+			for(b=0;b<rili.length;b++){
+				
+			
+//			for(i=0;i <=parseInt(dangqian);i++) {
+//				  rili.innerHTML+='<div>'+'&nbsp;'+'</div>';
+//			}
+			
+			for(i=parseInt(dangqian+ 1);i <=parseInt(moday[month - 1]+ dangqian);i++) {
+				if(i % 6==1 && i !=1) {
+//					rili.innerHTML+='<br>';
+				} //每七个是一行
+				rili[b].innerHTML+='<div class="mdata" style="float:left;">'+ parseInt(i - dangqian)+'</div><span></span>';
+			}
+			}
+			
+				//获取所有button	
+	var buttonS = document.getElementsByClassName("button");
+	for(var i = 0; i < buttonS.length; i++) {
+		buttonS[i].setAttribute("line", i);  //给每个button添加line元素赋值
+		buttonS[i].setAttribute("num", 0);   //给每个button添加line属性
+		rili[i].id = i;                    //给每个table添加id赋值
+	    
+		buttonS[i].addEventListener("tap", function() {
+			num = parseInt(this.getAttribute("num"));  //unm字符串转整形
+			line = this.getAttribute("line"); //取出button标签身上付给它的line元素
+			Ntable = document.getElementById(line);//通过button标签身上的line元素获得对应的table
+			if(num % 2 == 0) {
+				Ntable.style.display = "block";
+			} else {
+				Ntable.style.display = "none";
+			}
+			this.setAttribute("num", num + 1);
+		})
+	}
+		</script>
+	</body>
+
+</html>

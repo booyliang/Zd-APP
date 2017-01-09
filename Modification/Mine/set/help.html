@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../../css/normalize.css" />
+		<script src="../../js/flexible.js"></script>
+		<style>
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#e8e8e8;
+				font-family:"微软雅黑";
+			}
+			.mui-content{
+				background:#e8e8e8;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.ml{
+				margin-left:0.32rem;
+			}
+			.mr{
+				margin-right:0.106666rem;
+			}
+			.mui-bar-nav~.mui-content{
+				padding-top:1.173333rem;
+			}
+			.mui-bar{
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				background:#0f2646;
+			}
+			.mui-bar-nav{
+				box-shadow:none;
+			}
+			.mui-bar-nav.mui-bar .mui-icon{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../../Img/header/back.png) no-repeat center center;
+				background-size:contain;
+			}
+			.mui-bar .mui-title{
+				font-family:"苹方";
+				font-weight:bold;
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				color:#fafafa;
+				font-size:18px;
+			}
+			[data-dpr="2"] .mui-bar .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-bar .mui-title{
+				font-size:54px;
+			}
+			/*顶部搜索框*/
+			.input-row{
+				margin-bottom:0.426666rem;
+				position:relative;
+				height:0.853333rem;
+				line-height:0.853333rem;
+				background:#fafafa;
+				border-top:1px solid #d6d7dc;
+			}
+			.input-row span{
+				position:absolute;
+				right:0.426666rem;
+				top:0;
+				width:0.506666rem;
+				height:0.533333rem;
+				line-height:0.533333rem;
+				margin:0.16rem 0;
+			}
+			.search.iconfont{
+				font-size:22px;
+				color:#0f2646;
+			}
+			[data-dpr="2"] .search.iconfont{
+				font-size:44px;
+			}
+			[data-dpr="3"] .search.iconfont{
+				font-size:66px;
+			}
+			.input-row input{
+				text-indent:0.106666rem;
+				padding:0 0.32rem;
+				height:0.64rem;
+				line-height:normal;
+				font-size:12px;
+				color:#d4d4d4;
+				background:#fafafa;
+				margin:0.106666rem 0;
+				border:0;
+			}
+			[data-dpr="2"] .input-row input{
+				font-size:24px;
+			}
+			[data-dpr="3"] .input-row input{
+				font-size:36px;
+			}
+			.hot-back{
+				margin-bottom:0.213333rem;
+				color:#909090 !important;
+				font-size:13px;
+				padding-left:0.32rem;
+			}
+			[data-dpr="2"] .hot-back{
+				font-size:26px;
+			}
+			[data-dpr="3"] .hot-back{
+				font-size:39px;
+			}
+			
+			.feedback-list .mui-table-view-cell{
+				padding:0;
+				height:1.173333rem;
+				line-height:1.173333rem;
+				margin:0 0.32rem;
+				font-size:16px;
+				color:#2b2b2b;
+			}
+			[data-dpr="2"] .feedback-list .mui-table-view-cell{
+				font-size:32px;
+			}
+			[data-dpr="3"] .feedback-list .mui-table-view-cell{
+				font-size:48px;
+			}
+			.mui-table-view-cell:after{
+				left:0;
+				background-color:#d6d7dc !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--顶部-->
+		<header id="header" class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-pull-left" href=""></a>
+            <h1 class="mui-title">帮助</h1>
+    	</header>
+    	<div class="mui-content">
+    	    <div class="feedback-center">
+    	    	<div class="input-row">
+    	    		<span class="search iconfont">&#xe628;</span>
+    	    		<input type="text" placeholder="问题搜索"/>
+    	    	</div>
+    	    	
+    	    	<p class="hot-back">热点问题</p>
+    	    	<div class="feedback-list">
+    	    		<ul class="mui-table-view">
+					    <li class="mui-table-view-cell">除了首页还有哪里能扫码？</li>
+					    <li class="mui-table-view-cell">除了首页还有哪里能扫码？</li>
+					    <li class="mui-table-view-cell">除了首页还有哪里能扫码？</li>
+					    <li class="mui-table-view-cell">除了首页还有哪里能扫码？</li>
+					    <li class="mui-table-view-cell">除了首页还有哪里能扫码？</li>
+					</ul>
+    	    	</div>
+    	    </div>
+    	</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

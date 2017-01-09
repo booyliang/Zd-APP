@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>index</title>    
+    <script src="js/mui.min.js"></script>
+    <script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <style type="text/css">
+      body,.mui-content{
+      	background: white;
+      }
+         /*header头部*/ 
+         .mui-bar{
+         	background: #0f2646;
+         	box-shadow: none;
+         }
+         .mui-bar .mui-title{
+         	color: #FAFAFA
+         }
+         .mui-bar a.mui-icon{
+         	color: #FAFAFA;
+         }
+         /*header头部结束*/
+    	/*公告部分*/
+    	.notice{
+    		width: 100%;
+    		height: 1.173333rem;
+    		background: #FAFAFA;
+    		display: flex;
+    		align-items: center;
+    		position: relative;
+    	}
+    	.notice .notice-g{
+    		width:1.493333rem;
+    		height: 1.173333rem;
+    		line-height: 1.173333rem;
+    		background: #ec4b1f;
+    		text-align: center;
+    		color: white;
+    		float: left;
+    		font-size: 16px;
+    	}
+    	[data-dpr="2"] .notice .notice-g {
+		    font-size: 32px;
+		}
+		[data-dpr="3"] .notice .notice-g {
+		    font-size: 48px;
+		}
+    	.notice .news{
+    			width: 60%;
+    			height: 1.173333rem;
+    			float: left;
+				display:inline-block;
+				color:#909090;
+				overflow:hidden;
+			}
+		.notice .news p{			
+				margin-bottom:0;
+				height:1.173333rem;
+				line-height:1.173333rem;
+				text-align:left;
+				font-size:14px;
+			}
+		[data-dpr="2"] .notice .news p{
+			font-size: 28px;
+		}	
+		[data-dpr="3"] .notice .news p{
+			font-size: 42px;
+		}
+		.icon-gonggao{
+				font-size: 0.533333rem;
+				width: 0.4rem;
+				height: 1.173333rem;
+				line-height: 1.173333rem;
+				float: left;
+				margin: 0px 0.213333rem;
+				color: #EC4B1F;
+		}
+    	.notice .fined{
+    		position: absolute;
+    		right: 0.32rem;
+    		top: 0.25rem;
+    		width: 1.866666rem;
+    		height: 0.9rem;
+    		background:url(Img/Index/friend.png) no-repeat ;
+    		background-size: 100%;
+    		float: right;
+    	}
+    	.notice .fined span{
+    		top: 0.25rem;
+    		left: 0.58rem;
+    		position: absolute;
+    		font-size: 9px !important;
+    		color: #FAFAFA;
+    		
+    	}
+    	/*公告结束*/
+    	/*轮播*/
+    	.mui-slider .mui-slider-item img{
+    		max-width: 100%;
+    		height: 3.84rem;
+    	}
+    	/*轮播结束*/
+    	/*——————————————————————————————————————————————————————————*/
+    	/*查询区域*/
+    	.demand{
+    		display: flex;
+    		align-items: center;
+    		/*align-content: center;*/
+    		width: 100%;
+    		height: 1.173333rem;
+    	}
+    	.demand .demand-put{
+    		display: flex;
+    		align-items: center;
+    		width: 100%;
+    		height: 1.173333rem;
+    		background: #d8d8d8;
+    		padding-left: 24px;
+    	}
+    	.demand .demand-put span{
+    		width: 0.85rem;
+    		height: 0.746666rem;
+    		background: #FFFFFF;
+    		color: #323232;
+    		line-height: 0.746666rem;
+    		font-size: 0.453333rem;
+    		padding-left: 0.213333rem;
+    		border: 1px solid #c8c8c8;
+    		border-right: none !important;
+    	}
+    	.demand .demand-put input{
+    		border: 1px solid #c8c8c8 !important;
+    		border-left: none !important;
+    		border-right: none !important;
+    		margin-bottom: 0px;
+    		box-shadow: none;
+    		border-radius: inherit;
+    		width: 100%;
+    		height: 0.746666rem;
+    		line-height:0.746666rem;
+    		font-size: 14px;
+    		padding-left:0px;
+    		color: #909090;
+    	}
+    	[data-dpr="2"] .demand .demand-put input{
+    		font-size: 28px;
+    	}
+    	[data-dpr="3"] .demand .demand-put input{
+    		font-size: 42px;
+    	}
+    	
+    	.demand .demand-btn{
+    		text-align: center;
+    		line-height: 1.173333rem;
+    		width: 2.666666rem;
+    		height: 1.173333rem;
+    		background: #EC4B1F;
+    		color: #FAFAFA;
+    		font-size: 16px;
+    	}
+    	[data-dpr="2"] .demand .demand-btn{
+    		font-size: 32px;
+    	}
+    	[data-dpr="3"] .demand .demand-btn{
+    		font-size: 48px;
+    	}
+    	/*查询区域结束*/
+    	/*资讯中心*/
+			.news-center{
+				padding:0.426666rem 0.64rem 0px 0.64rem;
+			}
+			.news-center ul{
+				margin: 0px;
+				padding: 0px;
+				font-size:0;
+				display:-moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                display:-ms-flexbox;  /* TWEENER - IE 10 */
+                display:-webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                display:-webkit-flex;  /* NEW - Chrome */
+                display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+				flex-flow:row nowrap;
+				justify-content:space-between;	
+			}
+			.news-center ul li{
+				font-size:11px;
+				float:left;
+				line-height: 0.333333rem;	
+			}
+			[data-dpr="2"] .news-center ul li{
+				font-size:22px;
+			}
+			[data-dpr="3"] .news-center ul li{
+				font-size:33px;
+			}
+			.news-center a{
+				display:block;
+				overflow: hidden;
+			}
+			.news-center ul li span{
+				margin-top:0.106666rem;
+				display:block;
+				text-align:center;
+				color:#646464 !important;
+			}
+			.center-item{
+				height:1.36rem;
+				width:1.36rem;
+				margin:0 auto;
+				border-radius:0.68rem;
+			}
+			.line{
+				height: 1px;
+				background: #e1e1e1;
+				margin: 0.426666rem 0.32rem;
+			}
+			/*---------------------------------------------------*/
+			/*今日推荐*/
+			.choose-img{
+				text-align: center;
+				box-sizing: border-box;
+			}
+			.choose-img img{
+				width: 2.76rem;
+				max-width: 2.76rem;
+				height: 1.066666rem;
+				margin: 0;
+			}
+			/*诚信企业*/
+			.integrity{
+				background: #FAFAFA;
+				margin: 0 0.32rem;
+			}
+			.integrity-tit{
+				padding: 0.32rem 0;
+			}
+			.integrity .integrity-tit h2{
+				font-size: 14px;
+				color: #EC4B1F;	
+			}
+			[data-dpr="2"] .integrity .integrity-tit h2{
+				font-size: 28px;
+			}
+			[data-dpr="3"] .integrity .integrity-tit h2{
+				font-size: 42px;
+			}
+			.integrity .integrity-tit span{
+				float: left;
+				vertical-align:middle;
+				font-size: 0.52rem;
+				color:#EC4B1F;
+				margin-top: 0.04rem;
+				padding-right: 0.106666rem;
+			}
+			/*企业商品*/
+			.integrity-ul{
+				margin: 0px;
+				padding: 0px;
+				display: flex;
+				justify-content: flex-start;	
+				position: relative;
+			}
+			.integrity-ul li:first-child{
+				margin-left: 0;
+			}
+			.integrity-ul li{
+				position: relative;
+				width: 3rem;
+				border: 1px solid #d6d7dc;
+				margin-left: 0.186666rem;
+			}
+			.masking{
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: none;
+				width: 3rem;
+				height: 3.906666rem;
+				background: #2B2B2B;
+				opacity:0.24;
+				filter:alpha(opacity=24);
+			}
+			.integrity-ul li:active::after{
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: "";
+				display: none;
+				width: 3rem;
+				height: 3.906666rem;
+				background: #2B2B2B;
+				opacity:0.24;
+				filter:alpha(opacity=24);
+			}
+			.integrity-ul li a img{
+				width: 100%;
+				height: 2.986666rem;	
+			}
+			.integrity-ul li a p{
+				margin: 0px;
+				padding: 0px;
+				height: 0.8rem;
+				width: 100%;
+				line-height: 0.8rem;
+				text-align: center;
+				color: #2b2b2b;
+				background: #FAFAFA;
+				font-size: 11px;
+			}
+			[data-dpr="2"] .integrity-ul li a p{
+				font-size: 22px;
+			}
+			[data-dpr="3"] .integrity-ul li a p{
+				font-size: 33px;
+			}
+			/*----------------------------------------------*/
+			/*口碑商品*/
+			.public-title {
+				display: flex;
+				justify-content: flex-end;
+				align-items:baseline;
+			}
+			/*口碑商品结束*/			
+			/*公共样式*/
+    </style>
+</head>
+
+<body>	
+	<div class="mui-content">
+	    <div class="notice">
+	    	<div class="notice-g">
+	    		公告
+	    	</div>
+	    	<div class="iconfont icon-gonggao"></div>
+			<div id="scrollBox" class="news mui-scroll">
+				<p>B族西红柿将于近日隆重推出！</p>
+				<p>B族西红柿将于近日隆重推出！</p>
+			</div>
+	    	<div class="fined">
+	    		<span>11345</span>
+	    	</div>
+	    </div>
+	    <!--轮播-->
+	    <div class="mui-slider">
+		  <div class="mui-slider-group mui-slider-loop">
+		    <!--支持循环，需要重复图片节点-->
+		    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="Img/Index/banner.ipg.jpg" /></a></div>
+		    <div class="mui-slider-item"><a href="#"><img src="Img/Index/banner.ipg.jpg" /></a></div>
+		    <div class="mui-slider-item"><a href="#"><img src="Img/Index/banner.ipg.jpg" /></a></div>
+		    <div class="mui-slider-item"><a href="#"><img src="Img/Index/banner.ipg.jpg" /></a></div>
+		    <div class="mui-slider-item"><a href="#"><img src="Img/Index/banner.ipg.jpg" /></a></div>
+		    <!--支持循环，需要重复图片节点-->
+		    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="Img/Index/banner.ipg.jpg" /></a></div>
+		  </div>
+		</div>
+	    <!--轮播结束-->
+	    <!--查询区域-->
+	    <div class="demand">
+	    	<div class="demand-put">
+	    		<span id="btuSm" class="iconfont icon-sousuo"></span>
+	    		<input type="text" name="" id="" value=""  placeholder="请输入溯源码"/>
+	    	</div>
+	    	<div class="demand-btn">点我扫码</div>
+	    </div>
+	    <!--查询结束-->
+	    
+	    <!--资讯中心-->
+		    <div class="news-center">
+		    	<ul>
+		    		<li>
+		    			<a href="#">
+		    				<div class="center-item" style="background:url(img/index/supply.png) no-repeat center center;background-size:contain;"></div>
+		    				<span>供应</span>    						
+		    			</a>
+		    		</li>
+		    		<li>
+			    		<a href="#">
+			    			<div class="center-item" style="background:url(img/index/news.png) no-repeat center center;background-size:contain;"></div>
+			    			<span>资讯</span>
+			    		</a>
+			    	</li>
+			    	<li>
+			    		<a href="#">
+			    			<div class="center-item" style="background:url(img/index/policy.png) no-repeat center center;background-size:contain;"></div>
+			    			<span>政策</span>
+			    		</a>
+			    	</li>
+		    		
+		    		<li>
+		    			<a href="#">
+		    				<div class="center-item" style="background:url(img/index/logistic.png) no-repeat center center;background-size:contain;"></div>
+		    				<span>物流</span>
+		    			</a>
+		    		</li>
+		    	</ul>
+		    	<ul style="margin-top:0.24rem;">
+		    		<li>
+		    			<a href="#">
+		    				<div class="center-item" style="background:url(img/index/exposure.png) no-repeat center center;background-size:contain;"></div>
+		    				<span>曝光台</span>
+		    			</a>
+		    		</li>
+		    		
+		    		<li>
+		    			<a href="#">
+		    				<div class="center-item" style="background:url(img/index/water.png) no-repeat center center;background-size:contain;"></div>
+		    				<span>水利</span>
+		    			</a>
+		    		</li>
+		    		<li>
+		    			<a href="#">
+		    				<div class="center-item" style="background:url(img/index/solution.png) no-repeat center center;background-size:contain;"></div>
+		    				<span>方案</span>
+		    			</a>
+		    		</li>
+		    		<li>
+		    			<a href="#">
+		    				<div class="center-item" style="background:url(img/index/more.png) no-repeat center center;background-size:contain;"></div>
+		    				<span>更多</span>
+		    			</a>
+		    		</li>
+		    	</ul>
+		    </div>
+		    <!--分割线-->
+		    <div class="line"> </div>
+		    <!--今日推荐-->
+		    <div class="choose-img"><img src="Img/Index/tj.png"/></div>	
+		    <!--诚信企业-->
+		    <div class="integrity">
+		    	<div class="integrity-tit">	    		
+		    	<span class="iconfont icon-zhengzhichengxin"></span>
+		    	<h2>诚信企业</h2>
+		    	</div>
+		    	<!--企业商品-->
+		    	<ul id="integrityU" class="integrity-ul">
+		    	        <li>
+		    	           <a href="javascript:;">
+		    	           	<img src="Img/Index/enterprise.jpg"/>
+		    	           	<p>武汉正兴食品</p>
+		    	           </a> 
+		    	           <div class="masking"></div>
+		    	        </li>
+		    	        <li>
+		    	           <a href="javascript:;">
+		    	           	<img src="Img/Index/enterprise.jpg"/>
+		    	           	<p>武汉正兴食品</p>
+		    	           </a> 
+		    	           <div class="masking"></div>
+		    	        </li>
+		    	        <li>
+		    	           <a href="javascript:;">
+		    	           	<img src="Img/Index/enterprise.jpg"/>
+		    	           	<p>武汉正兴食品</p>
+		    	           </a> 
+		    	           <div class="masking"></div>
+		    	        </li>
+		    	</ul>
+		    	<!--口碑商品-->
+		    	<div class="public-title integrity-tit">
+		    		<span class="iconfont icon-jingxuan"></span>
+		    		<h2>口碑商品</h2>
+		    	</div>
+		    	<div class="public">
+		    		<ul class="">
+		    		    <li class="mLeft">
+		    		    	<a href="">
+		    		    		<img src="Img/Index/product.jpg"/>
+		    		    		<div class="public-text">
+		    		    			<h3>石门涧黄淮两瓶装蜂蜜</h3>
+		    		    			<div class="public-ful">
+		    		    				<span>¥<b>340</b></span>
+		    		    				月销1990件
+		    		    				<span class="public-site">重庆</span>
+		    		    			</div>
+		    		    		</div>
+		    		    	</a>
+		    		    </li>
+		    		    <li class="">
+		    		    	<a href="">
+		    		    		<img src="Img/Index/product.jpg"/>
+		    		    		<div class="public-text">
+		    		    			<h3>石门涧黄淮两瓶装蜂蜜</h3>
+		    		    			<div class="public-ful">
+		    		    				<span>¥<b>340</b></span>
+		    		    				月销1990件
+		    		    				<span class="public-site">重庆</span>
+		    		    			</div>
+		    		    		</div>
+		    		    	</a>
+		    		    </li>
+		    		     <li class="mLeft">
+		    		    	<a href="">
+		    		    		<img src="Img/Index/product.jpg"/>
+		    		    		<div class="public-text">
+		    		    			<h3>石门涧黄淮两瓶装蜂蜜</h3>
+		    		    			<div class="public-ful">
+		    		    				<span>¥<b>340</b></span>
+		    		    				月销1990件
+		    		    				<span class="public-site">重庆</span>
+		    		    			</div>
+		    		    		</div>
+		    		    	</a>
+		    		    </li>
+		    		     <li class="">
+		    		    	<a href="">
+		    		    		<img src="Img/Index/product.jpg"/>
+		    		    		<div class="public-text">
+		    		    			<h3>石门涧黄淮两瓶装蜂蜜</h3>
+		    		    			<div class="public-ful">
+		    		    				<span>¥<b>340</b></span>
+		    		    				月销1990件
+		    		    				<span class="public-site">重庆</span>
+		    		    			</div>
+		    		    		</div>
+		    		    	</a>
+		    		    </li>
+		    		</ul>
+		    	</div>
+		    </div>
+	</div>
+	
+</body>
+<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	//诚信企业
+      	mui.plusReady(function(){      		
+	      	mui("#integrityU li").each(function(){
+	      		this.addEventListener("tap",function(){
+	      			//mui.openWindow({
+	      				
+	      			//})
+	      		})
+	      })
+	      		
+	      	
+      	})
+      
+
+</script>
+</html>

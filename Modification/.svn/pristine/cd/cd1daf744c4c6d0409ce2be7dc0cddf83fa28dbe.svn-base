@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<script src="../js/flexible.js"></script>
+		<style>
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#fff;
+				font-family:"微软雅黑";
+			}
+			.mui-content{
+				background:#fff;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.ml{
+				margin-left:0.32rem;
+			}
+			.mr{
+				margin-right:0.106666rem;
+			}
+			.mui-bar-nav~.mui-content{
+				padding-top:1.173333rem;
+			}
+			.mui-bar{
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				background:#0f2646;
+			}
+			.mui-bar-nav{
+				box-shadow:none;
+			}
+			.mui-bar-nav.mui-bar .mui-icon{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../Img/header/back.png) no-repeat center center;
+				background-size:contain;
+			}
+			.mui-bar .mui-title{
+				font-family:"苹方";
+				font-weight:bold;
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				color:#fafafa;
+				font-size:18px;
+			}
+			[data-dpr="2"] .mui-bar .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-bar .mui-title{
+				font-size:54px;
+			}
+			/*标题*/
+			h2{
+				text-align:center;
+				margin-top:0.426666rem;
+				margin-bottom:0.426666rem;
+				color:#2b2b2b;
+				font-size:19px;
+				font-weight:normal;
+			}
+			[data-dpr="2"] h2{
+				font-size:38px;
+			}
+			[data-dpr="3"] h2{
+				font-size:57px;
+			}
+			p{
+				padding:0 0.32rem;
+				line-height:0.64rem;
+				font-size:16px;
+				color:#323232;
+				letter-spacing:0.7px;
+			}
+			[data-dpr='2'] p{
+				padding:0 0.32rem;
+				line-height:0.64rem;
+				font-size:32px;
+				color:#323232;
+			}
+			[data-dpr='3'] p{
+				padding:0 0.32rem;
+				line-height:0.64rem;
+				font-size:48px;
+				color:#323232;
+			}
+			.company-img{
+				width:9.36rem;
+				overflow:hidden;
+				margin:0.426666rem 0.32rem;
+			}
+			.company-img img{
+				width: 100%;
+			}
+			.company-detail{
+				margin:0 0.32rem;
+			}
+			.company-detail>li{
+				font-size:13px;
+				color:#2b2b2b;
+				line-height:13px;
+				margin-bottom:0.173333rem;
+				overflow: hidden;
+			}
+			
+			[data-dpr="2"] .company-detail>li{
+				font-size:26px;
+				line-height:26px;
+			}
+			
+			[data-dpr="3"] .company-detail>li{
+				font-size:39px;
+				line-height:39px;
+			}
+			.li-body ul{
+				font-size:0;
+			}
+			.li-body.imgBox li{
+				display:inline-block;
+			}
+			.li-body.imgBox li img{
+				width:1.6rem;
+				border:1px solid #d6d7dc
+			}
+			[data-dpr="2"] .li-body.imgBox li img{
+				border:2px solid #d6d7dc
+			}
+			[data-dpr="3"] .li-body.imgBox li img{
+				border:3px solid #d6d7dc
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-pull-left"></a>
+		    <h1 class="mui-title">正大溯源云平台</h1>
+		</header>
+		<div class="mui-content">
+		    <h2>原青林公社科技有限公司</h2>
+		    <p>原青林公社科技有限公司是全球领先的综合生态农产品供应商。公司通过为全球160多个国家和地区的电信运营商和企业网客户提供创新技术与产品解决方案，让全世界用户享有语音、数据、多媒体、无线宽带等全方位沟通。
+		          公司成立于1985年，在香港和深圳两地上市，是中国最大的通信设备上市公司。</p>	
+		    <div class="company-img">
+		    	<img src="../Img/honest/company.jpg" alt="" />
+		    </div>
+		    <ul class="company-detail">
+		    	<li>
+		    		<div class="li-tit mui-pull-left">公司性质：</div>
+		    		<div class="li-body">责任有限公司</div>
+		    	</li>
+		    	<li>
+		    		<div class="li-tit mui-pull-left">公司地址：</div>
+		    		<div class="li-body">湖北武汉武昌区中北路</div>
+		    	</li>
+		    	<li>
+		    		<div class="li-tit mui-pull-left">成立时间：</div>
+		    		<div class="li-body">2015年3月15日</div>
+		    	</li>
+		    	<li>
+		    		<div class="li-tit mui-pull-left">联系方式：</div>
+		    		<div class="li-body"><i>15845758541</i><i class="ml">027-5468712</i></div>
+		    	</li>
+		    	<li>
+		    		<div class="li-tit mui-pull-left">公司相册：</div>
+		    		<div class="li-body imgBox">
+		    			<ul>
+		    				<li class="mr"><img src="../Img/honest/company1.jpg" alt="" /></li>
+		    				<li class="mr"><img src="../Img/honest/company2.jpg" alt="" /></li>
+		    				<li><img src="../Img/honest/company3.jpg" alt="" /></li>
+		    			</ul>
+		    		</div>
+		    	</li>
+		    </ul>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

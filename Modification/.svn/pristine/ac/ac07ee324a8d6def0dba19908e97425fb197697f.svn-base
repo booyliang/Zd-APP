@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<script src="../../js/flexible.js"></script>
+	    <link href="../../css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="../../css/normalize.css" />
+	    <link rel="stylesheet" href="../../fonts/iconfont.css" />
+	    <style>
+	    	i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			html{
+				height:100%;
+			}
+			body{
+				background:#f4f4f4;
+				font-family:"微软雅黑";
+				height:100%;
+			}
+			.mui-content{
+				background:#f4f4f4;
+				height:100%;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.ml{
+				margin-left:0.32rem;
+			}
+			.mr{
+				margin-right:0.106666rem;
+			}
+			.mui-bar-nav~.mui-content{
+				padding-top:1.173333rem;
+			}
+			.mui-bar{
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				background:#f4f4f4;
+			}
+			.mui-bar-nav{
+				box-shadow:none;
+			}
+			.mui-bar-nav.mui-bar .mui-icon{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../../Img/header/back2.png) no-repeat center center;
+				background-size:contain;
+			}
+			.mui-bar .mui-title{
+				font-family:"苹方";
+				font-weight:bold;
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				color:#0f2646;
+				font-size:18px;
+			}
+			[data-dpr="2"] .mui-bar .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-bar .mui-title{
+				font-size:54px;
+			}
+			/*顶部导航*/
+	    	header{
+	    		background:#f4f4f4 !important
+	    	}
+	    	header.mui-bar{
+	    		padding:0 0.24rem;
+	    	}
+	    	.mui-bar-nav~.mui-content{
+	    		padding-top:0.88rem;
+	    	}
+	    	.mui-bar .mui-icon{
+	    		font-size:0.48rem;
+				padding:0.2rem;
+				color:#0f2646;
+			}
+			/*顶部图片*/
+			.user-img{
+				width:100%;
+				margin:0.853333rem 0;
+				display:-moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+	            display:-ms-flexbox;  /* TWEENER - IE 10 */
+	            display:-webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	            display:-webkit-flex;  /* NEW - Chrome */
+	            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+				align-items:center;
+				justify-content:center;
+				flex-flow: column wrap;
+			}
+			.img-center{
+				width:2.666666rem;
+				height:2.666666rem;
+				border-radius:50%;
+				overflow:hidden;
+				align-self:center;
+				background:url(../../Img/mine/login/portrait.png) no-repeat center center;
+				background-size:contain;
+			}
+			/*表单*/
+			.form-item{
+				padding:0 0.32rem;	
+			}
+			.form-item button{
+				width:100%;
+				height:1.44rem;
+				border-radius:5px;
+				background:#0f2646;
+				color:#8b9bb1;
+				font-size:18px;
+			}
+			[data-dpr="2"] .form-item button{
+				border-radius:10px;
+				font-size:36px;
+			}
+			[data-dpr="3"] .form-item button{
+				border-radius:15px;
+				font-size:54px;
+			}
+			.form-item p{
+				margin-top:0.32rem;
+				font-size:14px;
+			}
+			[data-dpr="2"] .form-item p{
+				font-size:28px;
+			}
+			[data-dpr="3"] .form-item p{
+				font-size:42px;
+			}
+			.form-item p a{
+				color:#646464;
+			}
+			.input-row{
+				margin-bottom:0.24rem;
+				position:relative;
+				height:1.44rem;
+				line-height:1.44rem;
+				border:1px solid #909090;
+				border-radius:5px;
+			}
+			[data-dpr="2"] .input-row{
+				border:1px solid #909090;
+				border-radius:10px;
+			}
+			[data-dpr="3"] .input-row{
+				border:1.5px solid #909090;
+				border-radius:15px;
+			}
+			.input-row input{
+				width:100%;
+				height:0.586666rem;
+				margin:0.426666rem 0;
+				padding:0 0.32rem;
+				color:#909090;
+				font-size:16px;
+				border:none;
+				background-color:#f4f4f4;
+				text-indent:0.8rem;
+				line-height:normal;
+			}
+			[data-dpr="2"] .input-row input{
+				font-size:32px;
+			}
+			[data-dpr="3"] .input-row input{
+				font-size:48px;
+			}
+			.text{
+				background:url(../../Img/mine/login/me.png) no-repeat 0.32rem center;
+				background-size:0.586666rem 0.586666rem;
+			}
+			.password{
+				background:url(../../Img/mine/login/password.png) no-repeat 0.32rem center;
+				background-size:0.586666rem 0.586666rem;
+			}
+			.input-row span{
+				position:absolute;
+				left:0.24rem;
+				top:0.32rem;
+			}
+			.input-row span.iconfont{
+				font-size:0.44rem;
+				color:#909090;
+			}
+			/*其他登录方式*/
+			.others{
+				position:fixed;
+				bottom:1.173333rem;
+				left:0;
+				width:100%;
+			}
+			.others p{
+				text-align:center;
+				color:#646464;
+				font-size:14px;
+				line-height:0.373333rem;
+			}
+			[data-dpr="2"] .others p{
+				font-size:28px;
+			}
+			[data-dpr="3"] .others p{
+				font-size:42px;
+			}
+			.social{
+				margin-top:0.533333rem;
+				display:-moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+	            display:-ms-flexbox;  /* TWEENER - IE 10 */
+	            display:-webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	            display:-webkit-flex;  /* NEW - Chrome */
+	            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+				align-items:center;
+				flex-flow:row nowrap;
+				justify-content:center;
+				font-size:0;
+			}
+			.social div{
+				display:inline-block;
+			}
+			.social div+div{
+				margin-left:0.853333rem;
+			}
+			.social a{
+				width:0.96rem;
+				height:0.96rem;
+				display:block;
+			}
+			.weixin{
+				background:url(../../Img/mine/login/wechat.png) no-repeat center center;
+				background-size:contain;
+			}
+			.qq{
+				background:url(../../Img/mine/login/qq.png) no-repeat center center;
+				background-size:contain;
+			}
+			.sina{
+				background:url(../../Img/mine/login/sina.png) no-repeat center center;
+				background-size:contain;
+			}
+	    </style>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header id="header" class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-pull-left" href=""></a>
+            <h1 id="title" class="mui-title mui-center">登录</h1>
+    	</header>
+    	<div class="mui-content">
+    	    <div class="user-img">
+    	    	<div class="img-center">
+    	    		<img class="realUser" style="display:none" src="img/user.jpg"/>
+    	    	</div>
+    	    </div>
+    	    <div class="form">
+    	    	<div class="form-item">
+    	    		<div class="input-row">
+    	    			<input type="text" class="mui-input-clear text" id="username" name="" autofocus="autofocus" placeholder="账号"/>
+    	    	    </div>
+    	    	    <div class="input-row">
+    	    	   		<input type="password" class="mui-input-clear password" id="userpassword" name="" value="" placeholder="密码"/>
+    	    	    </div>
+    	    	    <button type="button" id="login">登录</button>
+    	    	    <p><a class="mui-pull-left" id="signUp" href="javaScript:;">注册</a>	<a id="Password" class="mui-pull-right" href="javaScript:;">忘记密码？</a></p>
+    	    	</div>
+    	    	
+    	    </div>
+    	    <div class="others">
+    	    	<p>其他登录方式</p>
+    	    	<div class="social">
+	    	    	<div><a class="weixin" href="#"></a></div>
+	    	    	<div><a class="qq" href="#"></a></div>
+	    	    	<div><a class="sina" href="#"></a></div>
+	    	    </div>
+    	    </div>
+    	</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				//注册页面
+				document.getElementById("signUp").addEventListener("tap",function(){
+					mui.openWindow({
+							id:'signUp.html',
+							url:'signUp.html'
+						})
+				})
+			})
+		</script>
+	</body>
+
+</html>

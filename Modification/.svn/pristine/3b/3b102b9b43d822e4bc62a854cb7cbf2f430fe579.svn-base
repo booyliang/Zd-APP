@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>供应详情页</title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<script src="../js/flexible.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.mui-content{
+				padding-top: 1.173333rem !important;
+				background: #fff;
+				margin-bottom: 1.306666rem;
+			}
+			/*文章主题部分开始*/
+			#article{
+				padding: 0.426666rem 0.32rem 0 0.32rem;
+			}
+		#article h2{
+			text-align: left;
+			font-size: 19px;
+			color: #2b2b2b;
+			margin-bottom: 0.32rem;
+		}
+		[data-dpr="2"] #article h2{
+			font-size: 38px;
+		}
+		[data-dpr="3"] #article h2{
+			font-size: 57px;
+		}
+		#article p{
+			font-size: 12px;
+			color: #909090;
+			margin-bottom:0px !important;
+		}
+		[data-dpr="2"] #article p{
+			font-size: 24px;
+		}
+		[data-dpr="3"] #article p{
+			font-size: 36px;
+		}
+		#article p span{
+			margin-left: 0.32rem;
+		}
+		#article p b{
+			font-size: 13px;
+			margin-left: 0.533333rem;
+			color: #0F2646;
+		}
+		[data-dpr="2"] #article p b{
+			font-size: 26px;
+		}
+		[data-dpr="3"] #article p b{
+			font-size: 39px;
+		}
+		#article img{
+			max-width: 100%;
+			width: 9.373333rem;
+			height: 5.28rem;
+			margin: 0.426666rem 0px 0.426666rem 0px;
+		}
+		#article p{
+			color:#323232;
+			font-size: 16px;
+			line-height: 0.5rem;
+			line-height: 0.733333rem;
+		}
+		[data-dpr="2"] #article p{
+			font-size: 32px;
+		}
+		[data-dpr="3"] #article p{
+			font-size: 48px;
+		}
+		#article p.articleLess{
+			color:#323232;
+			margin-top: 0.853333rem;
+		}
+		#article p.articleZer{
+			text-align: right;
+			margin-top: 0.32rem;
+			color: #909090;	
+			font-size: 0.24rem;		
+		}
+		#article p.articleZer span{
+			color: #0F2646;
+		}
+		/*文章主题部分结束*/
+		
+		/*相关推荐开始*/
+		.recom #supUl li{
+			padding: 0.32rem 0;		
+		} 
+		.recom #supUl li:last-child{
+			border-bottom: none;
+		}
+		h3{
+			margin: 0.853333rem 0.32rem 0 0.32rem;
+			font-size:18px;
+			color: #0f2646;
+			padding-bottom: 0.24rem;
+		}
+		[data-dpr="2"] h3{
+			font-size: 36px;
+		}
+		[data-dpr="3"] h3{
+			font-size: 54px;
+		}
+		.inne{
+			border-bottom: 1px solid #D6D7DC;
+		}
+		h3 span{
+			font-size:0.32rem;
+			margin-left:0.106666rem;
+			color: #909090;	
+			font-weight: 400;
+		}
+		
+		
+		/*相关评论开始*/
+		/*控制标题头像*/
+				
+				
+       /*页脚区域*/
+      .footer{
+      	height: 1.306666rem;
+      	width: 100%;
+      	bottom: 0;
+      	display: flex;
+      	padding: 0.226666rem 0.32rem;
+      }
+      .footer .footL {
+      	width: 100%;
+      	display: flex;
+      	border-bottom: 1px solid #0F2646;
+      }
+      .footer .footL img{
+      	width: 0.68rem;
+      	height: 0.68rem;
+      }
+	  .footer .footL input{
+	  	border: none;
+	  	background: #FAFAFA;
+	  	box-shadow: none;
+	  	height: 0.733333rem;
+	  } 
+	  .footer .footR{
+	  	height: 0.853333rem;
+	  	width: 1.28rem;
+	  	background: #0F2646;
+	  	color: white;
+	  	text-align: center;
+	  	line-height: 0.853333rem;
+	  	margin-left: 0.106666rem;
+	  	border-radius: 0.066666rem;
+	  }	
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-pull-left iconfont icon-fanhui1"></a>
+		    <h1 class="mui-title">正大溯源云平台</h1>
+		</header>
+		<div class="mui-content">
+		    <!--文章主题部分开始-->
+		    <div id="article">
+		    	<h2>三星新广告暗讽 借iPad Air铅笔广告反击</h2>
+		    	<p>2016-10-01<span>14:07</span><b>新华网</b></p>
+		    	<p class="articleLess">
+		    	三星在最新的Galaxy Tab Pro 10.1广告中，模仿了苹果iPad Air铅笔广告的创意，
+		    	而且还直接让iPad Air出镜。iPad Air创意铅笔广告去年10月伴随新款iPad发布。
+		    	在三星的这段广告中，三星提到Galaxy Tab Pro 10.1要比iPad Air更薄，
+		    	还支持单屏多任务功能，这些都是iOS无法实现的。虽然三星在广告中没有提到确切的数字，
+		    	但Galaxy Tab Pro 10.1的厚度为7.3毫米，而iPad Air的厚度为7.5毫米，两款产品之间只有0.2毫米的差距。</p>
+		    		<img src="../Img/supply/supply-detail.jpg"/>
+		    	<p>此外，广告中还提到Galaxy Tab Pro 10.1采用10.1寸高清显示屏，分辨率为2560*1600，
+		    		每英寸像素数量为299个。iPad Air的分辨率为2048*1536，每英寸分辨率为264个。
+		    		微软也在广告中采用了相同的策略，直接将旗下Surface平板电脑与iPad进行横向对比。
+		    		这段广告中的最后一句话也非常幽默，旁白提到自己要拿走Galaxy Tab Pro 10.1和铅笔，iPad Air不要。</p>		    	
+		    	<p class="articleZer">责任编辑 <span>清云</span></p>
+		    </div>
+		    <!--文章主体部分结束-->
+		    <div class="recom">
+		    	<h3>相关推荐<span class="iconfont icon-xiangguantuijian"></span></h3>
+		    	<div class="inne"></div>		    		
+		    	<ul id="supUl" style="padding: 0 0.32rem;">
+					<li>
+						<a href="">
+							<img class="media-object mui-pull-right" src="../Img/supply/supply-list.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>三星新广告暗讽 借iPad Air铅笔广告分击</p>
+		    					<p class="supChat">
+		    						<span class="iconfont icon-shoucang1"><i class="chat">1334</i></span>
+		    						<span class="iconfont icon-pinglun1"><i>106</i></span>
+		    					</p>
+		    				</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img class="media-object mui-pull-right" src="../Img/supply/supply-list.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>三星新广告暗讽 借iPad Air铅笔广告分击</p>
+		    					<p class="supChat">
+		    						<span class="iconfont icon-shoucang1"><i class="chat">1334</i></span>
+		    						<span class="iconfont icon-pinglun1"><i>106</i></span>
+		    					</p>
+		    				</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img class="media-object mui-pull-right" src="../Img/supply/supply-list.jpg" alt="" />
+		    				<div class="media-body">
+		    					<p>三星新广告暗讽 借iPad Air铅笔广告分击</p>
+		    					<p class="supChat">
+		    						<span class="iconfont icon-shoucang1"><i class="chat">1334</i></span>
+		    						<span class="iconfont icon-pinglun1"><i>106</i></span>
+		    					</p>
+		    				</div>
+						</a>
+					</li>
+				</ul>
+				<div class="inne"></div>
+		    </div>
+		    
+		    <!--热门评论区域-->
+		    <h3>热门评论<span>106</span></h3>
+		    <div class="inne"></div>
+		     <div class="commentsNew">
+				<div class="commentsTitle">
+					<img src="../Img/supply/observer.png" />
+					<p>清云</p>
+					<span>湖北省黄石市   5小时前</span>
+				</div>
+				<!--评论区域-->
+				<div class="lice">					
+				<div class="commentsIn">
+					<p>如何让我遇见你,在我最美丽的时刻，为这，我已在佛前求了五百年，求它让我们结一段尘缘。</p>
+						<div class="commentsRight mui-pull-right">
+						<i class="iconfont">&#xe67a;</i> 102 删除
+						<span class="RightSpan">回复6</span>
+						</div>
+						<a id="reply">回复</a>
+					<div class="commentsInShow" id="commentsInShow">						
+						<ul class="ShowLeft">
+							<li>
+								<div class="ShowLeftTi">
+								    <div class="mui-pull-left">
+										<img src="../Img/supply/observer2.png" /> 
+										<b>邬小玉</b>
+									</div>
+								<div class="mui-pull-right">
+									<b>2016/11/15</b>
+									<span>15:00</span>
+								</div>
+								</div>
+								
+								<p>哈哈~~叔叔我们不约！</p>
+							</li>
+                            <li>
+								<div class="ShowLeftTi">
+								    <div class="mui-pull-left">
+										<img src="../Img/supply/observer2.png" /> 
+										<b>邬小玉</b>
+									</div>
+								<div class="mui-pull-right">
+									<b>2016/11/15</b>
+									<span>15:00</span>
+								</div>
+								</div>								
+								<p>哈哈~~叔叔我们不约！</p>
+							</li>     
+						</ul>
+					</div>
+				</div>
+				</div>
+				<!--第二区域-->
+			</div>
+		</div>
+		<div class="footer mui-bar">
+			<div class="footL">
+				<img src="../Img/supply/comment.png"/>
+				<input type="text" name="" id="" value="" placeholder="请吐槽~" />
+			</div>
+			<div class="footR">
+				发送
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			mui.plusReady(function(){
+				document.getElementById("reply").addEventListener('tap', function() {
+					var commentsInShow = document.getElementById('commentsInShow');
+					if(commentsInShow.style.display == "none") {
+						commentsInShow.style.display = "block";
+					} else {
+						commentsInShow.style.display = "none";
+					}
+				})
+			})
+		</script>
+	</body>
+
+</html>

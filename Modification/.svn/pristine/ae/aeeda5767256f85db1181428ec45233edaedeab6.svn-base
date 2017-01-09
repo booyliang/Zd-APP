@@ -1,0 +1,80 @@
+{
+  "News/news.html": {
+    "href": "News/news.html",
+    "resources": [
+      "fonts/mui.ttf",
+      "fonts/iconfont.eot",
+      "fonts/iconfont.woff",
+      "fonts/iconfont.ttf",
+      "fonts/iconfont.svg",
+      "css/normalize.css"
+    ],
+    "priority": 0
+  },
+  "Mine/mine.html": {
+    "href": "Mine/mine.html",
+    "resources": [
+      "fonts/mui.ttf",
+      "css/normalize.css",
+      "fonts/iconfont.eot",
+      "fonts/iconfont.woff",
+      "fonts/iconfont.ttf",
+      "fonts/iconfont.svg"
+    ],
+    "priority": 1
+  },
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "fonts/iconfont.eot",
+      "fonts/iconfont.ttf",
+      "fonts/iconfont.svg"
+    ],
+    "priority": 2
+  },
+  "Honesty/aliance.html": {
+    "href": "Honesty/aliance.html",
+    "resources": [
+      "fonts/iconfont.eot",
+      "fonts/iconfont.woff",
+      "fonts/iconfont.ttf",
+      "fonts/iconfont.svg",
+      "css/normalize.css"
+    ],
+    "priority": 3
+  },
+  "Product/product.html": {
+    "href": "Product/product.html",
+    "resources": [
+      "css/normalize.css",
+      "fonts/iconfont.eot",
+      "fonts/iconfont.ttf",
+      "fonts/iconfont.svg"
+    ],
+    "priority": 6
+  },
+  "footer.html": {
+    "href": "footer.html",
+    "resources": [
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "News/news.html",
+      "Honesty/aliance.html",
+      "Product/product.html",
+      "Mine/mine.html"
+    ],
+    "priority": 4
+  },
+  "home.html": {
+    "href": "home.html",
+    "resources": [
+      "fonts/mui.ttf",
+      "fonts/iconfont.eot",
+      "fonts/iconfont.ttf",
+      "fonts/iconfont.svg"
+    ],
+    "refer": [],
+    "priority": 0
+  }
+}

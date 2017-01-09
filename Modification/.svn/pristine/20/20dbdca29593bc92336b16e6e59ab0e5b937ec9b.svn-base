@@ -1,0 +1,581 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../../css/normalize.css" />
+		<script src="../../js/flexible.js"></script>
+		<style>
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#e8e8e8;
+				font-family:"微软雅黑";
+			}
+			.mui-content{
+				background:#e8e8e8;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.ml{
+				margin-left:0.32rem;
+			}
+			.ml16{
+				margin-left:0.213333rem;
+			}
+			.mr{
+				margin-right:0.106666rem;
+			}
+			.mr8{
+				margin-right:0.106666rem;
+			}
+			.mr24{
+				margin-right:0.32rem;
+			}
+			.mui-bar-nav~.mui-content{
+				padding-top:1.173333rem;
+			}
+			.mui-bar{
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				background: #0f2646;
+			}
+			.mui-bar-nav{
+				box-shadow:none;
+			}
+			.mui-bar-nav.mui-bar .mui-icon{
+				width:1.173333rem;
+				height:1.173333rem;
+				background:url(../../Img/header/back.png) no-repeat center center;
+				background-size:contain;
+			}
+			.mui-bar .mui-title{
+				font-family:"苹方";
+				font-weight:bold;
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				color:#fafafa;
+				font-size:18px;
+			}
+			[data-dpr="2"] .mui-bar .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-bar .mui-title{
+				font-size:54px;
+			}
+			.edit{
+				color:#fafafa;
+				font-size:15px;
+				z-index: 20;
+				position: relative;
+				right:0.32rem;
+				bottom:0;
+				height:1.173333rem;
+				line-height:1.173333rem;
+			}
+			[data-dpr="2"] .edit{
+				font-size:30px;
+			}
+			[data-dpr="3"] .edit{
+				font-size:45px;
+			}
+			/*收藏夹*/
+			.collection-box ul li{
+				margin-top:0.32rem;
+				background:#fff;
+				padding:0.32rem;
+				min-height:1.813333rem;
+				overflow: hidden;
+				position:relative;
+			}
+			.time{
+				position:absolute;
+				width:auto;
+				bottom:0.32rem;
+				right:0.32rem;
+				color:#909090;
+				font-size:11px;
+				height:0.586666rem;
+				line-height:0.586666rem;
+			}
+			[data-dpr="2"] .time{
+				font-size:22px;
+			}
+			[data-dpr="3"] .time{
+				font-size:33px;
+			}
+			.select{
+				margin-left:0.213333rem;
+				float:right;
+				width:0.586666rem;
+				height:0.586666rem;
+			}
+			.select img{
+				width:100%;
+			}
+			/*产品*/
+			.product .media-object{
+				width:2.773333rem;
+				height:1.813333rem;
+				border:1px solid #d6d7dc;
+			}
+			.product .media-object img{
+				width:100%;
+			}
+			.product .collect-body{
+				margin-left:2.88rem;
+				margin-top:0.106666rem;
+				/*height:1.813333rem;*/
+				overflow:hidden;
+			}
+			.product .collect-body p{
+				text-overflow: ellipsis;
+				white-space:nowrap;
+				overflow:hidden;
+			}
+			.sale-detail{
+				line-height:0.346666rem;
+				font-size:13px;
+				color:#646464;
+				margin:0.213333rem 0;
+			}
+			[data-dpr="2"] .sale-detail{
+				font-size:26px;
+			}
+			[data-dpr="3"] .sale-detail{
+				font-size:39px;
+			}
+			.product .collect-body p:first-child{
+				color:#323232;
+				line-height:0.426666rem;
+				font-size:16px;
+			}
+			[data-dpr="2"] .product .collect-body p:first-child{
+				font-size:32px;
+			}
+			[data-dpr="3"] .product .collect-body p:first-child{
+				font-size:48px;
+			}
+			.product .collect-body p:last-child{
+				line-height:0.48rem;
+				font-size:18px;
+				color:#f60f0f !important;
+			}
+			[data-dpr="2"] .product .collect-body p:last-child{
+				font-size:36px;
+			}
+			[data-dpr="3"] .product .collect-body p:last-child{
+				font-size:54px;
+			}
+			/*评论*/
+			.chat .media-object{
+				width:2.773333rem;
+				height:1.813333rem;
+				border:1px solid #d6d7dc;
+			}
+			.chat .collect-body{
+				margin-left:2.88rem;
+				margin-top:0.106666rem;
+				overflow:hidden;
+			}
+			.chat .collect-body .chat-user{
+				height:0.586666rem;
+				overflow:hidden;
+			}
+			.chat .collect-body .user-img{
+				width:0.586666rem;
+				height:0.586666rem;
+				display:block;
+			}
+			.chat .collect-body .username{
+				margin-left:0.693333rem;
+				color:#909090;
+				font-size:11px;
+				height:0.586666rem;
+				line-height:0.586666rem;
+			}
+			[data-dpr="2"] .chat .collect-body .username{
+				font-size:22px;
+			}
+			[data-dpr="3"] .chat .collect-body .username{
+				font-size:33px;
+			}
+			.chat .collect-body .chat-body{
+				color:#323232;
+				font-size:14px;
+				line-height:0.56rem;
+				margin-top:-0.093333rem;
+			}
+			[data-dpr="2"] .chat .collect-body .chat-body{
+				font-size:28px;
+			}
+			[data-dpr="3"] .chat .collect-body .chat-body{
+				font-size:42px;
+			}
+			/*新闻*/
+			.news .media-object{
+				width:2.773333rem;
+				height:1.813333rem;
+				border:1px solid #d6d7dc;
+			}
+			.news .collect-body{
+				margin-left:2.88rem;
+			}
+			.news .collect-body p{
+				/*margin-top:0.106666rem;*/
+				overflow:hidden;
+				color:#323232;
+				line-height:0.64rem;
+				font-size:16px;
+			}
+			[data-dpr="2"] .news .collect-body p{
+				font-size:32px;
+			}
+			[data-dpr="3"] .news .collect-body p{
+				font-size:48px;
+			}
+			/*生产*/
+			.produce .media-object{
+				width:2.986666rem;
+				height:2.986666rem;
+				border:1px solid #d6d7dc;
+			}
+			.produce .collect-body{
+				margin-left:3.093333rem;
+				overflow: hidden;
+				height:2.986666rem;
+			}
+			.produce .collect-body button{
+				width:0.973333rem;
+				height:0.586666rem;
+				line-height:0.586666rem;
+				background:#ec4b1f;
+				border:1px solid #ff3700;
+				color:#fff;
+				font-size:11px;
+				margin:0.106666rem 0 0.12rem;
+				padding:0;
+				text-align:center;
+			}
+			[data-dpr="2"] .produce .collect-body button{
+				font-size:22px;
+			}
+			[data-dpr="3"] .produce .collect-body button{
+				font-size:33px;
+			}
+			.produce .collect-body p{
+				color:#0f2646;
+				font-size:14px;
+				line-height:0.56rem;
+			}
+			[data-dpr="2"] .produce .collect-body p{
+				font-size:28px;
+			}
+			[data-dpr="3"] .produce .collect-body p{
+				font-size:42px;
+			}
+			.produce .ellipsis{
+				width:0.48rem;
+				height:0.106666rem;
+				margin-top:0.146666rem;
+			}
+			.produce .ellipsis img{
+				width:100%;
+			}
+			/*商家*/
+			.company .media-object{
+				width:2.72rem;
+				height:2.133333rem;
+				border:1px solid #d6d7dc;
+			}
+			.company .collect-body{
+				margin-left:2.826666rem;
+				padding-top:0.013333rem;
+				overflow:hidden;
+			}
+			.company .collect-body p{
+				line-height:0.56rem;
+				color:#2b2b2b;
+				font-size:14px;
+			}
+			[data-dpr="2"] .company .collect-body p{
+				font-size:28px;
+			}
+			[data-dpr="3"] .company .collect-body p{
+				font-size:42px;
+			}
+			/*底部编辑栏*/
+			.footer-edit{
+				line-height:1.306666rem;
+				height:1.306666rem;
+				position:fixed;
+				font-size:0;
+				width:100%;
+				bottom:0;
+				border-top:1px solid #e1e1e1;
+				border-bottom:1px solid #e1e1e1;
+				background:#fff;
+			}
+			.share{
+				background:#0f2646;
+				color:#fafafa;
+				font-size:18px;
+				width:2.346666rem;
+				height:1.28rem;
+				text-align:center;
+				float:left;
+				margin-left:0.106666rem;
+			}
+			[data-dpr="2"] .share{
+				font-size:36px;
+			}
+			[data-dpr="3"] .share{
+				font-size:54px;
+			}
+			.move{
+				width:2.346666rem;
+				height:1.28rem;
+				color:#fafafa;
+				text-align:center;
+				font-size:14px !important;
+				background:#ec4b1f;
+				float:left;
+			}
+			[data-dpr="2"] .move{
+				font-size:28px !important;
+			}
+			[data-dpr="3"] .move{
+				font-size:42px !important;
+			}
+			.select-box{
+				width:2.72rem;
+				height:1.28rem;
+				float:right;
+				border-left:1px solid #e1e1e1;
+			}
+			.footer-edit .all{
+				color:#646464;
+				font-size:16px !important;
+				margin-left:0.32rem;
+			}
+			[data-dpr="2"] 	.footer-edit .all{
+				font-size:32px !important;
+			}
+			[data-dpr="3"] 	.footer-edit .all{
+				font-size:48px !important;
+			}
+			.footer-edit .cancel-all{
+				color:#646464;
+				font-size:13px !important;
+				margin-left:0.32rem;
+			}
+			[data-dpr="2"] 	.footer-edit .cancel-all{
+				font-size:26px !important;
+			}
+			[data-dpr="3"] 	.footer-edit .cancel-all{
+				font-size:39px !important;
+			}
+			.all-select{
+				position:absolute;
+				top:0;
+				right:0.32rem;
+				width:0.586666rem !important;
+				height:0.586666rem !important;
+				margin:0.346666rem 0;
+			}
+			.all-select img{
+				width:100%;
+				height:100%;
+				display:block;
+			}
+		</style>
+	</head>
+	<body>
+		<!--顶部-->
+		<header id="header" class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-pull-left" href=""></a>
+            <h1 class="mui-title">我的收藏</h1>
+            <a class="edit  mui-pull-right" id="edit" href="javascript:;">编辑</a>
+    	</header>
+    	<div class="mui-content">
+    		<div class="collection-box">
+    			<ul>
+    				<li class="product">
+    					<img class="media-object mui-pull-left" src="../../Img/mine/personal/history-list.jpg" alt="" />
+    					<div class="collect-body">
+    						<p>B族豌豆</p>
+							<p class="sale-detail">月销:<span class="mr24">1990件</span>重庆</p>
+							<p><i class="mark mr8">￥</i>2.50</p>
+    					</div>
+    					<div class="time">2016-3-15
+    					<div class="select" style="display:none"><img src="../../Img/mine/personal/select.png" alt="" /></div>
+    					</div>
+    				</li>
+    				<li class="chat">
+    					<img class="media-object mui-pull-left" src="../../Img/mine/personal/favorite-comment.jpg" alt="" />
+    					<div class="collect-body">
+    						<div class="chat-user">
+    							<img class="user-img mui-pull-left" src="../../Img/mine/personal/observer.png" alt="" />
+    							<p class="username">清云</p>
+    						</div>
+    						<div class="chat-body">
+    							如何让我遇见你在我最美丽的时刻，为这我已在佛前求了五...
+    						</div>
+    					</div>
+    					<div class="time">2016-3-15
+    					<div class="select" style="display:none"><img src="../../Img/mine/personal/select.png" alt="" /></div>
+    					</div>
+    				</li>
+    				<li class="news">
+    					<img class="media-object mui-pull-left" src="../../Img/mine/personal/history-list.jpg" alt="" />
+    					<div class="collect-body">
+    						<p>三星新广告暗讽  借iPad  Air铅笔广告反击</p>
+    					</div>
+    					<div class="time">2016-3-15
+    					<div class="select" style="display:none"><img src="../../Img/mine/personal/select.png" alt="" /></div>
+    					</div>
+    				</li>
+    				<li class="produce">
+    					<img class="media-object mui-pull-left" src="../../Img/mine/personal/gather-honey2.png" alt="" />
+    					<div class="collect-body">
+    						<button>采蜜</button>
+    						<p>日期：2016-04-11</p>
+    						<p>时点：8:00-17:00</p>
+    						<p>天气：晴26℃</p>
+    						<div class="ellipsis"><img src="../../Img/mine/personal/dian.png" alt="" /></div>
+    					</div>
+    					<div class="time">2016-3-15
+    					<div class="select" style="display:none"><img src="../../Img/mine/personal/select.png" alt="" /></div>
+    					</div>
+    				</li>
+    				<li class="company">
+    					<img class="media-object mui-pull-left" src="../../Img/mine/personal/favorite-enterprise.jpg" alt="" />
+    					<div class="collect-body">
+    						<p>商家：武汉一品正信科技有限公司</p>
+    						<p>地址：光谷步行街D区555号</p>
+    						<p>电话：054-2212345</p>
+    					</div>
+    					<div class="time">2016-3-15
+    					<div class="select" style="display:none"><img src="../../Img/mine/personal/select.png" alt="" /></div>
+    					</div>
+    				</li>
+    			</ul>
+    		</div>
+    		<div class="footer-edit" style="display:none">
+	    		<div class="move" id="move">移出收藏夹</div>
+	    		<div class="share" id="share">分享</div>
+	    		<div class="select-box">
+	    			<label class="all">全选</label>
+	    			<div id="all-select" class="all-select"><img src="../../Img/mine/personal/select.png" alt="" /></div>
+	    		</div>
+    		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+//			mui.plusReady(function(){
+				var selectArray = mui('.collection-box .select');
+			//点击编辑时的事件
+				mui('#edit')[0].addEventListener('tap',function(){
+					if(mui('.footer-edit')[0].style.display == 'none'){
+						mui('.footer-edit')[0].style.display = 'block';
+						this.innerHTML = "完成";
+					}else{
+						mui('.footer-edit')[0].style.display = 'none';
+						this.innerHTML = "编辑";
+					}
+					selectArray.each(function(i,item){
+					if(item.style.display == "none"){
+							item.style.display = "block";
+						}else{
+							item.style.display = "none";
+						}
+						
+					})
+				})
+				
+				//点击单个选择时的样式切换事件
+				mui('.collection-box .select').each(function(i,item){
+					item.addEventListener('tap',function(){
+						var src = this.children[0].getAttribute('src');
+						if(src.indexOf('d')>0){
+							this.children[0].src= src.replace('ed.png','.png');
+						}else{
+							this.children[0].src= src.replace('.png','ed.png');
+						}
+					})
+				})
+				
+				
+				
+				//点击分享的事件
+				mui('#share')[0].addEventListener('tap',function(){
+					mui.openWindow({
+						url:'../examples/mshare.html',
+						id:'mshare.html',
+						styles:{
+							height:'40%',
+							top:'60%',
+							bottom:0,
+							background:(0,0,0,0.6)
+						}
+					})
+				})
+				
+				//点击全选时的样式切换事件
+				mui('#all-select')[0].addEventListener('tap',function(){
+					var label = mui('label')[0];
+					var $this = this.children[0];
+					var srcAll = $this.getAttribute('src');
+					label.innerHTML = "取消全选";
+					label.classList.remove('all');
+					label.classList.add('cancel-all');
+					if(srcAll.indexOf('d')>0){
+						$this.src = srcAll.replace('ed.png','.png');
+						selectArray.each(function(i,item){
+							item.children[0].src = item.children[0].getAttribute('src').replace('ed.png','.png');
+						})
+					}else{
+						$this.src = srcAll.replace('.png','ed.png');
+						selectArray.each(function(i,item){
+							item.children[0].src = item.children[0].getAttribute('src').replace('.png','ed.png');
+						})
+					}
+					
+				})
+				
+				
+				mui('#move')[0].addEventListener('tap',function(){
+					var selectArray = mui('.collection-box .select');//选择框要实时更新
+					selectArray.each(function(i,item){
+						var selected = item.children[0];
+						var srcImg = selected.getAttribute('src');
+						if(srcImg.indexOf('d')>0){
+							var  li = item.parentNode.parentNode;
+							var  ul = li.parentNode;
+							console.log(li);
+							ul.removeChild(li);
+							mui.toast("已删除");
+						}else{
+							return;
+						}
+						
+						
+					})
+				})
+//			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../fonts/iconfont.css" />
+		<link rel="stylesheet" href="../../css/normalize.css" />
+		<script src="../../js/flexible.js"></script>
+		<style>
+			i{
+				font-style:normal;
+				font-family:arial;
+			}
+			p{
+				margin:0;
+				padding:0;
+			}
+			body{
+				background:#fafafa;
+				font-family:"微软雅黑";
+			}
+			.mui-content{
+				background:#fafafa;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.ml{
+				margin-left:0.32rem;
+			}
+			.ml16{
+				margin-left:0.213333rem;
+			}
+			.mr{
+				margin-right:0.106666rem;
+			}
+			.mr8{
+				margin-right:0.106666rem;
+			}
+			.mr24{
+				margin-right:0.32rem;
+			}
+			.mui-bar-nav~.mui-content{
+				padding-top:1.173333rem;
+			}
+			.mui-bar{
+				height:1.306666rem;
+				line-height:1.306666rem;
+				background:#0f2646;
+			}
+			.mui-bar-nav{
+				box-shadow:none;
+			}
+			.mui-bar .mui-title{
+				font-family:"苹方";
+				font-weight:bold;
+				height:1.173333rem;
+				line-height: 1.173333rem;
+				color:#fafafa;
+				font-size:18px;
+			}
+			[data-dpr="2"] .mui-bar .mui-title{
+				font-size:36px;
+			}
+			[data-dpr="3"] .mui-bar .mui-title{
+				font-size:54px;
+			}
+			
+			.button{
+				line-height:0.8rem;
+				height:0.8rem;
+				background:#fafafa;
+				text-align:center;
+				color:#2b2b2b;
+				font-size:16px;
+				bottom:0.666666rem;
+				box-shadow:none;
+				margin-top:0.666666rem;
+			}
+			[data-dpr="2"] .button{
+				font-size:32px;
+			}
+			[data-dpr="3"] .button{
+				font-size:48px;
+			}
+			
+			.list{
+				margin-top:0.64rem;
+				padding:0 0.32rem;
+				overflow:hidden;
+			}
+			.list-item{
+				width:1.6rem;
+				float:left;
+				display:flex;
+				flex-flow: column wrap;
+				justify-content:center; 
+				align-items:center;
+				font-size:12px;
+				color:#2b2b2b;
+				line-height:0.48rem;
+				text-align:center;
+			}
+			[data-dpr="2"] .list-item{
+				font-size:24px;
+			}
+			[data-dpr="3"] .list-item{
+				font-size:36px;
+			}
+			.list .list-item+.list-item{
+				margin-left:0.426666rem;
+			}
+			.list span{
+				width:1.173333rem;
+				height:1.173333rem;
+				line-height:1.173333rem;
+				display:inline-block;
+				
+			}
+			.list span img{
+				width:100%;
+			}
+		</style>
+	</head>
+	<body>
+		<!--顶部-->
+		<header id="header" class="mui-bar mui-bar-nav">
+            <h1 class="mui-title">分享到</h1>
+    	</header>
+    	<div class="mui-content">
+	    	<div class="list">
+		    	<div class="list-item"><span><img src="../../Img/mine/login/wechat.png" alt="" /></span>复制链接</div>
+		    	<div class="list-item"><span><img src="../../Img/mine/login/qq.png" alt="" /></span>二维码</div>
+	    	</div>
+	    	<div class="list">
+	    	   	<div class="list-item"><span><img src="../../Img/mine/login/wechat.png" alt="" /></span>微信</div>
+	    	   	<div class="list-item"><span><img src="../../Img/mine/login/qq.png" alt="" /></span>QQ</div>
+	    	   	<div class="list-item"><span><img src="../../Img/mine/login/sina.png" alt="" /></span>微博</div>
+	    	   	<div class="list-item"><span><img src="../../Img/mine/login/wechat.png" alt="" /></span>手机联系人</div>
+	    	</div>
+    	</div>
+    	 <div class="mui-bar mui-bar-tab button mui-action-back">
+    	    	取消
+    	    </div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+		</script>
+	</body>
+
+</html>
